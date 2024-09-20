@@ -17,13 +17,13 @@ main{
 }
 
 #ej--lessonlist{
-    padding-top: 0;
     align-items: flex-start;
     gap: .5em;
 
     font-size: var(--fs-button);
     font-weight: 600;
 }
+
 
 
 
@@ -53,7 +53,15 @@ main{
         margin-top: .25em;
     }
 
-    & code{
-
+    & pre{
+        width: 100%;
+        margin-block: 1em;
+        
+        
+        & code{
+            width: 100%;
+            padding-block: 1.5em;
+            border-radius: 15px;
+        }
     }
 }
