@@ -1,6 +1,7 @@
 #ej--title{
     align-items: flex-start;
     text-align: left;
+    gap: 0;
 
     & h4{
         opacity: .3;
@@ -8,5 +9,14 @@
 }
 
 #ej--content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    gap: 2em;
 
+
+    & code{
+
+    }
 }
