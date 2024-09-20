@@ -1,0 +1,22 @@
+header{
+    & .ej--left{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 1em;
+
+
+        & span{
+            margin-bottom: 2px;
+
+            font-family: var(--f-heading);
+            font-size: var(--fs-600);
+            font-weight: 400;
+        }
+    }
+}
+
+main{
+    padding-top: 5em;
+    gap: 10em;
+}

@@ -1,28 +1,18 @@
-header{
-    & .ej--left{
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        gap: 1em;
+#ej--intro{
+    margin-bottom: -5em;
 
-
-        & span{
-            margin-bottom: 2px;
-
-            font-family: var(--f-heading);
-            font-size: var(--fs-600);
-            font-weight: 400;
-        }
+    & h1{
+        align-self: flex-start;
     }
 }
-
 
 .ej--semester{
     display: grid;
     grid-template-areas:
     'name name'
     'tech history';
-    grid-gap: 1em 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em 5%;
 
 
     & h2{
@@ -99,7 +89,12 @@ header{
     .ej--semester{
         display: flex;
         flex-direction: column;
-        gap: 2em;
+        gap: 10em;
+
+
+        & > h2{
+            margin-bottom: -1em;
+        }
     }
 }
 @media only screen and (max-width: 550px) {

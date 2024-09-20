@@ -1,0 +1,12 @@
+#ej--title{
+    align-items: flex-start;
+    text-align: left;
+
+    & h4{
+        opacity: .3;
+    }
+}
+
+#ej--content{
+
+}
