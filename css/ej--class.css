@@ -8,6 +8,12 @@
     }
 }
 
+#ej--lessonlist{
+    padding-top: 0;
+    align-items: flex-start;
+    gap: .5em;
+}
+
 #ej--content{
     display: flex;
     flex-direction: column;
