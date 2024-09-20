@@ -89,11 +89,11 @@
     .ej--semester{
         display: flex;
         flex-direction: column;
-        gap: 10em;
+        gap: 5em;
 
 
         & > h2{
-            margin-bottom: -1em;
+            
         }
     }
 }
