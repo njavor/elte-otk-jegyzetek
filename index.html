@@ -17,7 +17,8 @@
     <link rel="stylesheet" type="text/css" href="/css/footer.css" >
     <link rel="stylesheet" type="text/css" href="/css/section.css" >
     
-    <link rel="stylesheet" type="text/css" href="css/index.css" >
+    <link rel="stylesheet" type="text/css" href="css/ej--general.css" >
+    <link rel="stylesheet" type="text/css" href="css/ej--index.css" >
 
     <!-- js -->
     <script src="/js/lightMode.js" defer></script>
@@ -36,13 +37,11 @@
 
 <body>
     <header>
-        <a href="/" id="logolink" class="">
-            <img src="/img/nj_white.png" alt="">
-            <span>|</span>
-            <a href="/elte-otk-it-jegyzetek/">
-                ELTE-OTK-IT jegyzetek
+        <div class="ej--left">
+            <a href="/" id="logolink" class="">
+                <img src="/img/nj_white.png" alt="">
             </a>
-        </a>
+        </div>
         <button id="color-scheme-toggle" class="material-symbols-outlined" title="világos/sötét mód">
             contrast
         </button>
@@ -52,17 +51,17 @@
         <section id="ej--intro">
             <h1>ELTE jegyzetek</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At atque maiores ullam ab est, distinctio ex eveniet doloribus tenetur eius quaerat ipsum facere tempore soluta cumque excepturi odit quisquam placeat?
+                Ezen az oldalon érhetőek el az osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); történelemtanár] alatt készült publikus jegyzeteim. 
             </p>
         </section>
         <section id="ej--semesters">
-            <div id="ej--24251">
+            <div id="ej--24251" class="ej--semester">
                 <h2>24/25/1</h2>
-                <div class="ej--classes ej--tech">
+                <div class="ej--classlist ej--tech">
                     <h3>Informatika</h3>
                     <a href="classes/OTK-ALKR1EG-INF22">
                         <button>
-                            <h3>0</h3>
+                            <h2>0</h2>
                             <div class="ej--right">
                                 <h4>Alkalmazói rendszerek 1.</h4>
                                 <p></p>
@@ -71,7 +70,7 @@
                     </a>
                     <a href="classes/OTK-MATMOD1">
                         <button>
-                            <h3>1</h3>
+                            <h2>1</h2>
                             <div class="ej--right">
                                 <h4>Matematikai módszerek az informatikában 1.</h4>
                                 <p></p>
@@ -81,7 +80,7 @@
                     </a>
                     <a href="classes/OTK-PNY1EG-INF22">
                         <button>
-                            <h3>2</h3>
+                            <h2>2</h2>
                             <div class="ej--right">
                                 <h4>Programozási nyelvek 1.</h4>
                                 <p></p>
@@ -90,7 +89,7 @@
                     </a>
                     <a href="classes/OTK-SZGAEG-INF22">
                         <button>
-                            <h3>3</h3>
+                            <h2>3</h2>
                             <div class="ej--right">
                                 <h4>Számítógépes alapismeretek</h4>
                                 <p></p>
@@ -98,11 +97,11 @@
                         </button>
                     </a>
                 </div>
-                <div class="ej--classes ej--history">
+                <div class="ej--classlist ej--history">
                     <h3>Történelem</h3>
                     <a href="classes/TOR22-151">
                         <button>
-                            <h3>0</h3>
+                            <h2>0</h2>
                             <div class="ej--right">
                                 <h4>Bevezetés a történeti kutatás módszereibe és segédleteibe</h4>
                                 <p></p>
@@ -111,7 +110,7 @@
                     </a>
                     <a href="classes/OTK-TRN22-101">
                         <button>
-                            <h3>1</h3>
+                            <h2>1</h2>
                             <div class="ej--right">
                                 <h4>Bevezetés a történettudományba</h4>
                                 <p></p>
@@ -120,7 +119,7 @@
                     </a>
                     <a href="classes/OTK-TOR-161">
                         <button>
-                            <h3>2</h3>
+                            <h2>2</h2>
                             <div class="ej--right">
                                 <h4>Egyház és vallástörténet</h4>
                                 <p></p>
@@ -129,7 +128,7 @@
                     </a>
                     <a href="classes/BBN-TLA-101-2">
                         <button>
-                            <h3>3</h3>
+                            <h2>3</h2>
                             <div class="ej--right">
                                 <h4>Latin nyelv 1.</h4>
                                 <p></p>
@@ -138,7 +137,7 @@
                     </a>
                     <a href="classes/OTK-TOR22-203">
                         <button>
-                            <h3>4</h3>
+                            <h2>4</h2>
                             <div class="ej--right">
                                 <h4>Ókori történelem 1.</h4>
                                 <p></p>

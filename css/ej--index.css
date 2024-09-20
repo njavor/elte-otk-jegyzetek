@@ -1,0 +1,108 @@
+#ej--intro{
+    margin-bottom: -5em;
+
+    & h1{
+        align-self: flex-start;
+    }
+}
+
+.ej--semester{
+    display: grid;
+    grid-template-areas:
+    'name name'
+    'tech history';
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em 5%;
+
+
+    & h2{
+        grid-area: name;
+        width: auto;
+
+        text-align: center;
+    }
+
+    & .ej--classlist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+
+
+        & > h3{
+            margin-bottom: .25em;
+        }
+
+        
+        & a{
+            width: 100%;
+        }
+        & button{
+            width: 100%;
+    
+            background-color: transparent;
+            color: var(--textColor);
+            
+            display: flex;
+            justify-content: left;
+            align-items: center;
+    
+            text-align: left;
+            
+            border: 2px solid var(--textColor);
+            border-radius: var(--br-def);
+            
+            transition: var(--speed-quick);
+            cursor: pointer;
+        
+            &:hover{
+                background-color: transparent;
+                transform: translateY(0) translateX(5px);
+    
+    
+                & .ej--right{
+                    margin-left: 0;
+                }
+            }
+    
+    
+            & h2{
+                width: 40px;
+                margin: 0;
+                opacity: .25;
+                text-align: right;
+            }
+            & .ej--right{
+                margin-left: -.5em;
+                
+                transition: margin var(--speed-def);
+            }
+        }
+    }
+}
+
+
+
+
+/* MOBIL */
+@media only screen and (max-width: 1200px) {
+    .ej--semester{
+        display: flex;
+        flex-direction: column;
+        gap: 10em;
+
+
+        & > h2{
+            margin-bottom: -1em;
+        }
+    }
+}
+@media only screen and (max-width: 550px) {
+    header{
+        & .left{
+            & #logolink, span{
+                display: none;
+            }
+        }
+    }
+}
