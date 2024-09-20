@@ -1,6 +1,4 @@
 #ej--intro{
-    margin-bottom: -5em;
-
     & h1{
         align-self: flex-start;
     }
@@ -18,6 +16,7 @@
     & h2{
         grid-area: name;
         width: auto;
+        margin-bottom: -1em;
 
         text-align: center;
     }

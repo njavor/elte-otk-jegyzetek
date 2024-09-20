@@ -23,9 +23,9 @@
     <!-- js -->
     <script src="/js/lightMode.js" defer></script>
 
-    <link rel="stylesheet" href="/selfhost/highlightjs/styles/default.min.css">
-    <script src="/selfhost/highlightjs/highlight.min.js" defer></script>
-    <script defer>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="/selfhost/highlightjs/styles/vs2015.css">
+    <script src="/selfhost/highlightjs/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
     
     <!-- favicon -->
@@ -58,16 +58,27 @@
 
     <main>
         <section id="ej--title">
-            <h4>Számítógépes alapismeretek</h4>
+            <h4><a href="../OTK-SZGAEG-INF22">Számítógépes alapismeretek</a></h4>
             <h2>UNIX, bash alapok (24-09-19-G)</h2>
         </section>
+
+        <section id="ej--toc">
+            <h3>Tartalom</h3>
+            <h4><a href="#whatunix">Mi az a UNIX?</a></h4>
+            <h4><a href="#whatbash">Mi az a bash?</a></h4>
+        </section>
+
+
         <section id="ej--content">
-            <h3>Egy cím</h3>
+            <h3 id="whatunix">Mi az a UNIX?</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto omnis nam laboriosam deserunt officiis est unde provident fugiat maiores eum, fuga voluptatum eius molestiae distinctio, voluptatibus ipsa hic sed fugit!
             </p>
-            <pre><code class="language-bash">ls</code></pre>
-            <pre><code class="language-bash">touch valami.txt</code></pre>
+            <pre><code class="bash">ls</code></pre>
+            <pre><code class="bash">touch valami.txt</code></pre>
+
+
+            <h3 id="whatbash">Mi az a bash?</h3>
         </section>
     </main>
 
