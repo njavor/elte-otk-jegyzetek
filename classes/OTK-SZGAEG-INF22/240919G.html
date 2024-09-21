@@ -66,19 +66,47 @@
             <h3>Tartalom</h3>
             <h4><a href="#whatunix">Mi az a UNIX?</a></h4>
             <h4><a href="#whatbash">Mi az a bash?</a></h4>
+            <h4><a href="#joinnet">Kapcsolódás hálózathoz</a></h4>
+            <h4><a href="#commandrules">Parancsírás "szabályai"</a></h4>
+            <h4><a href="#basiccommands">Alapparancsok</a></h4>
         </section>
 
 
         <section id="ej--content">
-            <h3 id="whatunix">Mi az a UNIX?</h3>
+            <h3 id="joinnet">Kapcsolódás hálózathoz (SSH)</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto omnis nam laboriosam deserunt officiis est unde provident fugiat maiores eum, fuga voluptatum eius molestiae distinctio, voluptatibus ipsa hic sed fugit!
+                Számítógépünkről nem csak az eszközön található fájlokat érhetjük el, de egyéb gépek adataihoz is hozzáférhetünk.
             </p>
-            <pre><code class="bash">ls</code></pre>
-            <pre><code class="bash">touch valami.txt</code></pre>
+            <p>
+                Ennek leghétköznapibb módja internethasználat során történik. Amikor egy-egy weboldalt látogatunk meg, akkor valójában mi az 
+                egyes domainnév mögött található szerverrekkel (géppel, gépekkel) vesszük fel a kapcsolatot. Adatot kérhetünk le és tölthetünk fel.
+                Persze ezek egy többszörösen leegyszerűsített kezelőfelületen történnek, hiszen pl. egy facebook-bejegyzés létrehozásakor nem kell 
+                bonyolult könyvtárszerkezeteken átbogarásznunk magunkat, mivel a rendszer alapból csak a hozzánk tartozó részekhez enged hozzáférést.
+                Plusz az egész egy grafikus felületen történik.
+            </p>
+            <p>
+                De nem csak így csatlakozhatunk távoli számítógépekhez. Az SSH (Secure Shell) protokoll által képesek vagyunk biztonságos
+                kapcsolatot létesíteni egy másik eszközzel. Ez valamilyen parancssor felhasználói felület (CLI) segítségével történik, az alábbi módon:
+            </p>
+
+            <ol>
+                <li>Megnyitunk egy CLI-t (pl. Command Prompt, PowerShell)</li>
+                <li>"ssh" szöveggel kezdünk, ez a parancs, amit végrehajtunk</li>
+                <li>"felhasználónév", ez a távoli rendszeren lévő felhasználónevünk</li>
+                <li>"@", ez választja el a felhasználónevet az elérési címtől</li>
+                <li>"elérési cím", ez az cím, amihez csatlakozni akarunk; lehet domainnév vagy IP-cím</li>
+            </ol>
+            <p>Ez így fog kinézni egy parancssorban</p>
+            <pre><code class="bash">ssh felhasznalonev@domainnev.com</code></pre>
+            <p>vagy</p>
+            <pre><code class="bash">ssh felhasznalonev@123.12.123.12</code></pre>
 
 
-            <h3 id="whatbash">Mi az a bash?</h3>
+            <h3 id="commandrules">Parancsírás "szabályai"</h3>
+
+
+
+            <h3 id="basiccommands">Alapparancsok</h3>
         </section>
     </main>
 
