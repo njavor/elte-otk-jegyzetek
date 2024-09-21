@@ -6,6 +6,9 @@ header{
         gap: 1em;
 
 
+        & a{
+            font-family: var(--f-heading);
+        }
         & span{
             margin-bottom: 2px;
 
