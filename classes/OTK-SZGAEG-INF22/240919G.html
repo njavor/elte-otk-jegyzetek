@@ -22,10 +22,12 @@
 
     <!-- js -->
     <script src="/js/lightMode.js" defer></script>
-
-    <link rel="stylesheet" href="/selfhost/highlightjs/styles/vs2015.css">
-    <script src="/selfhost/highlightjs/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    
+    <link rel="stylesheet" href="/selfhost/prismjs/prism.css">
+    <link rel="stylesheet" href="/selfhost/prismjs/prism-vsc-dark-plus.css">
+    <script src="/selfhost/prismjs/prism.js"></script>
+    
+    <script src="/elte-otk-it-jegyzetek/js/addHighlight.js" defer></script>
 
     
     <!-- favicon -->
@@ -82,6 +84,8 @@
             <p>
                 Ennek leghétköznapibb módja internethasználat során történik. Amikor egy-egy weboldalt látogatunk meg, akkor valójában mi az 
                 egyes domainnév mögött található szerverrekkel (géppel, gépekkel) vesszük fel a kapcsolatot. Adatot kérhetünk le és tölthetünk fel.
+            </p>
+            <p>
                 Persze ezek egy többszörösen leegyszerűsített kezelőfelületen történnek, hiszen pl. egy facebook-bejegyzés létrehozásakor nem kell 
                 bonyolult könyvtárszerkezeteken átbogarásznunk magunkat, mivel a rendszer alapból csak a hozzánk tartozó részekhez enged hozzáférést.
                 Plusz az egész egy grafikus felületen történik.
@@ -103,10 +107,11 @@
 
             <div>
                 <p class="connect-down">Ez így fog kinézni egy parancssorban</p>
-                <pre><code class="language-bash">ssh <mark>felhasznalonev</mark>@<mark>domainnev.xyz</mark></code></pre>
+                <pre><code class="language-bash">ssh Đfelhasznalonevđ@Đdomainnev.xyzđ</code></pre>
                 <p class="connect-up">vagy</p>
-                <pre><code class="language-bash">ssh <mark>felhasznalonev</mark>@<mark>123.12.123.12</mark></code></pre>
+                <pre><code class="language-bash">ssh Đfelhasznalonevđ@Đ123.12.123.12đ</code></pre>
             </div>
+
 
             <span id="commandrules" class="anchor"></span>
             <h3>Parancsírás "szabályai"</h3>

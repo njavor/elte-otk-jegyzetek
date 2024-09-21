@@ -59,14 +59,14 @@ main{
     }
     & li{
         list-style: auto;
-        margin-bottom: .2em;
+        margin-bottom: .3em;
     }
 
     & p code, li code{
-        padding: .1em .2em;
+        padding: .2em .3em;
         background: #1E1E1E;
         color: #DCDCDC;
-        border-radius: 15px;
+        border-radius: 10px;
     }
     & pre{
         width: 100%;
@@ -89,6 +89,8 @@ main{
 }
 #ej--content{
     & div{
+        width: 100%;
+
         display: flex;
         flex-direction: column;
         align-items: flex-start;
