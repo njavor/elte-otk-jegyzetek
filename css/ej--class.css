@@ -62,6 +62,17 @@ main{
         margin-bottom: .3em;
     }
 
+    & img{
+        width: 80%;
+        padding-block: 1em;
+        align-self: center;
+    }
+    & label{
+        margin-top: -1em;
+        font-style: italic;
+        opacity: .8;
+    }
+
 
     & p code, li code{
         padding: .2em .3em;
@@ -117,7 +128,7 @@ main{
                 background: none;
                 box-shadow: none;
 
-                &.material-symbols-outlined{
+                & .material-symbols-outlined{
                     font-size: 12pt;
                 }
             }
