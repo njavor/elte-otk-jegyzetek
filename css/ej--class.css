@@ -46,7 +46,7 @@ main{
     flex-direction: column;
     align-items: flex-start;
     justify-content: left;
-    gap: 1em;
+    gap: 1.5em;
 
 
     & h3:not(:nth-child(2)){
@@ -71,7 +71,8 @@ main{
     }
     & pre{
         width: calc(100% - 2em);
-        margin-block: 2em 1em;
+        margin-block: 1em;
+        padding-block: 1.6em 1.4em;
         
         background: #1c1d1d;
         border-radius: 15px;
@@ -83,33 +84,38 @@ main{
             font-size: var(--fs-400);
 
 
-            & mark{
+            & em{
                 margin-inline: .05em;
                 padding: .2em .3em;
+
+                font-style: normal;
                 background: var(--primary);
                 color: var(--black);
             }
         }
     }
     & .toolbar{
-        flex-direction: row;
-    
-        & :first-child{
-            & button{
+        width: fit-content;
+        margin-top: 14px;
 
-                & span{
-                    margin: 8px 0 0 7px;
-                    background: none;
-                    color: var(--white);
-                    box-shadow: none;
-                }
-            }
-        }
-        & :last-child{
+        flex-direction: row;
+        opacity: 1;
+    
+        & .toolbar-item{
             & button{
-                align-self: flex-end;
-                & span{
-                    
+                color: var(--white);
+                background: none;
+                box-shadow: none;
+            }
+            & span{
+                padding-inline: 0;
+
+                color: var(--white);
+                background: none;
+                box-shadow: none;
+
+                &.material-symbols-outlined{
+                    font-size: 12pt;
                 }
             }
         }

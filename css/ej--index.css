@@ -1,15 +1,17 @@
 #ej--intro{
-    & h1{
-        align-self: flex-start;
-    }
+    align-items: flex-start;
+    gap: .5em;
 }
 
+#ej--semesters{
+    padding-inline: 5%;
+}
 .ej--semester{
     display: grid;
     grid-template-areas:
-    'name name'
-    'tech history';
-    grid-template-columns: 1fr 1fr;
+    'name name name'
+    'tech history ped';
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5em 5%;
 
 
