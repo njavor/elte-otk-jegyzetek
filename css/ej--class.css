@@ -102,14 +102,17 @@ main{
         opacity: 1;
     
         & .toolbar-item{
-            & button{
+            & span{
+                padding-inline: 0;
+
                 color: var(--white);
                 background: none;
                 box-shadow: none;
             }
-            & span{
-                padding-inline: 0;
-
+            & > span{
+                margin-top: 1px;
+            }
+            & button{
                 color: var(--white);
                 background: none;
                 box-shadow: none;
