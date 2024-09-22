@@ -100,8 +100,8 @@ main{
                 padding: .2em .3em;
 
                 font-style: normal;
-                background: var(--primary);
-                color: var(--black);
+                background: #333535;
+                color: var(--white);
             }
         }
     }

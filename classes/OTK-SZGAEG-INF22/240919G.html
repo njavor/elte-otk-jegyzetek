@@ -60,14 +60,14 @@
     <main>
         <section id="ej--title">
             <h4><a href="../OTK-SZGAEG-INF22">Számítógépes alapismeretek</a></h4>
-            <h2>UNIX, bash alapok (24-09-19)</h2>
+            <h2>UNIX, kapcsolódás SSH-val, bash alapok (24-09-19)</h2>
         </section>
 
         <section id="ej--toc">
             <h3>Tartalom</h3>
             <h4><a href="#whatunix">Mi az a UNIX?</a></h4>
-            <h4><a href="#whatbash">Mi az a bash?</a></h4>
             <h4><a href="#joinnet">Kapcsolódás hálózathoz</a></h4>
+            <h4><a href="#whatbash">Mi az a bash?</a></h4>
             <h4><a href="#commandrules">Parancsírás "szabályai"</a></h4>
             <h4><a href="#basiccommands">Alapparancsok</a></h4>
             <h4><a href="#sources">Források</a></h4>
@@ -75,6 +75,10 @@
 
 
         <section id="ej--content">
+            <span id="whatunix" class="anchor"></span>
+            <h3>Mi az a UNIX?</h3>
+
+
             <span id="joinnet" class="anchor"></span>
             <h3>Kapcsolódás hálózathoz (SSH)</h3>
             <p>
@@ -105,19 +109,98 @@
             </p>
 
             <div>
-                <p class="connect-down">Ez így fog kinézni egy parancssorban</p>
-                <pre class="language-bash"><code>ssh <em>felhasznalonev</em>@<em>domainnev.xyz</em></code></pre>
+                <p class="connect-down">Így fog kinézni a parancsunk:</p>
+                <pre class="language-bash"><code>ssh <em>felhasznalo</em>@<em>domainnev.xyz</em></code></pre>
                 <p class="connect-up">vagy</p>
-                <pre class="language-bash"><code>ssh <em>felhasznalonev</em>@<em>123.12.123.12</em></code></pre>
+                <pre class="language-bash"><code>ssh <em>felhasznalo</em>@<em>123.12.123.12</em></code></pre>
             </div>
+
+            <div>
+                <p>Ezt követően a felhasználóhoz tartozó jelszót kell megadnunk és máris előttün</p>
+                <pre class="language-bash"><code>
+                    Linux agep 4.9.0-19-amd64 #1 SMP Debian 4.9.320-2 (2022-03-10) x86_64
+                    Hi!
+                    Last login: Thu Sep 19 10:11:12 2024 from 123.12.123.12
+                    
+                    Disk quotas for user ennevem (uid 0): none
+                    Volume Name                    Quota       Used %Used   Partition
+                    user.ennevem               1002000        4    0%         20%
+                    
+                    ennevem@agep:~$
+                </code></pre>
+            </div>
+
+
+            <span id="whatbash" class="anchor"></span>
+            <h3>Mi az a bash"</h3>
 
 
             <span id="commandrules" class="anchor"></span>
             <h3>Parancsírás "szabályai"</h3>
+            <ul>
+                <li>NE használjunk ékezetes (nem angol) karaktereket, szóközöket vagy speciális karaktereket névadáshoz - zavarják az elérési út "tisztaságát"</li>
+                <li>az <code>ENTER</code> nem új sort kezd, hanem elkezdi a parancs futtatását</li>
+                <li>többsoros parancsokat nem szerencsés egyből a terminálba írni - érdemes máshol megírni, majd bemásolni</li>
+            </ul>
 
 
             <span id="basiccommands" class="anchor"></span>
             <h3>Alapparancsok</h3>
+
+            <h4>Felhasználók</h4>
+
+            <p>Saját felhasználó lekérdezése</p>
+            <pre class="language-bash"><code>
+                whoami
+                ennevem
+            </code></pre>
+            
+            <p>Bejelentkezett felhasználók listázása</p>
+            <pre class="language-bash"><code>
+                who
+                jozsi   pts/0   2024-09-22 00:12 (12.123.12.12)
+                masikfelhasznalo    pts/1   2024-09-22 00:42 (12.123.31.13)
+                ennevem pts/2   2024-09-22 00:28 (13.132.12.13)
+                harmadikhasznalo    pts/3   2024-09-22 00:35 (13.231.11.22)
+            </code></pre>
+
+
+            <h4>Tájékozódás és mozgás a fájszerkezetben</h4>
+
+            <p>Fájlok listázása (ott, ahol a fájlszerkezetben vagyunk - adott mappában)</p>
+            <pre class="language-bash"><code>
+                ls
+                mappa   mappa23    zord.txt
+            </code></pre>
+
+            <p>Mozgás az egyel feljebb található mappába</p>
+            <pre class="language-bash"><code>
+                cd ..
+            </code></pre>
+
+
+            <h4>Fájlok és mappák létrehozása, törlése</h4>
+
+            <p>Fájl létrehozása (ott, ahol vagyunk)</p>
+            <pre class="language-bash"><code>
+                touch egyszoveg.txt
+            </code></pre>
+
+            <p>Mappa létrehozása (ott, ahol vagyunk)</p>
+            <pre class="language-bash"><code>
+                mkdir amappa
+            </code></pre>
+            
+            <p>Fájl törlése</p>
+            <pre class="language-bash"><code>
+                rm egyszoveg.txt
+            </code></code>
+
+
+            <p>Mappa törlése (benne lévő fájlokkal együtt: +"-r")</p>
+            <code class="language-bash"><code>
+                rm -r amappa
+            </code></pre>
 
 
             <span id="sources" class="anchor"></span>
