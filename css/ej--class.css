@@ -52,8 +52,21 @@ main{
     & h3:not(:nth-child(2)){
         margin-top: .5em;
     }
+    & h3#otherh3{
+        margin-top: 2em;
+        padding-top: 2em;
+        border-top: 2px dashed var(--scrollbarThumb);
+    }
     & h4:not(:first-child){
         margin-block: .5em -.5em;
+    }
+
+    & a{
+        color: var(--primary);
+
+        &:hover{
+            opacity: .8;
+        }
     }
 
     & ol, ul{
@@ -78,7 +91,7 @@ main{
     }
     & label{
         width: 100%;
-        margin-top: -1em;
+        margin-block: -.5em;
 
         text-align: center;
         font-style: italic;
@@ -90,8 +103,8 @@ main{
 
     & p code, li code{
         padding: .2em .4em;
-        background: #d4d4d4;
-        color: var(--feher);
+        background: #1c1d1d;
+        color: #d4d4d4;
         border-radius: 10px;
     }
     & pre{
@@ -118,7 +131,7 @@ main{
 
                 font-style: normal;
                 background: #333535;
-                color: var(--white);
+                /* color: var(--white); */
             }
         }
     }

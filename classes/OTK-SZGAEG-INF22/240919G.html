@@ -96,7 +96,7 @@
             <div>
                 <p><code>echo</code> – valami kiírása a konzolba</p>
                 <pre class="language-powershell"><code>
-                    echo ITTANAGYszovegem
+                    <em>echo ITTANAGYszovegem</em>
                     ITTANAGYszovegem
                 </code></pre>
             </div>
@@ -107,7 +107,7 @@
             <div>
                 <p><code>ls</code> – könyvtár tartalmának listázása (list)</p>
                 <pre class="language-powershell"><code>
-                    ls
+                    <em>ls</em>
                     mappa   mappa23    zord.txt
                 </code></pre>
                 <ul>
@@ -119,14 +119,14 @@
             <div>
                 <p><code>cd</code> – könyvtárváltás (change directory)</p>
                 <pre class="language-powershell"><code>
-                    cd /ut/a/mappahoz
+                    <em>cd /ut/a/mappahoz</em>
                 </code></pre>
             </div>
 
             <div>
                 <p><code>pwd</code> – munkakönyvtár kiírása (print working directory)</p>
                 <pre class="language-powershell"><code>
-                    pwd
+                    <em>pwd</em>
                     C:/ut/a/helyzetemhez                    
                 </code></pre>
             </div>
@@ -134,12 +134,12 @@
             <div>
                 <p><code>mkdir</code> – új könyvtár létrehozása (make directory)</p>
                 <pre class="language-powershell"><code>
-                    ls
+                    <em>ls</em>
                     marittlevofajl.cs
 
-                    mkdir egy_konyvtar
+                    <em>mkdir egy_konyvtar</em>
 
-                    ls
+                    <em>ls</em>
                     marittlevofajl.cs   egy_konyvtar
                 </code></pre>
             </div>
@@ -147,13 +147,13 @@
             <div>
                 <p><code>rm</code> – fájl/(üres) könyvtár törlése (remove)</p>
                 <pre class="language-powershell"><code>
-                    ls
+                    <em>ls</em>
                     egyfajl.txt uresmappa  mappa3
 
-                    rm egyfajl.txt
+                    <em>rm egyfajl.txt</em>
                     rm uresmappa
 
-                    ls
+                    <em>ls</em>
                     mappa3
                 </code></pre>
                 <ul>
@@ -164,14 +164,14 @@
             <div>
                 <p><code>cp</code> – fájl/könyvtár átmásolása (copy)</p>
                 <pre class="language-powershell"><code>
-                    cp masolando celkonyvtar
+                    <em>cp masolando celkonyvtar</em>
                 </code></pre>
             </div>
             
             <div>
                 <p><code>mv</code> – fájl/könyvtár áthelyezése (vagy átnevezése) (move)</p>
                 <pre class="language-powershell"><code>
-                    mv egynev.txt masiknev.txt  # az "egynev.txt" mostmár "masiknev.txt" néven létezik
+                    <em>mv egynev.txt masiknev.txt</em>  # az "egynev.txt" mostmár "masiknev.txt" néven létezik
                     mv afajl.html a/celkonyvtar
                 </code></pre>
             </div>
@@ -179,9 +179,9 @@
             <div>
                 <p><code>touch</code> – új fájl létrehozása</p>
                 <pre class="language-powershell"><code>
-                    touch alma.txt
+                    <em>touch alma.txt</em>
 
-                    ls
+                    <em>ls</em>
                     alma.txt    marittlevodolog.php   marittlevomappa
                 </code></pre>
             </div>
@@ -189,7 +189,7 @@
             <div>
                 <p><code>cat</code> – fájl tartalmának megjelenítése (concatenate)</p>
                 <pre class="language-powershell"><code>
-                    cat afajl.txt
+                    <em>cat afajl.txt</em>
                     Ebben a fájlban ez a szöveg van most
                 </code></pre>
             </div>
@@ -197,7 +197,7 @@
             <div>
                 <p><code>head</code> – fájl elejének (első 10 sor) megjelenítése</p>
                 <pre class="language-powershell"><code>
-                    head alma.txt
+                    <em>head alma.txt</em>
                     első sor
                     körte
                     szilva
@@ -217,7 +217,7 @@
             <div>
                 <p><code>tail</code> – fájl végének (utolsó 10 sor) megjelenítése</p>
                 <pre class="language-powershell"><code>
-                    tail alma.txt
+                    <em>tail alma.txt</em>
                     körte
                     szilva
                     barack
@@ -237,12 +237,12 @@
             <div>
                 <p><code>ln</code> – "kemény" referenciafájl létrehozása; mintha duplikáltuk volna a fájlt, de ha az egyik módosul, akkor a másik is; törlés nem érvényesül mindkettőre (link)</p>
                 <pre class="language-powershell"><code>
-                    ls
+                    <em>ls</em>
                     nemerdekesmappa     linkelendofajl.txt  valami.csv  egymappa
 
-                    ln linkelendofajl.txt masnev.txt
+                    <em>ln linkelendofajl.txt masnev.txt</em>
 
-                    ls
+                    <em>ls</em>
                     nemerdekesmappa     linkelendofajl.txt  valami.csv  egymappa    masnev.txt
                 </code></pre>
                 <ul>
@@ -253,7 +253,7 @@
             <div>
                 <p><code>find</code> – keresés</p>
                 <pre class="language-powershell"><code>
-                    find /ahol/keresni/akarok -name "keresendo.txt"     # névre keres
+                    <em>find /ahol/keresni/akarok -name "keresendo.txt"</em>     # névre keres
                 </code></pre>
             </div>
 
@@ -263,7 +263,7 @@
             <div>
                 <p><code>whoami</code> – saját felhasználó lekérdezése</p>
                 <pre class="language-powershell"><code>
-                    whoami
+                    <em>whoami</em>
                     ennevem
                 </code></pre>
             </div>
@@ -271,7 +271,7 @@
             <div>
                 <p><code>who</code> – bejelentkezett felhasználók listázása</p>
                 <pre class="language-powershell"><code>
-                    who
+                    <em>who</em>
                     jozsi   pts/0   2024-09-22 00:12 (12.123.12.12)
                     masikfelhasznalo    pts/1   2024-09-22 00:42 (12.123.31.13)
                     ennevem pts/2   2024-09-22 00:28 (13.132.12.13)
@@ -343,7 +343,7 @@
 
 
             <span id="other" class="anchor"></span>
-            <h3>További linkek</h3>
+            <h3 id="otherh3">További linkek</h3>
             <a href="https://www.inf.u-szeged.hu/~ikadar/files/progalap/Linuxosszefoglalo.pdf">Linux parancsok összefoglaló - pdf (in.u-szeged.hu/~ikadar)</a>
             <a href="https://www.youtube.com/playlist?list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As">Linux Command Line Tutorial For Begginers (youtube.com/@ProgrammingKnowledge)</a>
 
