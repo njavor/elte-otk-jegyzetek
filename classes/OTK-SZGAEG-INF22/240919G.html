@@ -60,23 +60,256 @@
     <main>
         <section id="ej--title">
             <h4><a href="../OTK-SZGAEG-INF22">Számítógépes alapismeretek</a></h4>
-            <h2>UNIX, bash alapok (24-09-19)</h2>
+            <h2>Linux alapparancsok, SSH (24-09-19)</h2>
         </section>
 
         <section id="ej--toc">
             <h3>Tartalom</h3>
-            <h4><a href="#whatunix">Mi az a UNIX?</a></h4>
-            <h4><a href="#whatbash">Mi az a bash?</a></h4>
-            <h4><a href="#joinnet">Kapcsolódás hálózathoz</a></h4>
             <h4><a href="#commandrules">Parancsírás "szabályai"</a></h4>
             <h4><a href="#basiccommands">Alapparancsok</a></h4>
+            <h4><a href="#joinnet">Kapcsolódás hálózathoz (SSH)</a></h4>
+            <h4><a href="#other">További linkek</a></h4>
             <h4><a href="#sources">Források</a></h4>
         </section>
 
 
         <section id="ej--content">
+            <span id="commandrules" class="anchor"></span>
+            <h3>Parancsírás "szabályai"</h3>
+            <ul>
+                <li>NE használjunk ékezetes (nem angol) karaktereket, szóközöket vagy speciális karaktereket névadáshoz - hibássá tehetik az elérési utat, parancsokat jelenthetnek</li>
+                <li>az <b>ENTER</b> nem új sort kezd, hanem elkezdi a parancs futtatását</li>
+                <li>többsoros parancsokat nem szerencsés egyből a terminálba írni - érdemes máshol megírni, majd bemásolni</li>
+            </ul>
+
+            <div>
+                <pre class="language-bash"><code>
+                    parancs -opciók parameterek
+                </code></pre>
+                <label for="">Parancs (tipikus) felépítése</label>
+            </div>
+
+
+
+
+            <span id="basiccommands" class="anchor"></span>
+            <h3>Alapparancsok</h3>
+            <h4>Itt felsoroltak:</h4>
+            <ul>
+                <li>echo – valami kiírása a konzolba</li>
+                <li>ls – könyvtár tartalmának listázása (list)</li>
+                <li>cd – könyvtárváltás (change directory)</li>
+                <li>pwd – munkakönyvtár kiírása (print working directory)</li>
+                <li>mkdir – új könyvtár létrehozása (make directory)</li>
+                <li>rm – fájl/(üres) könyvtár törlése (remove)</li>
+                <li>cp – fájl/könyvtár átmásolása (copy)</li>
+                <li>mv – fájl/könyvtár áthelyezése (vagy átnevezése) (move)</li>
+                <li>touch – új fájl létrehozása</li>
+                <li>cat – fájl tartalmának megjelenítése (concatenate)</li>
+                <li>head – fájl elejének (első 10 sor) megjelenítése</li>
+                <li>tail – fájl végének (utolsó 10 sor) megjelenítése</li>
+                <li>ln – referenciafájl létrehozása (link)</li>
+                <li>find – keresés</li>
+                <li>whoami – saját felhasználó lekérdezése</li>
+                <li>who – bejelentkezett felhasználók listázása</li>
+            </ul>
+            <br>
+
+            <div>
+                <p><code>echo</code> – valami kiírása a konzolba</p>
+                <pre class="language-powershell"><code>
+                    echo ITTANAGYszovegem
+                    ITTANAGYszovegem
+                </code></pre>
+            </div>
+
+
+            <h4>Fájl és könyvtárműveletek </h4>
+            
+            <div>
+                <p><code>ls</code> – könyvtár tartalmának listázása (list)</p>
+                <pre class="language-powershell"><code>
+                    ls
+                    mappa   mappa23    zord.txt
+                </code></pre>
+                <ul>
+                    <li><code>ls -l</code> – többletinformációs listázás (list -long)</li>
+                    <li><code>ls -al</code> – listázás, a rejtett fájlokat és mappákat is beleértve (list -all)</li>
+                </ul>
+            </div>
+
+            <div>
+                <p><code>cd</code> – könyvtárváltás (change directory)</p>
+                <pre class="language-powershell"><code>
+                    cd /ut/a/mappahoz
+                </code></pre>
+            </div>
+
+            <div>
+                <p><code>pwd</code> – munkakönyvtár kiírása (print working directory)</p>
+                <pre class="language-powershell"><code>
+                    pwd
+                    C:/ut/a/helyzetemhez                    
+                </code></pre>
+            </div>
+
+            <div>
+                <p><code>mkdir</code> – új könyvtár létrehozása (make directory)</p>
+                <pre class="language-powershell"><code>
+                    ls
+                    marittlevofajl.cs
+
+                    mkdir egy_konyvtar
+
+                    ls
+                    marittlevofajl.cs   egy_konyvtar
+                </code></pre>
+            </div>
+            
+            <div>
+                <p><code>rm</code> – fájl/(üres) könyvtár törlése (remove)</p>
+                <pre class="language-powershell"><code>
+                    ls
+                    egyfajl.txt uresmappa  mappa3
+
+                    rm egyfajl.txt
+                    rm uresmappa
+
+                    ls
+                    mappa3
+                </code></pre>
+                <ul>
+                    <li><code>rm -r [konyvtarneve]</code> – könyvtár törlése tartalmával együtt</li>
+                </ul>
+            </div>
+
+            <div>
+                <p><code>cp</code> – fájl/könyvtár átmásolása (copy)</p>
+                <pre class="language-powershell"><code>
+                    cp masolando celkonyvtar
+                </code></pre>
+            </div>
+            
+            <div>
+                <p><code>mv</code> – fájl/könyvtár áthelyezése (vagy átnevezése) (move)</p>
+                <pre class="language-powershell"><code>
+                    mv egynev.txt masiknev.txt  # az "egynev.txt" mostmár "masiknev.txt" néven létezik
+
+                    mv afajl.html a/celkonyvtar
+                </code></pre>
+            </div>
+            
+            <div>
+                <p><code>touch</code> – új fájl létrehozása</p>
+                <pre class="language-powershell"><code>
+                    touch alma.txt
+
+                    ls
+                    alma.txt    marittlevodolog.php   marittlevomappa
+                </code></pre>
+            </div>
+            
+            <div>
+                <p><code>cat</code> – fájl tartalmának megjelenítése (concatenate)</p>
+                <pre class="language-powershell"><code>
+                    cat afajl.txt
+                    Ebben a fájlban ez a szöveg van most
+                </code></pre>
+            </div>
+            
+            <div>
+                <p><code>head</code> – fájl elejének (első 10 sor) megjelenítése</p>
+                <pre class="language-powershell"><code>
+                    head alma.txt
+                    első sor
+                    körte
+                    szilva
+                    barack
+                    narancs
+                    mandarin
+                    banán
+                    citrom
+                    meggy
+                    retek
+                </code></pre>
+                <ul>
+                    <li><code>head -n [szam]</code> – elso <i>n</i> sor megjelenítése</li>
+                </ul>
+            </div>
+            
+            <div>
+                <p><code>tail</code> – fájl végének (utolsó 10 sor) megjelenítése</p>
+                <pre class="language-powershell"><code>
+                    tail alma.txt
+                    körte
+                    szilva
+                    barack
+                    narancs
+                    mandarin
+                    banán
+                    citrom
+                    meggy
+                    retek
+                    utolsó sor
+                </code></pre>
+                <ul>
+                    <li><code>tail -n [szam]</code> – utolsó <i>n</i> sor megjelenítése</li>
+                </ul>
+            </div>
+            
+            <div>
+                <p><code>ln</code> – "kemény" referenciafájl létrehozása; mintha duplikáltuk volna a fájlt, de ha az egyik módosul, akkor a másik is; törlés nem érvényesül mindkettőre (link)</p>
+                <pre class="language-powershell"><code>
+                    ls
+                    nemerdekesmappa     linkelendofajl.txt  valami.csv  egymappa
+
+                    ln linkelendofajl.txt masnev.txt
+
+                    ls
+                    nemerdekesmappa     linkelendofajl.txt  valami.csv  egymappa    masnev.txt
+                </code></pre>
+                <ul>
+                    <li><code>ln -s</code> – "puha" (szimbolikus) referenciafájl létrehozása; olyan, mint egy parancsikon, ha az eredeti törlődik, akkor nem fog működni (link -soft(symbolic)) </li>
+                </ul>
+            </div>
+            
+            <div>
+                <p><code>find</code> – keresés</p>
+                <pre class="language-powershell"><code>
+                    find /ahol/keresni/akarok -name "keresendo.txt"     # névre keres
+                </code></pre>
+            </div>
+
+            
+            <h4>Felhasználók</h4>
+            
+            <div>
+                <p><code>whoami</code> – saját felhasználó lekérdezése</p>
+                <pre class="language-powershell"><code>
+                    whoami
+                    ennevem
+                </code></pre>
+            </div>
+
+            <div>
+                <p><code>who</code> – bejelentkezett felhasználók listázása</p>
+                <pre class="language-powershell"><code>
+                    who
+                    jozsi   pts/0   2024-09-22 00:12 (12.123.12.12)
+                    masikfelhasznalo    pts/1   2024-09-22 00:42 (12.123.31.13)
+                    ennevem pts/2   2024-09-22 00:28 (13.132.12.13)
+                    harmadikhasznalo    pts/3   2024-09-22 00:35 (13.231.11.22)
+                </code></pre>
+            </div>
+            
+            <p>Ennél jóval több parancs van, de elsőre ez is egy jelentős mennyiség, szóval most itt megállok.</p>
+
+
+
+
             <span id="joinnet" class="anchor"></span>
             <h3>Kapcsolódás hálózathoz (SSH)</h3>
+
             <p>
                 Számítógépünkről nem csak az eszközön található fájlokat érhetjük el, de egyéb gépek adataihoz is hozzáférhetünk.
             </p>
@@ -91,37 +324,60 @@
             </p>
             <p>
                 De nem csak így csatlakozhatunk távoli számítógépekhez. Az SSH (Secure Shell) protokoll által képesek vagyunk biztonságos
-                kapcsolatot létesíteni egy másik eszközzel. Ez valamilyen parancssor felhasználói felület (CLI) segítségével történik, az alábbi módon:
+                kapcsolatot létesíteni egy másik eszközzel. Ez (esetünkben) valamilyen parancssor felhasználói felület (CLI) segítségével történik, az alábbi módon:
             </p>
 
-            <p>
-                <ol>
-                    <li>Megnyitunk egy CLI-t (pl. Command Prompt, PowerShell)</li>
+            <ol>
+                <li>Megnyitunk egy CLI-t (pl. Command Prompt, PowerShell)</li>
+                <li>Következő kerül beírásra <code>ssh felhasznalo@eleresicim</code>, majd <b>ENTER</b></li>
+                <ul>
                     <li><code>ssh</code> – ez a parancs, amit végrehajtunk</li>
-                    <li><code>felhasználónév</code> – ez a távoli rendszeren lévő felhasználónevünk</li>
-                    <li><code>@</code> – ez választja el a felhasználónevet az elérési címtől</li>
-                    <li><code>elérési cím</code> – ez az cím, amihez csatlakozni akarunk; lehet domainnév vagy IP-cím</li>
-                </ol>
-            </p>
+                    <li><code>felhasznalo</code> – ez a távoli rendszeren lévő felhasználónevünk</li>
+                    <li><code>@</code> – felhasználónév és az elérési cím köztt áll; "at" - mint "felhasználónév AT elérési címnél"</li>
+                    <li><code>eleresicim</code> – ez az cím, amihez csatlakozni akarunk; lehet domainnév vagy IP-cím</li>
+                </ul>
+            </ol>
 
             <div>
-                <p class="connect-down">Ez így fog kinézni egy parancssorban</p>
-                <pre class="language-bash"><code>ssh <em>felhasznalonev</em>@<em>domainnev.xyz</em></code></pre>
+                <p class="connect-down">Így fog kinézni a parancsunk:</p>
+                <pre class="language-powershell"><code>ssh <em>felhasznalo</em>@<em>domainnev.xyz</em></code></pre>
                 <p class="connect-up">vagy</p>
-                <pre class="language-bash"><code>ssh <em>felhasznalonev</em>@<em>123.12.123.12</em></code></pre>
+                <pre class="language-powershell"><code>ssh <em>felhasznalo</em>@<em>123.12.123.12</em></code></pre>
+            </div>
+
+            <p>Ezt követően a felhasználóhoz tartozó jelszót kell megadnunk és már bent is vagyunk.</p>
+
+            <div>
+                <pre class="language-powershell"><code>
+                    Linux agep 4.9.0-19-amd64 #1 SMP Debian 4.9.320-2 (2022-03-10) x86_64
+                    Hi!
+                    Last login: Thu Sep 19 10:11:12 2024 from 123.12.123.12
+                    
+                    Disk quotas for user ennevem (uid 0): none
+                    Volume Name                    Quota       Used %Used   Partition
+                    user.ennevem               1002000        4    0%         20%
+                    
+                    ennevem@agep:~$
+                </code></pre>
+                <label>Példa a belépés utáni állapotra</label>
             </div>
 
 
-            <span id="commandrules" class="anchor"></span>
-            <h3>Parancsírás "szabályai"</h3>
 
 
-            <span id="basiccommands" class="anchor"></span>
-            <h3>Alapparancsok</h3>
+            <span id="other" class="anchor"></span>
+            <h3 id="otherh3">További linkek</h3>
+            <a href="https://www.inf.u-szeged.hu/~ikadar/files/progalap/Linuxosszefoglalo.pdf" target="_blank">Linux parancsok összefoglaló - pdf (in.u-szeged.hu/~ikadar)</a>
+            <a href="https://www.youtube.com/playlist?list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As" target="_blank">Linux Command Line Tutorial For Begginers (youtube.com/@ProgrammingKnowledge)</a>
+
+
 
 
             <span id="sources" class="anchor"></span>
             <h3>Források</h3>
+            <p>Az előadás prezentációja ("2. Operációs rendszerek feladatai")</p>
+            <p>A gyakorlat</p>
+            <a href="https://www.geeksforgeeks.org/linux-commands-cheat-sheet" target="_blank">Linux Commands Cheat Sheet (geeksforgeeks.org)</a>
         </section>
     </main>
 

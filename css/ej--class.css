@@ -52,14 +52,37 @@ main{
     & h3:not(:nth-child(2)){
         margin-top: .5em;
     }
+    & h3#otherh3{
+        width: 100%;
+        margin-top: 2em;
+        padding-top: 2em;
+        border-top: 2px dashed var(--scrollbarThumb);
+    }
+    & h4:not(:first-child){
+        margin-block: .5em -.5em;
+    }
+
+    & a{
+        color: var(--primary);
+
+        &:hover{
+            opacity: .8;
+        }
+    }
 
     & ol, ul{
         margin-left: 1.4em;
-        opacity: 90%;
+        color: var(--textColor2);
+
+        & li{
+            margin-bottom: .3em;
+        }
     }
-    & li{
-        list-style: auto;
-        margin-bottom: .3em;
+    & ol li{
+        list-style: decimal;
+    }
+    & ul li{
+        list-style: disc;
     }
 
     & img{
@@ -68,29 +91,37 @@ main{
         align-self: center;
     }
     & label{
-        margin-top: -1em;
+        width: 100%;
+        margin-block: -.5em;
+
+        text-align: center;
         font-style: italic;
+        color: var(--textColor2);
+
         opacity: .8;
     }
 
 
     & p code, li code{
-        padding: .2em .3em;
-        background: var(--black);
-        color: #D6D6D6;
+        padding: .2em .4em;
+        background: #1c1d1d;
+        color: #d4d4d4;
         border-radius: 10px;
     }
     & pre{
-        width: calc(100% - 2em);
+        width: calc(100% - 4em);
         margin-block: 1em;
-        padding-block: 1.6em 1.4em;
+        padding: 1.6em 2em 1.4em 2em;
         
         background: #1c1d1d;
         border-radius: 15px;
         
         
         & code{
-            width: 100%;
+            width: 0;
+            min-width: 100%;
+
+            display: inline-block;
 
             font-size: var(--fs-400);
 
@@ -100,12 +131,13 @@ main{
                 padding: .2em .3em;
 
                 font-style: normal;
-                background: var(--primary);
-                color: var(--black);
+                background: #333535;
+                /* color: var(--white); */
             }
         }
     }
     & .toolbar{
+        z-index: 2;
         width: fit-content;
         margin-top: 14px;
 
@@ -121,6 +153,7 @@ main{
                 box-shadow: none;
             }
             & > span{
+                width: max-content;
                 margin-top: 1px;
             }
             & button{
