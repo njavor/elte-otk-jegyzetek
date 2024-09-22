@@ -59,10 +59,16 @@ main{
     & ol, ul{
         margin-left: 1.4em;
         color: var(--textColor2);
+
+        & li{
+            margin-bottom: .3em;
+        }
     }
-    & li{
-        list-style: auto;
-        margin-bottom: .3em;
+    & ol li{
+        list-style: decimal;
+    }
+    & ul li{
+        list-style: disc;
     }
 
     & img{
@@ -71,16 +77,21 @@ main{
         align-self: center;
     }
     & label{
+        width: 100%;
         margin-top: -1em;
+
+        text-align: center;
         font-style: italic;
+        color: var(--textColor2);
+
         opacity: .8;
     }
 
 
     & p code, li code{
-        padding: .2em .3em;
-        background: #333535;
-        color: var(--white);
+        padding: .2em .4em;
+        background: #d4d4d4;
+        color: var(--feher);
         border-radius: 10px;
     }
     & pre{
