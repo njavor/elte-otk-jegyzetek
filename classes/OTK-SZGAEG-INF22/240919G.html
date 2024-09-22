@@ -60,14 +60,15 @@
     <main>
         <section id="ej--title">
             <h4><a href="../OTK-SZGAEG-INF22">Számítógépes alapismeretek</a></h4>
-            <h2>UNIX, kapcsolódás SSH-val, bash alapok (24-09-19)</h2>
+            <h2>UNIX, SSH, bash alapok (24-09-19)</h2>
         </section>
 
         <section id="ej--toc">
             <h3>Tartalom</h3>
             <h4><a href="#whatunix">Mi az a UNIX?</a></h4>
+            <h4><a href="#whatshell">Mi az a Shell?</a></h4>
+            <h4><a href="#whatssh">Mi az az SSH?</a></h4>
             <h4><a href="#joinnet">Kapcsolódás hálózathoz</a></h4>
-            <h4><a href="#whatbash">Mi az a bash?</a></h4>
             <h4><a href="#commandrules">Parancsírás "szabályai"</a></h4>
             <h4><a href="#basiccommands">Alapparancsok</a></h4>
             <h4><a href="#sources">Források</a></h4>
@@ -77,10 +78,16 @@
         <section id="ej--content">
             <span id="whatunix" class="anchor"></span>
             <h3>Mi az a UNIX?</h3>
+            <span id="whatshell" class="anchor"></span>
+            <h3>Mi az a Shell?</h3>
+            <span id="whatssh" class="anchor"></span>
+            <h3>Mi az az SSH?</h3>
+
 
 
             <span id="joinnet" class="anchor"></span>
             <h3>Kapcsolódás hálózathoz (SSH)</h3>
+
             <p>
                 Számítógépünkről nem csak az eszközön található fájlokat érhetjük el, de egyéb gépek adataihoz is hozzáférhetünk.
             </p>
@@ -98,15 +105,13 @@
                 kapcsolatot létesíteni egy másik eszközzel. Ez valamilyen parancssor felhasználói felület (CLI) segítségével történik, az alábbi módon:
             </p>
 
-            <p>
-                <ol>
-                    <li>Megnyitunk egy CLI-t (pl. Command Prompt, PowerShell)</li>
-                    <li><code>ssh</code> – ez a parancs, amit végrehajtunk</li>
-                    <li><code>felhasználónév</code> – ez a távoli rendszeren lévő felhasználónevünk</li>
-                    <li><code>@</code> – ez választja el a felhasználónevet az elérési címtől</li>
-                    <li><code>elérési cím</code> – ez az cím, amihez csatlakozni akarunk; lehet domainnév vagy IP-cím</li>
-                </ol>
-            </p>
+            <ol>
+                <li>Megnyitunk egy CLI-t (pl. Command Prompt, PowerShell)</li>
+                <li><code>ssh</code> – ez a parancs, amit végrehajtunk</li>
+                <li><code>felhasználónév</code> – ez a távoli rendszeren lévő felhasználónevünk</li>
+                <li><code>@</code> – ez választja el a felhasználónevet az elérési címtől</li>
+                <li><code>elérési cím</code> – ez az cím, amihez csatlakozni akarunk; lehet domainnév vagy IP-cím</li>
+            </ol>
 
             <div>
                 <p class="connect-down">Így fog kinézni a parancsunk:</p>
@@ -115,8 +120,10 @@
                 <pre class="language-powershell"><code>ssh <em>felhasznalo</em>@<em>123.12.123.12</em></code></pre>
             </div>
 
+            <p>Ezt követően a felhasználóhoz tartozó jelszót kell megadnunk és már bent is vagyunk.</p>
+
             <div>
-                <p>Ezt követően a felhasználóhoz tartozó jelszót kell megadnunk és máris előttün</p>
+                <p>(példa a belépési utánni állapotra:)</p>
                 <pre class="language-powershell"><code>
                     Linux agep 4.9.0-19-amd64 #1 SMP Debian 4.9.320-2 (2022-03-10) x86_64
                     Hi!
@@ -129,10 +136,6 @@
                     ennevem@agep:~$
                 </code></pre>
             </div>
-
-
-            <span id="whatbash" class="anchor"></span>
-            <h3>Mi az a bash</h3>
 
 
             <span id="commandrules" class="anchor"></span>

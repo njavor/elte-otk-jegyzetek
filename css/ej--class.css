@@ -52,10 +52,13 @@ main{
     & h3:not(:nth-child(2)){
         margin-top: .5em;
     }
+    & h4:not(:first-child){
+        margin-block: .5em -.5em;
+    }
 
     & ol, ul{
         margin-left: 1.4em;
-        opacity: 90%;
+        color: var(--textColor2);
     }
     & li{
         list-style: auto;
@@ -76,21 +79,24 @@ main{
 
     & p code, li code{
         padding: .2em .3em;
-        background: var(--black);
-        color: #D6D6D6;
+        background: #333535;
+        color: var(--white);
         border-radius: 10px;
     }
     & pre{
-        width: calc(100% - 2em);
+        width: calc(100% - 4em);
         margin-block: 1em;
-        padding-block: 1.6em 1.4em;
+        padding: 1.6em 2em 1.4em 2em;
         
         background: #1c1d1d;
         border-radius: 15px;
         
         
         & code{
-            width: 100%;
+            width: 0;
+            min-width: 100%;
+
+            display: inline-block;
 
             font-size: var(--fs-400);
 
@@ -121,6 +127,7 @@ main{
                 box-shadow: none;
             }
             & > span{
+                width: max-content;
                 margin-top: 1px;
             }
             & button{
