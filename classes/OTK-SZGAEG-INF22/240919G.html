@@ -110,14 +110,14 @@
 
             <div>
                 <p class="connect-down">Így fog kinézni a parancsunk:</p>
-                <pre class="language-bash"><code>ssh <em>felhasznalo</em>@<em>domainnev.xyz</em></code></pre>
+                <pre class="language-powershell"><code>ssh <em>felhasznalo</em>@<em>domainnev.xyz</em></code></pre>
                 <p class="connect-up">vagy</p>
-                <pre class="language-bash"><code>ssh <em>felhasznalo</em>@<em>123.12.123.12</em></code></pre>
+                <pre class="language-powershell"><code>ssh <em>felhasznalo</em>@<em>123.12.123.12</em></code></pre>
             </div>
 
             <div>
                 <p>Ezt követően a felhasználóhoz tartozó jelszót kell megadnunk és máris előttün</p>
-                <pre class="language-bash"><code>
+                <pre class="language-powershell"><code>
                     Linux agep 4.9.0-19-amd64 #1 SMP Debian 4.9.320-2 (2022-03-10) x86_64
                     Hi!
                     Last login: Thu Sep 19 10:11:12 2024 from 123.12.123.12
@@ -132,7 +132,7 @@
 
 
             <span id="whatbash" class="anchor"></span>
-            <h3>Mi az a bash"</h3>
+            <h3>Mi az a bash</h3>
 
 
             <span id="commandrules" class="anchor"></span>
@@ -149,58 +149,71 @@
 
             <h4>Felhasználók</h4>
 
-            <p>Saját felhasználó lekérdezése</p>
-            <pre class="language-bash"><code>
-                whoami
-                ennevem
-            </code></pre>
-            
-            <p>Bejelentkezett felhasználók listázása</p>
-            <pre class="language-bash"><code>
-                who
-                jozsi   pts/0   2024-09-22 00:12 (12.123.12.12)
-                masikfelhasznalo    pts/1   2024-09-22 00:42 (12.123.31.13)
-                ennevem pts/2   2024-09-22 00:28 (13.132.12.13)
-                harmadikhasznalo    pts/3   2024-09-22 00:35 (13.231.11.22)
-            </code></pre>
+            <div>
+                <p>Saját felhasználó lekérdezése</p>
+                <pre class="language-powershell"><code>
+                    whoami
+                    ennevem
+                </code></pre>
+            </div>
 
+            <div>
+                <p>Bejelentkezett felhasználók listázása</p>
+                <pre class="language-powershell"><code>
+                    who
+                    jozsi   pts/0   2024-09-22 00:12 (12.123.12.12)
+                    masikfelhasznalo    pts/1   2024-09-22 00:42 (12.123.31.13)
+                    ennevem pts/2   2024-09-22 00:28 (13.132.12.13)
+                    harmadikhasznalo    pts/3   2024-09-22 00:35 (13.231.11.22)
+                </code></pre>
+            </div>
 
             <h4>Tájékozódás és mozgás a fájszerkezetben</h4>
 
-            <p>Fájlok listázása (ott, ahol a fájlszerkezetben vagyunk - adott mappában)</p>
-            <pre class="language-bash"><code>
-                ls
-                mappa   mappa23    zord.txt
-            </code></pre>
+            <div>
+                <p>Fájlok listázása (ott, ahol a fájlszerkezetben vagyunk - adott mappában)</p>
+                <pre class="language-powershell"><code>
+                    ls
+                    mappa   mappa23    zord.txt
+                </code></pre>
+            </div>
 
-            <p>Mozgás az egyel feljebb található mappába</p>
-            <pre class="language-bash"><code>
-                cd ..
-            </code></pre>
-
+            <div>
+                <p>Mozgás a felettünk található mappába</p>
+                <pre class="language-powershell"><code>
+                    cd ..
+                </code></pre>
+            </div>
 
             <h4>Fájlok és mappák létrehozása, törlése</h4>
 
-            <p>Fájl létrehozása (ott, ahol vagyunk)</p>
-            <pre class="language-bash"><code>
-                touch egyszoveg.txt
-            </code></pre>
+            <div>
+                <p>Fájl létrehozása (ott, ahol vagyunk)</p>
+                <pre class="language-powershell"><code>
+                    touch egyszoveg.txt
+                </code></pre>
+            </div>
 
-            <p>Mappa létrehozása (ott, ahol vagyunk)</p>
-            <pre class="language-bash"><code>
-                mkdir amappa
-            </code></pre>
-            
-            <p>Fájl törlése</p>
-            <pre class="language-bash"><code>
-                rm egyszoveg.txt
-            </code></code>
+            <div>
+                <p>Mappa létrehozása (ott, ahol vagyunk)</p>
+                <pre class="language-powershell"><code>
+                    mkdir amappa
+                </code></pre>
+            </div>
 
+            <div>
+                <p>Fájl törlése</p>
+                <pre class="language-powershell"><code>
+                    rm egyszoveg.txt
+                </code></pre>
+            </div>
 
+            <div>
             <p>Mappa törlése (benne lévő fájlokkal együtt: +"-r")</p>
-            <code class="language-bash"><code>
+            <pre class="language-powershell"><code>
                 rm -r amappa
             </code></pre>
+            </div>
 
 
             <span id="sources" class="anchor"></span>
