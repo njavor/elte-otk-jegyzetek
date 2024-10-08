@@ -60,7 +60,7 @@
     <main>
         <section id="ej--title">
             <h4><a href="../OTK-SZGAEG-INF22">Számítógépes alapismeretek</a></h4>
-            <h2>A Vi csodálatos világa (24-10-03)</h2>
+            <h2>A Vim csodálatos világa (24-10-03)</h2>
         </section>
 
         <section id="ej--toc">
@@ -91,15 +91,39 @@
 
             <h4>De akkor most mire is jó ez?</h4>
             <p>Röviden: parancssor használat közben ez a legkézenfekvőbb szövegszerkesztési mód; segíti a gyorsabb kódírást</p>
-            <p>Kicsit hosszabban: A tárgy lényege, hogy jobban megismerkedjünk </p>
-
-
-
+            <p>
+                Kicsit hosszabban:<br>
+                A Vim-ben használt parancsok és az azok által megtanult "alapelvek" (banális példa, de pl. a mentés fontossága) végig vissza fognak köszönni tanulmányaink során. Ezért érdemes őket most, 
+                ilyen "kezdetleges" változatukban megtanulni, mivel a továbbiak ezek térnek vissza újra és újra.
+                <br>
+                Praktikai szempontból: a szerverekkel (nem csak a szamrend.inf.elte.hu esetében) általában parancssor segítségével kommunikálunk, ami mellé még egy programmal történő csatlakozás macerás és nehez átlátható lehet, 
+                így egy külsős szövegszerkesztő bevonás nem preferált.
+                <br>
+                Mellékesen: Ha sok kódot ír az ember napi szinten, az egér használata hosszú távon jelentős mértékben lassítja a különböző folyamatok lefolytatását, hiszen idő elnavigálni a kurzorral a képernyő egyik végéből a másikba. 
+                Tehát az egér kiiktatása időbeli nyereséggel jár. A Vim segít ezt megvalósítani.
+            </p>
 
 
 
             <span id="intandcomm" class="anchor">Interface és parancsok</span>
             <h3>Interface és parancsok</h3>
+
+            <div>
+                <p>
+                    A parancssor megnyitása, valamint a szerverre való belépést követően az alábbi mód(ok)on tudjuk megnyitni a Vim-et:
+                </p>
+                <pre class="language-powershell"><code>
+                    vim
+                    vim ujnev.txt  # megadtuk, hogy a létrejövő fájlnak mi legyen a neve
+                    vim letezo_fajl.txt  # ha már létező fájl nevét adjuk meg, akkor <b>azt nyitja meg</b>, nem hoz létre újat azonos néven
+                </code></pre>
+            </div>
+
+            <p>Ezt követően (új fájl esetén) az alábbi ablak fogad minket:</p>
+            <img src="./img/241003-vim-start.png" alt="megnyitott Vim">
+
+
+
 
 
 
@@ -110,6 +134,7 @@
 
             <span id="practice" class="anchor"></span>
             <h3>Gyakorló feladatok</h3>
+            <p><i>hamarosan</i></p>
 
 
             
