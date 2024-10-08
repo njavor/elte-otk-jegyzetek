@@ -102,6 +102,24 @@ main{
     }
 
 
+    & table{
+        border-collapse: collapse;
+
+
+        & th, td{
+            padding: .6em;
+
+            text-align: center;
+            border: 2px solid var(--textColor2);
+        }
+        & th{
+            font-weight: 600;
+            background: var(--bgLight);
+        }
+
+    }
+
+
     & p code, li code{
         padding: .2em .4em;
         background: #1c1d1d;
