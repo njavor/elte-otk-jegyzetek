@@ -101,6 +101,7 @@ main{
 
     & img{
         width: 80%;
+        height: auto;
         padding-block: 1em;
         align-self: center;
     }
@@ -164,7 +165,6 @@ main{
 
                 font-style: normal;
                 background: #333535;
-                /* color: var(--white); */
             }
         }
     }
