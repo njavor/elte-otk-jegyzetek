@@ -22,6 +22,20 @@ main{
 
     font-size: var(--fs-button);
     font-weight: 600;
+
+
+    & div{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: .5em;
+    }
+
+    & h3:not(:first-child){
+        margin-top: 1em;
+    }
 }
 
 
@@ -192,6 +206,7 @@ main{
 #ej--content{
     & div{
         width: 100%;
+        padding-block: .5em;
 
         display: flex;
         flex-direction: column;

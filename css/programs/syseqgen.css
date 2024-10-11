@@ -1,0 +1,56 @@
+div.syseqgen{
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr;
+    gap: 1.5em 5em;
+
+    & > label{
+        grid-column: 1;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    & div.variables{
+        grid-column: 1;
+        width: fit-content;
+
+        display: grid;
+        grid-template-columns: fit-content(100%) fit-content(100%);
+        align-items: center;
+        gap: 1em .5em;
+
+        & label{
+            margin-block: 0;
+            text-align: left;
+            opacity: 1;
+
+            color: var(--textColor);
+        }
+
+        & input{
+            width: 40px;
+            padding: .5em;
+
+            color: var(--textColor);
+            background: var(--bgLight);
+            border: 1px solid var(--textColor)
+        }
+
+        & button{
+            grid-column: 1/3;
+            padding: .5em;
+
+            border-radius: 0;
+            font-size: var(--fs-400);
+        }
+    }
+
+    & div.results{
+        grid-row: 3;
+
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+
+        color: var(--textColor);
+    }
+}
