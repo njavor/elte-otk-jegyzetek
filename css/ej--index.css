@@ -7,12 +7,14 @@
     padding-inline: 5%;
 }
 .ej--semester{
+    width: 100%;
+
     display: grid;
     grid-template-areas:
     'name name name'
     'tech history ped';
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5em 5%;
+    grid-gap: 5em 0;
 
 
     & h2{
@@ -24,6 +26,8 @@
     }
 
     & .ej--classlist{
+        padding: 3%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -80,6 +84,9 @@
             }
         }
     }
+}
+#ej--24251{
+    grid-template-columns: 1fr 1fr;
 }
 
 
