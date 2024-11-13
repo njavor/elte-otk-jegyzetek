@@ -36,6 +36,13 @@
     <script src="/selfhost/prismjs/prism.js"></script>
 
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!------------------ KATEX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
     
     
     <!-- favicon -->
@@ -74,16 +81,19 @@
 
         <section id="ej--toc">
             <h3>Tartalom</h3>
-            <h4><a href="#syseqxgen">Egyenletrendszer generátor</a></h4>
+            <h4><a href="#syseq">Kiküszöböléses módszer</a></h4>
+            <h4><a href="#syseqgen">Egyenletrendszer generátor</a></h4>
             <h4><a href="#syseqsolve">Egyenletrendszer kalkulátor</a></h4>
+            <h4><a href="#excercises">Feladatok</a></h4>
+            <h4><a href="#solutions">Megoldások</a></h4>
             <h4><a href="#other">További linkek</a></h4>
             <h4><a href="#sources">Források</a></h4>
         </section>
 
 
         <section id="ej--content">
-            <span id="intro" class="anchor"></span>
-            <h3>Bevezetés</h3>
+            <span id="syseq" class="anchor"></span>
+            <h3>Kiküszöböléses módszer</h3>
 
 
 
@@ -93,13 +103,35 @@
                 <h3>Egyenletrendszer generátor</h3>
                 <div class="variables">
                     <label for="egyneletszam">egyenletrendszer <br> mérete (max. 6):</label>
-                    <input type="number" name="egyenletszam" id="" max="6">
+                    <input type="number" name="egyenletszam" id="" min="1" max="6">
                     <button id="syseqgenButton">generálás</button>
                 </div>
                 <div class="results"></div>
             </div>
 
+
+
+            <span id="excercises" class="anchor"></span>
+            <h3>Feladatok</h3>
+            <h4><code>3.0.1. feladat.</code> Vizsgáljuk meg az alábbi egyenletrendszereket megoldhatóság szempontjából!</h4>
+            $$
+                2x_1 - 5x_2 + 3x_3 = -4
+            $$
+            $$
+            \begin{bmatrix}
+            1 & 2 & 3 \\
+            4 & 5 & 6
+            \end{bmatrix}
+            $$
+
+
+
+            <span id="solutions" class="anchor"></span>
+            <h3>Megoldások</h3>
             
+
+
+
 
 
             <span id="other" class="anchor"></span>
