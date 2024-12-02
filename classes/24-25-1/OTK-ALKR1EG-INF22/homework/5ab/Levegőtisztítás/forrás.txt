@@ -1,0 +1,12 @@
+Levegőtisztítás-védelmi adatszolgáltatás
+Telephely adatai
+Környezetvédelmi Területi Jel (KTJ):
+0	0	0	1
+Megnevezése:
+Település neve:
+Cím:
+irányítószámközterületházszám
+Nyilatkozat
+Tudomásul veszem, hogy valótlan adatok közlése, az adatszolgáltatás megtagadása, a késedelmes adatszolgáltatás a hatályos jogszabályok szerinti bírság kiszabását vonja maga után.
+Az üzemeltető képviseletében kérem, hogy küldjék meg számomra a fent megadott KTJ számú telephelyre vonatkozó aktuális LAL adatokat.
+Kérjük, a kitöltött űrlapot postafordultával a következő címre küldjék: 1376 Budapest, Pf. 997.

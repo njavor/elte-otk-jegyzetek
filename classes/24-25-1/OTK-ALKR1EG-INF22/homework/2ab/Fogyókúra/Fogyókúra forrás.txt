@@ -1,0 +1,26 @@
+Fogyókúra 
+A lakosság jelentős része elhízott, ami nem csak esztétikailag jelent problémát, de ennek következtében egy sor betegség is kialakulhat. A túlsúly megszüntetésének egyik módszere a fogyókúra.
+Ebben a feladatban az egészséges fogyókúrát bemutató dokumentumot kell elkészítenie az alábbi leírás és minta alapján. Az elkészítéséhez használja fel az ismerteto.txt UTF-8 kódolású szövegállományt!
+Alapbeállítások és az első oldal formázása
+Hozza létre szövegszerkesztő program segítségével a fogyokura nevű dokumentumot a program alapértelmezett formátumában a forrás felhasználásával! A dokumentumban szüntesse meg a felesleges szóközöket és üres bekezdéseket!
+Legyen a dokumentum álló tájolású és A4-es lapméretű! A bal és a jobb oldali margót 2,1 cm-esre, az alsó, illetve felső margót pedig 2,3 cm-esre állítsa be!
+A dokumentum teljes szövege Times New Roman (Nimbus Roman) betűtípusú legyen! A szövegtörzs karaktereinek betűméretét – ahol a feladat mást nem kér – 12 pontosra állítsa! A bekezdések igazítása sorkizárt, a sorközük egyszeres, előttük 0 pontos, utánuk 6 pontos térköz legyen!
+Készítse el a cím és a hat alcím formázását a következőképpen!
+A címhez 22 pontos és az alcímekhez 14 pontos betűméretet alkalmazzon!
+A betűk kiskapitális és félkövér betűstílussal jelenjenek meg!
+A cím előtt 0, utána 6 pontos, az alcímek előtt 12, utánuk pedig 6 pontos térköz legyen!
+Állítsa a cím és az alcímek igazítását a mintának megfelelően!
+Az első oldalon, közvetlenül a kapcsos zárójel előtt található „BMI” szóhoz és a második oldalon található „A diéta meghatározása” alcímhez szúrjon be lábjegyzeteket! Mind a kettő jelölésére „*” karaktert alkalmazzon! A lábjegyzetek szövegét külön-külön a kapcsos zárójelek közül helyezze át, és a kapcsos zárójeleket tartalmazó szövegrészeket törölje ki! A lábjegyzetek szövegét Times New Roman (Nimbus Roman) betűtípussal, 10 pontos betűmérettel és dőlt betűstílussal jelenítse meg!
+Alakítsa ki és formázza a mintának megfelelően az első oldal alján látható képletet! Biztosítsa, hogy a képlet utáni szöveg mindenképpen új oldalon kezdődjön!
+A többi oldal formázása
+A dokumentum második oldalára a két táblázatot alakítsa ki, készítse el! A forrásszövegben a táblázat adatait kettős pont tagolja. A táblázatok a mintának és az alábbi leírásnak megfelelően jelenjenek meg:
+A táblázatokat igazítsa középre és szélességüket állítsa úgy, hogy a szövegtükörnél keskenyebbek, de a cellák szövegei egysorosak legyen!
+A táblázatok celláiban a bekezdések utáni térköz 0 pontos legyen!
+Állítsa a táblázatok sorainak magasságát 0,6 cm-re! Valamennyi cella tartalmát zárja vízszintesen balra, függőlegesen középre!
+Az első sor betűstílusa félkövér, a cellák háttérszíne pedig világosszürke legyen! 
+Formázza az első táblázat „normál, egészséges testsúly” sorát félkövér betűstílussal! 
+A cellákat a táblázaton belül vékony vonallal, a táblázatot pedig dupla vonallal szegélyezze!
+Alakítsa ki a minta szerint a 2. és 3. oldalon a felsorolásokat! A felsorolásjel a kötőjel legyen!
+Az utolsó alcím, az „Ételkészítési eljárások” után a felsorolás szövegében a betűméret 10 pontos és a betűstílus dőlt legyen! A bekezdések hátterét állítsa világosszürkére és balról vékony, szaggatott, fekete szegély jelenjen meg! (A szegély és a szürke háttér a mintától eltérően akár össze is érhet.)
+A teljes dokumentumban alkalmazzon elválasztást!
+40 pont

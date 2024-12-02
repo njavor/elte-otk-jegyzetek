@@ -1,0 +1,173 @@
+A Dürer verseny szabályzata
+
+Nemzetközi verseny az E és E+ kategóriákban
+Idén az E és E+ kategóriát meghirdetjük nem hivatalos nemzetközi versenyként. Ez azt jelenti, hogy a helyi forduló ideje alatt a honlapon elérhetővé tesszük a feladatsorok angol nyelvű változatait, melyet így bárki megoldhat és beküldhet nekünk. Mi pedig vállaljuk, hogy kijavítjuk és az eredményéről értesítjük a csapatot.
+Ugyanakkor, így nem tudjuk ellenőrizni, hogy az indulók betartják-e a verseny szabályait (azaz például a csapatalkotási feltételeknek megfelelnek, vagy hogy nem használnak-e számológépet), emiatt a versenyen ők csak nem hivatalos indulóként vehetnek részt, ezért például a döntőbe se hívjuk meg őket.
+Az angol nyelvű felhívást ezen az oldalon lehet elolvasni: https://durerinfo.hu/durer-in-english/durer-in-english-take-part-in-the-competition/
+A verseny bármifajta terjesztéséért nagyon hálásak vagyunk, mivel hisszük, hogy a jó feladatokon bárkinek öröm gondolkodni. 
+Matematika (általános iskola)
+A versenyt Borsod-Abaúj-Zemplén, Heves és Szabolcs-Szatmár-Bereg megye tehetséges diákjai számára szervezzük (5-6., illetve 7-8. évfolyamon), de lehetőséget biztosítunk a máshonnan érkező csapatok nevezésére is. A versenyre 3 fős csapatok jelentkezését várjuk.
+Egy csapatnak az alábbi két feltételt kell teljesítenie:
+Legalább egy lány is legyen a csapatban!
+Legyen legalább egy tanuló az alacsonyabb évfolyamról!
+Helyi forduló
+Az A és B kategória versenyeit elsősorban Borsod-Abaúj-Zemplén, Heves és Szabolcs-Szatmár-Bereg megye tehetséges diákjai számára szervezzük, ennek megfelelően a versenyhelyszínek is mind ebben a régióban helyezkednek el.
+15 feladat megoldására nyílik lehetőség; erre 90 perc áll rendelkezésre. A válasz minden kérdésre egy legfeljebb 4-jegyű nemnegatív egész szám, melyet a feladatlap megfelelő válaszmezőjébe beírva lehet leadni a zsűrinek. A verseny elején a csapatok csak az első feladatot kapják meg. Ha a csapat egy feladatot helyesen megold, akkor kapja meg a következő feladatot.
+A feladatok pontértéke változó (3-6 pont), a feladatlapon lesz feltüntetve. Egy feladatra adott hibás válaszkísérletet követően még lehet újra próbálkozni, de minden rossz tipp esetén a feladatra szerezhető pontszám 1 ponttal csökken. A harmadik rossz válasz után azonban már nem lehet újra tippelni ‒ ilyenkor a csapat erre a feladatra 0 pontot kap, és megkapja a következő feladatot. 
+A forduló során élőben követhető lesz egy kivetítőn a csapatok haladása (hogy melyik feladatra hány pontot szereztek). Kivéve az utolsó 10 percben, amikor lekapcsoljuk a kivetítőket, hogy a végeredmény titkos maradjon az eredményhirdetésig. Az összes feladat megoldásával 66 pont szerezhető.
+Sajnos, a legalaposabb ellenőrzés ellenére is előfordulhat, hogy a megoldókulcs hibás. Ha előfordul olyan feladat, amelynek megoldása hibás, arról a zsűri verseny közben semmilyen információt sem ad. Akkor sem fogadjuk el a helyes megoldást, ha menet közben mi magunk is meggyőződtünk a hibáról, tehát (verseny közben) az esetleges reklamációkra sem reagálunk. A verseny után a hibás feladatra kapott pontokat minden csapatnál töröljük.
+A helyi forduló során kizárólag az alábbi segédeszközök használhatók: toll, ceruza, radír, körző, vonalzó. A döntő eredményébe a helyi fordulóban szerzett pontok már nem számítanak bele.
+A miskolci döntőbe kétféleképpen lehet bejutni. A helyszínek győztesei bejutnak a döntőbe, ha a saját kategóriájukban legalább 3 csapat részt vesz a versenyen. A Borsod-Abaúj-Zemplén, Heves és Szabolcs-Szatmár-Bereg megyén kívülről érkező, külsős csapatokat a fenti szabálynál nem vesszük figyelembe. A legjobb külsős csapat is bejut a döntőbe (ha legalább 3 külsős csapat vett részt a kategóriájában). A győzteseken kívül bejutnak még az összesítésben legjobban szereplő csapatok is, de egy kategóriában egy iskolának legfeljebb két csapata juthat be a döntőbe. Az adott iskola csapatának számít egy csapat, ha minden tagja abból az iskolából jött.
+Döntő (1. versenynap)
+Az első napon 6 feladat megoldására van lehetőség, ehhez 2 óra áll rendelkezésre. Az első öt hagyományos matematika feladat, melynek írásban kell elkészíteni a megoldását, részletesen indokolva a megoldás lépéseit. A feladatok mindegyike 12 pontot ér. Kérjük, hogy a versenyzők minden feladatot külön lapra írjanak (tollal), és mindegyik lap tetején szerepeljen a csapat neve és kategóriája.
+Az utolsó, hatodik feladat egy matematikai játék. Ebben a szervezőket kell legyőzni, így szerezhető meg a feladatért járó 12 pont. A verseny időtartama során bármikor jelentkezhet egy csapat, ha úgy érzi, nyerő stratégiát talált, mellyel meg tudja verni az egyetemista szervezőket. Ekkor valamelyikünk odamegy, és ját-szik a csapat ellen, egymás után 2 meccset. Ha mindkét meccset a versenyzők nyerik, úgy övék a 12 pont. Ha ez nem sikerül, a versenyző csapat tovább gondolkozhat, és később újra kihívhatja a szervezőket az előbbi feltételekkel, de sikere esetén már csak 6 pontot kap; az esetleges harmadik próbálkozás sikere esetén pedig 3 pont szerezhető (negyedik kísérletre már nincs lehetőség).
+Összesen 72 pont szerezhető.
+Döntő (2. versenynap)
+A második nap hasonló a helyi fordulóhoz. Ekkor 16 feladat megoldására nyílik lehetőség; erre 90 perc áll rendelkezésre. A válasz minden kérdésre egy legfeljebb 4-jegyű nemnegatív egész szám, melyet a feladatlap megfelelő válaszmezőjébe beírva lehet leadni a zsűrinek (1. ábra). A verseny elején a csapatok csak az első feladatot kapják meg. Ha a csapat egy feladatot helyesen megold, akkor kapja meg a következő feladatot.
+A feladatok pontértéke változó (3-6 pont), a feladatlapon lesz feltüntetve. Egy feladatra adott hibás válaszkísérletet követően még lehet újra próbálkozni, de minden rossz tipp esetén a feladatra szerezhető pontszám 1 ponttal csökken. A harmadik rossz válasz után azonban már nem lehet újra tippelni – ilyenkor a csapat erre a feladatra 0 pontot kap, de megkapja a következő feladatot. A forduló során élőben követhető lesz egy kivetítőn a csapatok haladása (hogy melyik feladatra hány pontot szereztek). Kivéve az utolsó 10 percben, amikor lekapcsoljuk a kivetítőket, hogy a végeredmény titkos maradjon az eredményhirdetésig.
+A második versenynapon az összes feladat megoldásával 72 pont szerezhető.
+Sajnos, a legalaposabb ellenőrzés ellenére is előfordulhat, hogy a megoldókulcs hibás. Ha előfordul olyan feladat, amelynek megoldása hibás, arról a zsűri verseny közben semmilyen információt sem ad. Akkor sem fogadjuk el a helyes megoldást, hogyha menet közben mi magunk is meggyőződtünk a hibáról, tehát (verseny közben) az esetleges reklamációkra sem reagálunk. A verseny után a hibás feladatra kapott pontokat minden csapatnál töröljük.
+A döntő során kizárólag az alábbi segédeszközök használhatók: toll, ceruza, radír, körző, vonalzó.
+A verseny végeredményét a két versenynapon szerzett pontok összege határozza meg. Összesen a döntő során 144 pont szerezhető. A döntő eredményébe a helyi fordulóban szerzett pontok már nem számítanak bele.
+Matematika (középiskola)
+A C és D kategóriákat elsősorban népszerűsítő céllal szervezzük. Reméljük, hogy sok olyan diákot is sikerül megszólítanunk, aki korábban még nem nagyon járt versenyeken. Olyan feladatokat tűzünk ki, amelyek a normál gimnáziumi kerettantervben foglaltak ismeretével megoldhatóak ‒ persze szép, nehéz ötleteket itt is igényelhet egy-egy feladat.
+Az E és az E+ kategóriákban a rutinosabb versenyzők részére hirdettük meg. Az E kategóriában nehezebb, de mélyebb előismeretet nem igénylő feladatokat tűzünk ki. E+ kategóriákban nehezebb, alkalmanként mélyebb háttérismeretet is igénylő feladatokra lehet számítani; támpontnak itt a speciális matematika tagozatos kerettantervet tekintjük.
+Indulási feltételek
+Három fős csapatok jelentkezését várjuk. Minden csapatban kell lennie legalább egy lánynak. Minden csapatban kell lennie egy ,,fiatal” diáknak, azaz a C kategóriában kell maximum 9. osztályos diák a csapatba; a D, E és E+ kategóriában pedig kell legfeljebb 11. osztályos diák a csapatba.
+Nem indulhat a C, D és E kategóriákban olyan diák, akire az alábbiak valamelyike igaz:
+A Matematika Diákolimpiai válogatóversenyén kvalifikációs pontot szerzett valaha, vagy IMO, EGMO, MEMO csapattag volt.
+A matematika OKTV-n döntős volt III. kategóriában, vagy 1-10. helyezett volt a II. kategóriában.
+Az előző tanévben Arany Dániel versenyen kezdő III., haladó II. vagy haladó III. kategóriában díjazott vagy dicséretes volt.
+Az előző Dürer döntőn az E kategóriában 1-3. helyezett csapat tagja volt.
+Nem indulhat a C és D kategóriákban olyan diák, akire az alábbiak valamelyike igaz:
+“Tapasztalt versenyfelkészítő gimnázium” tanulója (lejjebb ezt megmagyarázzuk).
+2019-ben résztvevője volt A Gondolkodás Öröme Alapítvány táborainak (MaMuT, MaMuT2, hétvégi táborok) valamelyikének.
+A matematika OKTV-n döntős volt II. kategóriában.
+Az előző Dürer döntőn a D kategóriában 1-3. helyezett csapat tagja volt.
+Nem indulhat a C kategóriákban olyan diák, akire az alábbiak valamelyike igaz:
+11. vagy magasabb évfolyamos
+Az elmúlt tanévben országos döntőbe jutott az Arany Dániel Matematikaversenyen, a Kalmár László Matematikaversenyen, a Varga Tamás Matematikaversenyen, a Zrínyi Ilona Matematika-versenyen vagy a Dürer Versenyen (gimnáziumi, matematika kategóriában).
+Tapasztalt versenyfelkészítő gimnáziumok
+Tapasztalt versenyfelkészítő gimnáziumnak tekintünk egy gimnáziumot, ha az alábbi két feltételből legalább az egyik teljesül:
+Az elmúlt 5 évben legalább 5 (különböző) diákjuk szerepelt a Matematika OKTV döntőn II. vagy III. kategóriában.
+Rendelkezik speciális matematika tagozattal.
+Online forduló
+Egy online forduló keretében minden C, D és E kategóriában induló csapat egy 9 feladatból álló váltófel-adatsort old meg.
+Akár otthon, akár az iskolában, akár egy parkban ki lehet tölteni egy számítógép vagy egy okostelefon segítségével.
+Az online forduló időpontja: 2019. október 22. (kedd), 12:00–23:59 (2. ábra).
+Ezen időszak alatt lesz lehetőségük a csapatoknak bármikor elkezdeni a váltóversenyt, melyre összesen 60 percük lesz. A feladatokra a válasz egy legfeljebb négyjegyű nemnegatív egész szám. Minden feladatra maximum 3 tippet adhatnak le a csapatok, egy-egy rossz tipp után a megszerezhető pontszám csökken.
+Azok a csapatok, akik az online forduló során a lehetséges 40 pontból legalább 20-at elértek, bejutnak a helyi fordulóra. (Fenntartjuk a jogot, hogy a ponthatárt esetleg csökkentsük, növelni biztosan nem fogjuk.) Az online fordulón szerzett pontszám nem számít bele a további eredményekbe.
+A csapatoknak önállóan kell dolgozniuk, külső segítséget nem fogadhatnak el, másokkal nem kommunikál-hatnak egészen a versenyzési időszak végéig (azaz éjfélig). Természetesen egy csapat csak egyszer írhatja meg a versenyt. Ezen szabályok megsértése kizárást jelenthet.
+Az online feladatsor elérhetőségét, a kitöltés technikai részleteit a jelentkezett csapatoknak emailben fogjuk elküldeni a jelentkezési határidő lejárta után. (Ezért is fontos, hogy a jelentkezéskor működő, gyakran használt emailcímet adjatok meg.)
+Helyi forduló, döntőbe jutási feltételek
+Ebben a fordulóban 5 feladatot kapnak a csapatok, melyek megoldására 3 óra áll a rendelkezésükre. Részletes, indoklással ellátott megoldásokat várunk el. Minden helyes és megfelelően indokolt feladatmegoldás 12 pontot ér (összesen 60 pont szerezhető).
+C, D, E kategória
+A miskolci döntőbe kétféleképpen lehet bejutni. A régiók győztesei bejutnak a döntő-be, ha teljesülnek a következő feltételek: a régióban a saját kategóriájukban legalább 3 iskola, legalább 5 csapata részt vesz a versenyen, és a győztes csapat eléri a bejutási ponthatár legalább 75%-át. A határon túli csapatok is egy külön régiónak számítanak. Azok a csapatok, amelyek tagjai több különböző régió iskoláiból érkeznek, szintén külön régiónak számítanak. A győzteseken kívül bejutnak még az összesítésben legjobban szereplő csapatok is.
+E+ kategória
+A legtöbb pontot elérő csapatokat hívjuk a döntőre.
+Támogatjuk a különböző iskolák diákjaiból álló csapatokat, ezért egy iskolának legfeljebb egy csapata juthat be az E, illetve az E+ kategória döntőjébe. Az adott iskola csapatának számít egy csapat, ha minden tagja abból az iskolából jött. Vagyis ha egy csapatban legalább két iskola diákjai is benne vannak, arra a csapatra nem vonatkozik ilyen megszorítás.
+A döntő eredményébe a helyi fordulóban szerzett pontok nem számítanak bele.
+Döntő (1. versenynap)
+Az első napon 6 feladat megoldására van lehetőség, ehhez 3 óra áll rendelkezésre. Az első öt hagyományos matematika feladat, melynek írásban kell elkészíteni a megoldását, részletesen indokolva a megoldás lépéseit. A feladatok mindegyike 12 pontot ér. Lényegesen különböző második megoldással vagy általánosítással feladatonként még legfeljebb +4 pont szerezhető. Kérjük, hogy a versenyzők minden feladatot külön lapra írjanak (tollal), és mindegyik lap tetején szerepeljen a csapat neve és kategóriája.
+Az utolsó, hatodik feladat egy matematikai játék. Ebben a szervezőket kell legyőzni, így szerezhető meg a feladatért járó 12 pont. A verseny időtartama során bármikor jelentkezhet egy csapat, ha úgy érzi, nyerő stratégiát talált, mellyel meg tudja verni az egyetemista szervezőket. Ekkor valamelyikünk odamegy, és ját-szik a csapat ellen, egymás után 2 meccset. Ha mindkét meccset a versenyzők nyerik, úgy övék a 12 pont. Ha ez nem sikerül, a versenyző csapat tovább gondolkozhat, és később újra kihívhatja a szervezőket az előbbi feltételekkel, de sikere esetén már csak 6 pontot kap; az esetleges harmadik próbálkozás sikere esetén pedig 3 pont szerezhető (negyedik kísérletre már nincs lehetőség).
+Összesen (a második megoldásokért járó extra pontok nélkül) 72 pont szerezhető.
+Döntő (2. versenynap)
+A második napon 16 feladat megoldására nyílik lehetőség; erre 90 perc áll rendelkezésre. A válasz minden kérdésre egy legfeljebb 4-jegyű nemnegatív egész szám, amelyet a feladatlap megfelelő válaszmezőjébe beírva lehet leadni a zsűrinek. A verseny elején a csapatok csak az első feladatot kapják meg. Ha a csapat egy feladatot helyesen megold, akkor kapja meg a következő feladatot.
+A feladatok pontértéke változó (3-6 pont), a feladatlapon lesz feltüntetve. Egy feladatra adott hibás válaszkísérletet követően még lehet újra próbálkozni, de minden rossz tipp esetén a feladatra szerezhető pontszám 1 ponttal csökken. A harmadik rossz válasz után azonban már nem lehet újra tippelni – ilyenkor a csapat erre a feladatra 0 pontot kap, de megkapja a következő feladatot. A forduló során élőben követhető lesz egy kivetítőn a csapatok haladása (hogy melyik feladatra hány pontot szereztek). Kivéve az utolsó 10 percben, amikor lekapcsoljuk a kivetítőket, hogy a végeredmény titkos maradjon az eredményhirdetésig. A második versenynapon az összes feladat megoldásával 72 pont szerezhető.
+Sajnos, a legalaposabb ellenőrzés ellenére is előfordulhat, hogy a megoldókulcs hibás. Ha előfordul olyan feladat, amelynek megoldása hibás, arról a zsűri verseny közben semmilyen információt sem ad. Akkor sem fogadjuk el a helyes megoldást, hogyha menet közben mi magunk is meggyőződtünk a hibáról, tehát (verseny közben) az esetleges reklamációkra sem reagálunk. A verseny után a hibás feladatra kapott pontokat minden csapatnál töröljük.
+A döntő során kizárólag az alábbi segédeszközök használhatók: toll, ceruza, radír, körző, vonalzó, függvény-táblázat.
+A verseny végeredményét a két versenynapon szerzett pontok összege határozza meg. Összesen a döntő során 144 pont szerezhető. A döntő eredményébe a helyi fordulóban szerzett pontok már nem számítanak bele.
+Fizika
+Idén is meghirdetjük a Dürer Fizikaversenyt (F kategória), amelyre szeretettel várjuk 3 fős, 11-12. évfolyamos tanulókból álló csapatok jelentkezését.
+Egy csapatnak az alábbi két feltételt kell teljesítenie:
+Legalább egy lány is legyen a csapatban!
+Legyen legalább 11. osztályos diák a csapatban!
+Helyi forduló
+Ebben a fordulóban 5 feladatot tűzünk ki. Részletes, indoklással ellátott megoldásokat várunk el. Minden helyes és megfelelően indokolt feladatmegoldás 20 pontot ér. Összesen 100 pont szerezhető.
+A feladatsorok úgy vannak összeállítva, hogy a korosztálynak megfelelő fizika tananyag ismeretében és az esetlegesen mellékelt ismeretanyag segítségével megoldhatóak legyenek. Javasolt irodalom a felkészüléshez nincs.
+A döntő eredményébe a helyi fordulóban szerzett pontok nem számítanak bele.
+Döntőbe jutási feltételek
+A miskolci döntőbe kétféleképpen lehet bejutni. A régiók győztesei bejutnak a döntőbe, ha teljesülnek a következő feltételek: a régióban a saját kategóriájukban legalább 3 iskola, legalább 5 csapata részt vesz a versenyen, és a győztes csapat eléri a bejutási ponthatár legalább 75%-át. A határon túli csapatok is egy külön régiónak számítanak. Azok a csapatok, amelyek tagjai több különböző régió iskoláiból érkeznek szintén külön régiónak számítanak. A győzteseken kívül bejutnak még az összesítésben legjobban szereplő csapatok is.
+Döntő
+1. versenynap. Az első versenynapon 3 óra áll rendelkezésre 3-5 elméleti feladat megoldására. A feladatok között egyaránt találhatóak megszokott, a középiskolás tananyag ismeretére építő feladatok, illetve olyanok, amelyek az iskolai anyagon túlmutatnak. Ez utóbbiak esetén a feladat szövege minden szükséges előismeretet tartalmaz. Az első versenynapon 50 pont szerezhető.
+2. versenynap. Ezen a napon egy mérést kell elvégezni. A mérés során jellemzően a versenyzők feladata a mérési elrendezés megalkotása, illetve a mért adatokból a mérni kívánt mennyiséget megadó képlet kiszámítása. Amennyiben a mérés a középiskolai tudáson túlmutató ismeretekre épül, akkor azokat (a szükséges képletekkel együtt) a mérés leírásában közöljük. Mivel a forduló célja a mérés elvégzése, így a szükséges képletet a csapat kérésére megadjuk. Ekkor a képletért szerezhető, kb. 10 pont megszerzésétől elesik a csapat. A második versenynapon szintén 50 pont szerezhető.
+A döntő végeredménye a két versenynapon szerzett pontok összegéből adódik, tehát a megszerezhető maximális pontszám kereken 100 pont.
+Kémia
+Idén is meghirdetjük a Dürer Kémiaversenyt, melyre szeretettel várjuk a lelkes jelentkezőket. A Dürer Verseny szokásaihoz híven csapatversenyt rendezünk 9-12. osztályosoknak, két kategóriában lehet versenyezni (K és K+).
+Három fős csapatok jelentkezését várjuk. Minden csapatban kell legyen legalább egy lány.
+A K+ kategóriában bárki indulhat, a csapatban kell lennie legalább egy főnek, aki még nem fejezte be a 11. évfolyamot.
+A K kategóriában induló csapatban kell legalább egy olyan főnek lenni, aki még nem fejezte be a 10. évfolyamot.
+A K kategóriában nem indulhat, aki az előző tanévben vagy előtte:
+Tagja volt a magyar csapatnak az IChO-n vagy a Mengyelejev Olimpián;
+1-10. helyezést ért el a kémia OKTV-n I. vagy II. kategóriában;
+1-3. helyezést ért el az Irinyi János Kémiaversenyen az I.A, I.B, II.A vagy II.B kategóriában.
+Tagja volt Dürer Kémiaversenyt nyerő csapatnak.
+Helyi forduló
+Mindkét kategóriában 5 feladatot tűzünk ki a helyi fordulón. Részletes, indoklással ellátott megoldásokat várunk el. Minden helyes és megfelelően indokolt feladatmegoldás 20 pontot ér. Összesen 100 pont szerezhető.
+A feladatsorok úgy vannak összeállítva, hogy a korosztálynak megfelelő kémia tananyag ismeretében és az esetlegesen mellékelt ismeretanyag segítségével megoldhatóak legyenek. Javasolt irodalom a felkészüléshez nincs. Elérhető egy mintafeladatsor is.
+A döntő eredményébe a helyi fordulóban szerzett pontok már nem számítanak bele.
+Döntőbe jutási feltételek
+K kategória
+A miskolci döntőbe kétféleképpen lehet bejutni. A régiók győztesei bejutnak a döntőbe, ha teljesülnek a következő feltételek: a régióban a saját kategóriájukban legalább 3 iskola, legalább 5 csapata részt vesz a versenyen, és a győztes csapat eléri a bejutási ponthatár legalább 75%-át. A határon túli csapatok is egy külön régiónak számítanak. Azok a csapatok, amelyek tagjai több különböző régió iskoláiból érkeznek szintén külön régiónak számítanak. A győzteseken kívül bejutnak még az összesítésben legjobban szereplő csapatok is.
+K+ kategória
+A döntőbe az összesítésben legjobban szereplő csapatok kerülnek.
+Döntő (1. versenynap)
+K kategória
+3 óra áll rendelkezésre 6 feladat megoldására.
+Az első 5 klasszikus kémia-feladat, melynek írásban kell elkészíteni a megoldását, részletesen indokolva a megoldás lépéseit. Minden feladat 8 pontot ér.
+Az utolsó, hatodik feladat kombinált gyakorlati és szóbeli. Ebben a szervezők előtt kell egy 3-5 perces kis-előadást tartani a helyben kapott rövid cikkről, segítő kérdések alapján, valamint elvégezni és megmagyarázni egy apró kísérletet. Így szerezhető meg a feladatért járó 12 pont. A 3 óra során az utolsó 2 órában fordított bejutási sorrend alapján adhatják elő a csapatok kiselőadásaikat és végezhetik el a kísérleteket. A kiselőadást legalább 2 embernek kell prezentálnia a csapatból, a harmadik eközben akár tanulmányozhatja addig a gyakorlati feladatot is. A hatodik feladatra 10 perce van a csapatoknak. A pénteki forduló során 52 pont szerezhető.
+K+ kategória
+Gyakorlati forduló, a helyszínen található laboratóriumban kerül megrendezésre. 3,5 óra áll rendelkezésre 3 kombinált elméleti-gyakorlati feladat megoldására. A feladatok kapcsán előfordulhat egy-egy mérés (pl.: titrálás) vagy kísérlet (pl.: kémcsőkísérlet) elvégzése, valamint olyan feladatrész is, melyre szóban kell felelni. A gyakorlati forduló során 52 pont szerezhető.
+A gyakorlati forduló alatt köpeny viselése kötelező!
+Döntő (2. versenynap)
+Ebben mindkét kategória számára tesztfeladatok megoldására nyílik lehetőség. A válasz minden kérdésre egy szó vagy egy szám, melyet normálalakban (x,xx * 10x) kell megadni, vagyis az előre kiosztott válaszlapokon leadni a zsűrinek.
+K és K+ kategória
+Ebben a fordulóban a feladatokat 4 kérdéscsoportba soroltuk: szerves, szervetlen, analitikai és általános kémia.
+Szerves kémia: a gimnáziumi tananyagban található szerves kémiai ismeretekre épülő feladatok.
+Szervetlen kémia: az általános iskolai és gimnáziumi tananyagban található szervetlen kémiai ismeretekre épülő feladatok, melyek megoldása során a szervetlen anyagismeret alkalmazása a legfontosabb, az egyes számítási műveletek fontossága kisebb.
+Analitika kémia: Olyan feladatok a kvantitatív analitika témaköréből, melyeket már a gimnáziumi tananyag is érint, megoldásuk során a számolási műveletek fontossága nagyobb (példa: pH számolási feladatok).
+Általános kémia: azon feladatok, melyek nem tartoznak szorosan a már említett 3 témakörhöz (atomszerkezet, elektrokémia, fizikai-kémia…)
+Minden csoportban 4 kérdés található, nehezedő sorrendben. A verseny elején a csapatoknak lehetőségük van megválasztani, hogy melyik kategória első feladatával szeretnék kezdeni. Ha egy csapat helyesen meg-oldja az első feladatot, akkor választhat, hogy az adott kategória második, vagy egy másik kategória első feladatával kívánja folytatni.
+Így mindig csak egy feladaton gondolkodhatnak a csapatok, de a megoldás (vagy harmadik sikertelen próbálkozás) után szabadon dönthetnek a továbbhaladás irányáról.
+Minden feladatra háromszor lehet „tippelni”, azaz megoldást bevinni a Szervezőknek – aki egyből meg-mondja, hogy jó-e válasz: ha igen, egyből a következő feladatot is odaadja a csapatnak. Ha az első tipp helyes: 3; ha a második: 2, ha a harmadik: 1 pontot kap a versenyző csapat. Három rossz tipp esetén pedig 0 pontot ugyan, de ekkor is továbbléphet a következő feladatra.
+Megengedett taktikai húzás „passzolni”, azaz egy nem szimpatikus feladatra egyből 3 véletlenszerű tippet beadni, hogy a következő feladatra ugorhasson a csapat – bár a következő feladat valószínűleg még nehezebb lesz.
+Szerezhetőek bónuszpontok is:
+1 bónuszpont jár annak a csapatnak, aki először megoldja mind a 4 kategória első feladatát.
+2 bónuszpont jár annak a csapatnak, aki először megoldja mind a 4 kategória második feladatát.
+3 bónuszpont jár annak a csapatnak, aki először megoldja mind a 4 kategória harmadik feladatát.
+3-3 bónuszpont jár annak a csapatnak, aki először megoldja az adott kategória összes feladatát.
+Bónuszpontok nélkül összesen 48 pont szerezhető a 2. versenynapon a K és K+ kategóriában.
+A döntő mindkét versenynapján mindkét kategóriában az alábbi segédeszközök használhatók: tollak, ceruzák, radír, számológép, függvénytáblázat, periódusos rendszer.
+A döntő végeredménye a két versenynapon szerzett pontok összegéből adódik, tehát a megszerezhető maximális pontszám kereken 100 pont. 
+Kérdések és válaszok
+Mi a helyzet, ha valaki nem tud jönni a helyi fordulóra?
+A helyi forduló előtt szabad módosítani a nevezéseteket (persze a feltételeknek meg kell felelni). A cserét itt jelezzétek: https://forms.gle/SVLg7A92UtFaGHPM8. A jelentkezési lapot nem kell újra kitölteni.
+Abban a kivételes esetben, ha az utolsó pillanatban derül ki, hogy valamelyikőtök nem tud versenyezni, akkor ketten is részt vehetnek a versenyen. Erről mindenképpen részletes indoklást írjatok. (Ez a lehetőség nem arra való, hogy megkerüljétek az indulási/bejutási feltételeket.)
+Mi a helyzet, ha valaki nem tud jönni a döntőre?
+Igazolt hiányzás esetén szabad csak tagot cserélni, taktikai okokból erre nincsen lehetőség.
+A cserét itt jelezzétek: https://forms.gle/SVLg7A92UtFaGHPM8, mindenképpen írjatok indoklást. A jelentkezési lapot nem kell újra kitölteni.
+Legfeljebb egy tagot cserélhettek a helyi fordulón részt vett csapathoz képest, az indulási és bejutási feltételeknek továbbra is meg kell felelnetek.
+Mi történik, ha a váltóversenyen a megoldókulcs hibás?
+Már elég régen fordult elő ilyen. Ha előfordul olyan feladat, amelynek megoldása hibás, arról a zsűri verseny közben semmilyen információt sem ad. Akkor sem fogadjuk el a helyes megoldást, ha menet közben mi magunk is meggyőződtünk a hibáról, tehát (verseny közben) az esetleges reklamációkra sem reagálunk. A verseny után a hibás feladatra kapott pontokat minden csapatnál töröljük.
+Szabad-e a telefonomat használni? Időmérésre lehet-e használni?
+Nem, még időmérésre sem. A mobiltelefonokat kikapcsolt állapotban és képernyővel lefordítva az asztalra kell tenni. Ha egy versenyző kezében működő mobiltelefont látunk, az a csapata azonnali kizárását eredményezheti.
+Kiválasztottam egy versenyhelyszínt, biztosan lesz ott verseny?
+Fontos tudni, hogy egy helyszínen csak akkor lesz verseny, ha legalább 3 iskolából, legalább 8 csapat érkezik.
+Így előfordulhat, hogy bár a helyszínt kihirdetjük, végül mégsem lesz ott helyi forduló. A helyszín megszüntetéséről minden érintett csapatot értesítünk.
+Fenntartjuk a jogot, hogy ezt a szabályunkat indokolt esetben ne vegyük figyelembe.
+Mi történik, ha kések a versenyről?
+Amennyiben a késés előrelátható mindenképpen jelezd nekünk előre a tényt. A legfeljebb 10 perc késéssel érkező csapatok elkezdhetik a versenyt, de plusz időt a verseny végén nem kaphatnak. A 10 percnél többet késő csapatok nem írhatják meg a versenyt.
+Mi történik, ha a posta elveszíti a megoldásokat?
+A megoldások javítókhoz való eljuttatása a rendező iskola feladata. Az elveszett vagy meg nem érkezett dolgozatokat nem fogjuk tudni figyelembe venni. Szerencsére ilyen eset nem fordult elő, reméljük, hogy nem is fog.
+Miért ennyire bonyolultak a (matematika) kategóriák szabályai?
+Azt gondoljuk, hogy a versenyből a legjobb dolog, hogy részt lehet venni a döntőn. A jelenlegi szabályokkal az a célunk, hogy a lehető legtöbb induló csapatnak legyen esélye a döntőbe jutni (azaz olyanoknak is legyen esélye a döntőre, akiknek egyébként erre kevesebb lehetőségük van). Egy bővebb leírást is olvashattok a szabályaink céljáról.
+Miért ennyire bonyolultak a bejutás szabályai?
+Ez is a fenti cél miatt van így. Elég sokat szoktunk ezeken gondolkozni magunk között, kifejezetten örülünk, ha hozzá-szóltok ti is a szabályokhoz.
+Miért kell lány a csapatba? Miért nem szimmetrikus ez a szabály?
+Hisszük, hogy egy lány is ugyanakkora eséllyel tehetséges természettudományból, mint egy fiú. Tapasztalatok szerint sokkal kevesebb lány foglalkozik természettudománnyal, szeretnénk ha ez változna.
+Nem titkoljuk, hogy a pozitív diszkrimináció a célunk, a szabály így nem szimmetrikus.
+C kategóriában lehetne jelölni, hogy melyikhez szükséges a 10.-es tananyag, hogy ne 9.-es töltse vele az időt.
+Egy ilyen jelölés elkerülhetetlenül utalna a megoldási ötletre, ezt szeretnénk elkerülni. Alapvetően az a célunk, hogy ne kelljen 10.-es tananyagot használni, sajnos ez nem mindig sikerül.
+Nem szerencsés a verseny döntőjének időpontja.
+Sajnos ezen nem tudunk változtatni. A versenyt 50-60 egyetemista szervezi, ezért a verseny mindig azon az egyetlen hét végén van, amikor az egyetemen nincsenek sem órák, sem vizsgák.
+Ha maradt még kérdésetek, írjátok meg a durerinfo [K] gmail [P] com címre, vagy írjatok nekünk FB-on.

@@ -1,0 +1,12 @@
+Ismerd meg a RoboMind-ot!
+Interaktív bemutató
+
+Mi a RoboMind?
+A RoboMind-ban egy virtuális terepen mozgó padlórobot programozható.
+A környezetet 2007 óta a Research Kitchen holland szoftvervállalat fejleszti.
+Ingyenes és fizetős változata is van.
+
+A robot képességei
+A robot előre és hátra haladni egész mezőnyit, fordulni pedig 90 fokot tud.
+Markolója segítségével képes egyszerre egy bóját magával vinni és máshol letenni.
+Ecsetével fehér vagy fekete festékcsíkot tud húzni, valamint látja a szembeni és a két oldalszomszédos mező tartalmát.
