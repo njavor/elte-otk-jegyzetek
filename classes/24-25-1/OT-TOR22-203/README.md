@@ -21,7 +21,7 @@
 - ~~[Pun háborúk, Gracchusok (24-11-12)](./notes/241112.md)~~
 - ~~[Caesar (24-11-19)](./notes/241119.md)~~
 - [Augustus principatusa (24-11-26)](./notes/241126.md)
-<!-- 
 - [Diocletianus, Constantinus, Attila (24-12-03)](./notes/241203.md)
+<!-- 
 - [Női szerepek a görög-római világban (24-12-10)](./notes/241210.md)
  -->
