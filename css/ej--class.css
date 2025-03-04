@@ -230,3 +230,23 @@ main{
         color: var(--textColor2);
     }
 }
+
+
+#ej--content{
+    & em.vissza1, em.vissza2, em.vissza3{
+        background: none;
+
+        &.vissza1{
+            color: yellow;
+        }
+        &.vissza2{
+            color: red;
+        }
+        &.vissza3{
+            color: cyan;
+        }
+        &.vissza4{
+            color: lime;
+        }
+    }
+}
