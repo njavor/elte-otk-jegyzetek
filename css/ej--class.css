@@ -233,20 +233,23 @@ main{
 
 
 #ej--content{
-    & em.vissza1, em.vissza2, em.vissza3{
+    & em.visszavezetes{
         background: none;
 
-        &.vissza1{
+        &.egy{
             color: yellow;
         }
-        &.vissza2{
+        &.ketto{
             color: red;
         }
-        &.vissza3{
+        &.harom{
             color: cyan;
         }
-        &.vissza4{
+        &.negy{
             color: lime;
+        }
+        &.ot{
+            color: violet;
         }
     }
 }
