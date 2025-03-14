@@ -234,6 +234,7 @@ main{
 
 #ej--content{
     & em.visszavezetes{
+        padding: 0;
         background: none;
 
         &.egy{
