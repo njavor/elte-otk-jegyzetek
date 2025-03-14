@@ -5,6 +5,7 @@
 
 #ej--semesters{
     padding-inline: 5%;
+    gap: 10em;
 }
 .ej--semester{
     width: 100%;
