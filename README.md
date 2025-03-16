@@ -9,7 +9,10 @@ Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); tö
 <br>
 
 > [!NOTE]
-> Csak kötelező tárgyakat tartalmazza (jelenleg). A .md jegyzetek többsége órákan készült, hibákat tartalmazhat.
+> Csak a kötelező tárgyakat tartalmazza (jelenleg). 
+
+> [!WARNING]
+> A `.md` jegyzetek többsége órákon készült, hibákat tartalmazhat.
 
 <br>
 <br>
