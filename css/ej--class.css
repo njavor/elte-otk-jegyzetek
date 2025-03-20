@@ -250,21 +250,28 @@ main{
 
     button.solution{
         display: flex;
-        gap: 1.5em;
+        align-items: center;
+        gap: .5em;
         
-        text-align: left;
         font-size: var(--fs-400);
-        border-radius: 0;
+        text-align: left;
         background: none;
+        color: var(--textColor);
+        border-radius: 0;
 
-        &:hover, .opened{
+        &:hover{
+            transform: none;
+            background: var(--black-p);
+            color: var(--white);
+        }
+        & .opened{
             transform: none;
             background: var(--black-p);
             color: var(--white);
         }
     }
     div.solution{
-        margin-top: 1.5em;
+        margin-top: -1.5em;
         display: none;
         
         background-color: var(--black-p);
