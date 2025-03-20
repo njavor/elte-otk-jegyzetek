@@ -264,7 +264,7 @@ main{
             background: var(--black-p);
             color: var(--white);
         }
-        & .opened{
+        &.opened{
             transform: none;
             background: var(--black-p);
             color: var(--white);
