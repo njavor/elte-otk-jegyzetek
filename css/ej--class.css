@@ -33,8 +33,24 @@ main{
         gap: .5em;
     }
 
-    & h3:not(:first-child){
-        margin-top: 1em;
+    & h3{
+        position: relative;
+        padding: .5em 0;
+
+        &::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100px;
+            height: 5px;
+            
+            display: block;
+            background: var(--primary);
+        }
+
+        &:not(:first-child){
+            margin-top: 1em;
+        }
     }
 }
 
@@ -228,6 +244,44 @@ main{
         padding: 1em 0 1em 1em;
         border-left: 5px solid var(--primary);
         color: var(--textColor2);
+    }
+
+
+
+    button.solution{
+        display: flex;
+        gap: 1.5em;
+        
+        text-align: left;
+        font-size: var(--fs-400);
+        border-radius: 0;
+        background: none;
+
+        &:hover, .opened{
+            transform: none;
+            background: var(--black-p);
+            color: var(--white);
+        }
+    }
+    div.solution{
+        margin-top: 1.5em;
+        display: none;
+        
+        background-color: var(--black-p);
+        opacity: 0;
+
+        transition-property: display opacity;
+        transition-duration: var(--speed-def);
+        transition-behavior: allow-discrete;
+
+        &.opened{
+            display: block;
+            opacity: 1;
+            
+            @starting-style{
+                opacity: 0;
+            }
+        }
     }
 }
 

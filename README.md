@@ -12,10 +12,28 @@ Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); tö
 > Csak a kötelező tárgyakat tartalmazza (jelenleg). 
 
 > [!WARNING]
-> A `.md` jegyzetek többsége órákon készült, hibákat tartalmazhat.
+> A `.md` jegyzetek többsége órákon készült, hibákat tartalmaz(hat).
 
 <br>
 <br>
+
+
+
+## [24/25/1](/24-25-1/)
+### Tárgyak
+| # | tárgy | kred | típus | kar |
+| :-: | :- | :-: | :-: | :-: |
+| **1** | ***[Alkalmazói rendszerek 2.](/classes/24-25-2/OTK-ALKR2EG-INF22/)*** | 4 | `K` | **IK** |
+| **2** | ***[Informatikai alapismeretek](/classes/24-25-2/OTK-INFALG-INF22/)*** | 3 | `K` | **IK** |
+| **3** | ***[Latin nyelv 2.](/classes/24-25-2/BBN-TLA-102/)*** | 2 | `K` | **BTK** |
+| **4** | ***[Magyar őstörténet](/classes/24-25-2/OT-TÖR22-201/)*** | 3 | `K` | **BTK** |
+| **5<br>6** | ***[Matematikai módszerek az informatikában 2.](/classes/24-25-2/OTK-MATMOD2-INF22/)*** | 1<br>3 | `KV` | **IK** |
+| **7** | ***[Ókori történelem 2.](/classes/24-25-2/OT-TÖR22-205/)*** | 3 | `K` | **BTK** |
+| **8** | ***[Pályaszocializációs gyakorlat 1. - Tanár leszek](/classes/24-25-2/OTK-PGY-1-TAN22-102/)*** | 3 | `K` | **PPK** |
+| **9** | ***[Programozási alapismeretek](/classes/24-25-2/OTK-PAEG-INF22/)*** | 5 | `K` | **IK** |
+| **10** | ***[Tanár leszek](/classes/24-25-2/OTK-TAN22-101/)*** | 1 | `K` | **PPK** |
+| **11** | ***[Történeti segédtudományok 1.](/classes/24-25-2/OT-TÖR-291/)*** | 2 | `K` | **BTK** |
+| **12** | ***[Történeti segédtudományok 2.](/classes/24-25-2/OT-TÖR22-292/)*** | 2 | `K` | **BTK** |
 
 
 
