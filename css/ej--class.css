@@ -234,6 +234,10 @@ main{
         align-items: flex-start;
         justify-content: left;
         gap: 0;
+
+        &:has(pre.language-cs){
+            max-width: none;
+        }
     }
     & .anchor{
         margin-top: -100px;
