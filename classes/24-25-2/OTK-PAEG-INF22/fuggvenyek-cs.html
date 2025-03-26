@@ -71,7 +71,7 @@
         <section id="ej--toc">
             <h3>Tartalom</h3>
             <h4><a href="#readint">Egész szám beolvasás</a></h4>
-            <h4><a href="#readint">Egész tömb beolvasás</a></h4>
+            <h4><a href="#readintarray">Egész tömb beolvasás</a></h4>
             <h4><a href="#other">További linkek</a></h4>
             <h4><a href="#sources">Források</a></h4>
         </section>
@@ -81,64 +81,56 @@
             <span id="readint" class="anchor"></span>
             <h3>Egész szám beolvasás</h3>
             <h4>Függvény</h4>
-            <div class="code-toolbar">
-                <pre class="language-cs"><code>
-                    static int be_egesz_szam(string input_szoveg, int minert, int maxert, string hibauzenet)
+            <pre class="language-cs"><code>
+                static int be_egesz_szam(string input_szoveg, int minert, int maxert, string hibauzenet)
+                {
+                    // Ellenőrzéshez
+                    string input
+                    bool hiba
+                    //Helyi változó
+                    int egesz_szam
+                    do
                     {
-                        // Ellenőrzéshez
-                        string input
-                        bool hiba
-                        //Helyi változó
-                        int egesz_szam
-                        do
+                        Console.WriteLine(input_szoveg);
+                        input = Console.ReadLine();
+                        hiba = !int.Parse(input, out egesz_szam) || egesz_szam < minert || egesz_szam > maxert;
+                        if(hiba)
                         {
-                            Console.WriteLine(input_szoveg);
-                            input = Console.ReadLine();
-                            hiba = !int.Parse(input, out egesz_szam) || egesz_szam < minert || egesz_szam > maxert;
-                            if(hiba)
-                            {
-                                Console.WriteLine(hibauzenet);
-                            }
-                        }while(hiba);
-                    }
-                </code></pre>
-            </div>
+                            Console.WriteLine(hibauzenet);
+                        }
+                    }while(hiba);
+                }
+            </code></pre>
 
 
             <h4>Meghívás</h4>
-            <div class="code-toolbar">
-                <pre class="language-cs"><code>
-                    int elemszam = be_egesz_szam("Add meg, hány db osztályunk van!", 0, int.MaxValue, "Nulla, vagy annál nagyobb egész számot kell megadnod!");
-                </code></pre>
-            </div>
+            <pre class="language-cs"><code>
+                int elemszam = be_egesz_szam("Add meg, hány db osztályunk van!", 0, int.MaxValue, "Nulla, vagy annál nagyobb egész számot kell megadnod!");
+            </code></pre>
             
 
 
-            <span id="count" class="anchor"></span>
+            <span id="readintarray" class="anchor"></span>
             <h3>Egész tömb beolvasás (függvény/eljárás újra felhasználás)</h3>
             <h4>Függvény</h4>
-            <div class="code-toolbar">
-                <pre class="language-cs"><code>
-                    static void be_egesz_tomb(int elemszam, int[] egesz_tomb)
+            <pre class="language-cs"><code>
+                static void be_egesz_tomb(int elemszam, int[] egesz_tomb)
+                {
+                    for(int i = 0; i < elemszam; i++)
                     {
-                        for(int i = 0; i < elemszam; i++)
-                        {
-                            be_egesz_szam[i] = be_egesz_szam($"Add meg az {i}. osztály létszámát!", 1, 50, "1-50 közötti egész számot kell megadnod!");
-                        }
+                        be_egesz_szam[i] = be_egesz_szam($"Add meg az {i}. osztály létszámát!", 1, 50, "1-50 közötti egész számot kell megadnod!");
                     }
-                </code></pre>
-            </div>
+                }
+            </code></pre>
 
 
             <h4>Meghívás</h4>
-            <div class="code-toolbar">
-                <pre class="language-cs"><code>
-                    int elemszam = be_egesz_szam("", 0, int.MaxValue, "");
-                    int[] elemek = new int[elemszam];
+            <pre class="language-cs"><code>
+                int elemszam = be_egesz_szam("Add meg, hány db osztályunk van!", 0, int.MaxValue, "Nulla, vagy annál nagyobb egész számot kell megadnod!");
+                int[] elemek = new int[elemszam];
 
-                    be_egesz_tomb(elemszam, elemek);
-                </code></pre>
-            </div>
+                be_egesz_tomb(elemszam, elemek);
+            </code></pre>
             
 
 
