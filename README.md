@@ -2,9 +2,9 @@
 
 Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); történelemtanár] alatt készült publikus jegyzeteim.
 
-| [24/25/1](/24-25-1/) | 25/26/1 | 26/27/1 | 27/28/1 | 28/29/1 |
+| [24/25/1](/classes/24-25-1/) | 25/26/1 | 26/27/1 | 27/28/1 | 28/29/1 |
 | :--: | :--: | :--: | :--: | :--: |
-| **24/25/2** | **25/26/2** | **26/27/2** | **27/28/2** | **28/29/2** |
+| **[24/25/2](/classes/24-25-2/)** | **25/26/2** | **26/27/2** | **27/28/2** | **28/29/2** |
 
 <br>
 
@@ -19,7 +19,7 @@ Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); tö
 
 
 
-## [24/25/1](/24-25-1/)
+## [24/25/2](/classes/24-25-2/)
 ### Tárgyak
 | # | tárgy | kred | típus | kar |
 | :-: | :- | :-: | :-: | :-: |
@@ -37,7 +37,7 @@ Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); tö
 
 
 
-## [24/25/1](/24-25-1/)
+## [24/25/1](/classes/24-25-1/)
 ### Tárgyak
 | # | tárgy | kredit | típus | kar |
 | :-: | :- | :-: | :-: | :-: |
