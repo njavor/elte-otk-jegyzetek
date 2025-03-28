@@ -91,13 +91,12 @@
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Kiválasztás</b>
-
+                        <b>// TÉTEL: Kiválasztás //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
-                        <b>Be:</b> honev ∈ S, honapok ∈ S[1..12] = ["január","február","március","április","május","június","július","augusztus","szeptember","október","november","december"]
+                        <b>Be:</b> honev ∈ S, 
+                                   honapok ∈ S[1..12] = ["január","február","március","április","május","június","július","augusztus","szeptember","október","november","december"]
                         <b>Ki:</b> sorszam ∈ N
                         <b>Ef:</b> ∃i ∈ [1..12]: (honev = honapok[i])
                         <b>Uf:</b> sorszam = KIVÁLASZT(i>=1, honev = honapok[i])
@@ -129,9 +128,7 @@
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Megszámolás</b>
-
+                        <b>// TÉTEL: Megszámolás //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
@@ -154,7 +151,7 @@
                             i: <b>Egész</b>
                         fagyott := 0
                         <b>Ciklus</b> i=1-től elemszám-ig
-                            <b>Ha</b> homersekletek[i] <= 0 akkor fagyott := fagyott + 1
+                            <b>Ha</b> homersekletek[i] <= 0 <b>akkor</b> fagyott := fagyott + 1
                         <b>Ciklus vége</b>
 
 						Forrás: 3. előadás 70. o.
@@ -164,14 +161,12 @@
 
             <button class="solution">
                 <span class="material-symbols-outlined">arrow_right</span>
-                3. Egy maratonon felírtuk az egyes versenyzők idejét "óra perc" formátumban, adjuk meg, hogy hány perc alatt futották le! <br>A maraton résztvevő nélkül nem indult volna el. Az egyes idők nem kisebbek 1 percnél és nem nagyobbak 10 óránál.
+                3. Egy maratonon felírtuk az egyes versenyzők idejét "óra perc" formátumban, adjuk meg, hogy hány perc alatt futották le a maratont! <br>Résztvevő nélkül nem indul maraton. Az egyes idők nem kisebbek 1 percnél és nem nagyobbak 10 óránál.
             </button>
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Másolás</b>
-
+                        <b>// TÉTEL: Másolás //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
@@ -185,7 +180,7 @@
                         
                         fvelemek ~ percek
                         1..elemszám ~ 1..vdb
-                        f(elemek[i]) ~ 
+                        f(elemek[i]) ~ idok[i].ora*60 + idok[i].perc
 
 
                         <b>//ALGORITMUS //</b>
@@ -201,14 +196,12 @@
 
             <button class="solution">
                 <span class="material-symbols-outlined">arrow_right</span>
-                4. Lakáskeresés közben több ingatlan bérleti árát is feljegyeztük, adjuk meg, hogy volt-e olyan, ami a büdzsémbe belefér!
+                4. Lakáskeresés közben több ingatlan bérleti árát is feljegyeztük, adjuk meg, hogy volt-e olyan, ami a büdzsénkbe belefér!
             </button>
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Eldöntés</b>
-
+                        <b>// TÉTEL: Eldöntés //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
@@ -245,9 +238,7 @@
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Minimumkiválasztás</b>
-
+                        <b>// TÉTEL: Minimumkiválasztás //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
@@ -286,9 +277,7 @@
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Kiválogatás</b>
-
+                        <b>// TÉTEL: Kiválogatás //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
@@ -326,14 +315,12 @@
 
             <button class="solution">
                 <span class="material-symbols-outlined">arrow_right</span>
-                7. Egy tanuló év végi latin jegyei alapján adjuk meg, hogy dícséretes ötös lesz-e az osztályzata! <br>Évente legalább négy jegyet kell kapni egy-egy diáknak. Az osztályzás 5-ös skálán folyik. Dícséretest abban az esetben ad a latin tanár, ha minden jegye ötös egy tanulónak.
+                7. Egy tanuló év végi latin jegyei alapján adjuk meg, hogy dícséretes ötös lesz-e az osztályzata! <br>Évente legalább négy jegyet kell kapni egy-egy diáknak. Az osztályzás 5-ös skálán folyik. <br>Dícséretest abban az esetben ad a tanár, ha minden jegye ötös egy tanulónak.
             </button>
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Mind eldöntés</b>
-
+                        <b>// TÉTEL: Mind eldöntés //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
@@ -370,9 +357,7 @@
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Összegzés</b>
-
+                        <b>// TÉTEL: Összegzés //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
@@ -409,9 +394,7 @@
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        <b>// TÉTEL //</b>
-                        <b>Keresés</b>
-
+                        <b>// TÉTEL: Keresés //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
@@ -435,7 +418,7 @@
                             i: <b>Egész</b>
                         ind := 1
                         <b>Ciklus</b> <b>amíg</b> ind < fdb és nem filmek[i] = "Jurassic World"
-                            i := i +1
+                            i := i + 1
                         <b>Ciklus vége</b>
                         van := ind <= fdb
                     </code></pre>
@@ -449,11 +432,7 @@
             <div class="solution">
                 <div class="code-toolbar">
                     <pre class="language-pseudocode"><code>
-                        Forrás: 
-
-						<b>// TÉTEL //</b>
-                        <b>Maximumkiválasztás</b>
-
+						<b>// TÉTEL: Maximumkiválasztás //</b>
 
                         <b>// SPECIFIKÁCIÓ //</b>
 
