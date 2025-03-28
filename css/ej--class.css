@@ -253,8 +253,6 @@ main{
 
 
     button.solution{
-        width: 77.3ch;
-
         display: flex;
         align-items: center;
         gap: .5em;
