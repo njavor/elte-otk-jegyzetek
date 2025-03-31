@@ -86,11 +86,11 @@ main{
     & h3:not(:nth-child(2)){
         margin-top: .5em;
     }
-    & h3#otherh3{
-        width: 100%;
-        margin-top: 2em;
-        padding-top: 2em;
-        border-top: 2px dashed var(--scrollbarThumb);
+    & h3#otherh{
+        /* width: 100%; */
+        /* margin-top: 2em; */
+        padding-top: 3em;
+        /* border-top: 2px dashed var(--scrollbarThumb); */
     }
     & h4:not(:first-child){
         margin-block: .5em -.5em;
