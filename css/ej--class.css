@@ -86,7 +86,7 @@ main{
     & h3:not(:nth-child(2)){
         margin-top: .5em;
     }
-    & h3#otherh{
+    & h3#other{
         /* width: 100%; */
         /* margin-top: 2em; */
         padding-top: 3em;
