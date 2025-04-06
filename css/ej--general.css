@@ -21,4 +21,8 @@ header{
 
 main{
     padding-top: 5em;
+
+    & *{
+        scroll-margin-top: 100px;
+    }
 }
