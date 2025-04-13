@@ -1,0 +1,199 @@
+---
+layout: lesson-latex
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási alapismeretek tárgyon tanult rendezések.
+class: Programozási alapismeretek
+class-link: ../OTK-PAEG-INF22
+title: Rendezési algoritmusok
+---
+
+<section id="ej--toc">
+    <h3>Tartalom</h3>
+    <h4><a href="#">Az elemi rendezések</a></h4>
+    <h4><a href="#">Egyszerű cserés rendezés</a></h4>
+    <h4><a href="#">Minimum-kiválasztásos rendezés</a></h4>
+    <h4><a href="#bubble">Buborékrendezés</a></h4>
+    <h4><a href="#">Beillesztéses rendezés</a></h4>
+    <h4><a href="#other">További linkek</a></h4>
+    <h4><a href="#sources">Források</a></h4>
+</section>
+
+
+<section id="ej--content">
+    <h3 id="">Az elemi rendezések</h3>
+
+    <p>
+        Dummy text.
+    </p>
+    <p>
+        Az alábbi rendezések futási ideje: <b>N$^2$</b>
+    </p>
+
+
+
+    <h3 id="">Egyszerű cserés rendezés</h3>
+    <p>
+        Egyesével összehasonlítjuk a legelső elemet az összes tőle jobbra álló elemmel. 
+        Amennyiben egy adott összehasonlított elem kisebb/nagyobb, akkor kicseréljük.
+        Ezt ismételjük a második, harmadik, stb. elemekre mindaddig, még a tömb végére nem érünk.
+    </p>
+    <p>
+        Az azonos értékű elemek nem cserélődnek fel, sorrendiségük megmarad.
+    </p>
+
+
+    <h4>Algoritmus</h4>
+    <div class="code-toolbar">
+        <pre class="language-pseudocode"><code>
+            Egyszerű_cserés_rendezés:
+                <b>Változó</b>
+                    i, j: Egész
+                    cs: TH
+                <b>Ciklus</b> i=1-től elemszám-ig
+                    <b>Ciklus</b> j=i+1-től elemszámig
+                        <b>Ha</b> elemek[i] > elemek[j] <b>akkor</b>
+                            cs := elemek[i]
+                            elemek[i] := elemek[j]
+                            elemek[j] := cs
+                        <b>Elágazás vége</b>
+                    <b>Ciklus vége</b>
+                <b>Ciklus vége</b>
+            <b>Eljárás vége.</b>
+        </code></pre>
+    </div>
+
+
+
+    <h3 id="">Minimum-kiválasztásos rendezés</h3>
+    <p></p>
+
+
+    <h4>Algoritmus</h4>
+    <div class="code-toolbar">
+        <pre class="language-pseudocode"><code>
+            Minimum-kiválasztásos_rendezés:
+                <b>Változó</b>
+                    minI, i, j: Egész
+                    cs: TH
+                <b>Ciklus</b> i=1-től elemszám-1-ig
+                    minI := i
+                    <b>Ciklus</b> j=i+1-től elemszámig
+                        <b>Ha</b> elemek[minI] > elemek[j] <b>akkor</b> minI := j
+                    <b>Ciklus vége</b>
+                    cs := elemek[minI]
+                    elemek[minI] := elemek[i]
+                    elemek[i] := cs
+                <b>Ciklus vége</b>
+            <b>Eljárás vége.</b>
+        </code></pre>
+    </div>
+
+
+
+    <h3 id="">Buborékrendezés</h3>
+    <p></p>
+
+
+    <h4>Algoritmus</h4>
+    <div class="code-toolbar">
+        <pre class="language-pseudocode"><code>
+            Buborékrendezés:
+                <b>Változó</b>
+                    i, j: Egész
+                    cs: TH
+                <b>Ciklus</b> i=elemszám-tól 2-ig -1-esével
+                    <b>Ciklus</b> j=1-től i-1-ig
+                        <b>Ha</b> elemek[j] > elemek[j+1] <b>akkor</b>
+                            cs := elemek[j]
+                            elemek[j] := elemek[j+1]
+                            elemek[j+1] := cs
+                        <b>Elágazás vége</b>
+                    <b>Ciklus vége</b>
+                <b>Ciklus vége</b>
+            <b>Eljárás vége.</b>
+        </code></pre>
+    </div>
+
+
+    <h4>Algoritmus (javított)</h4>
+    <div class="code-toolbar">
+        <pre class="language-pseudocode"><code>
+            Javított_buborékrendezés:
+                <b>Változó</b>
+                    ucs, i, j: Egész
+                    cs: TH
+                i := elemszám
+                <b>Ciklus amíg</b> i >= 2
+                    ucs := 0
+                    <b>Ciklus</b> j=1-től i-1-ig
+                        <b>Ha</b> elemek[j] > elemek[j+1] <b>akkor</b>
+                            cs := elemek[j]
+                            elemek[j] := elemek[j+1]
+                            elemek[j+1] := cs
+                            ucs := j
+                        <b>Elágazás vége</b>
+                    <b>Ciklus vége</b>
+                    i := ucs
+                <b>Ciklus vége</b>
+            <b>Eljárás vége.</b>
+        </code></pre>
+    </div>
+
+
+
+    <h3 id="">Beillesztéses rendezés</h3>
+    <p></p>
+
+
+    <h4>Algoritmus</h4>
+    <div class="code-toolbar">
+        <pre class="language-pseudocode"><code>
+            Beillesztéses_rendezés:
+                <b>Változó</b>
+                    i, j: Egész
+                    cs: TH
+                <b>Ciklus</b> i=2-től elemszám-ig
+                    j := i-1
+                    <b>Ciklus amíg</b> j>0 és elemek[j] > elemek[j+1]
+                        cs := elemek[j]
+                        elemek[j] := elemek[j+1]
+                        elemek[j+1] := cs
+                        j := j-1
+                    <b>Ciklus vége</b>
+                <b>Ciklus vége</b>
+            <b>Eljárás vége.</b>
+        </code></pre>
+    </div>
+
+
+    <h4>Algoritmus (javított)</h4>
+    <div class="code-toolbar">
+        <pre class="language-pseudocode"><code>
+            Javított_beillesztéses_rendezés:
+                <b>Változó</b>
+                    i, j: Egész
+                    cs: TH
+                <b>Ciklus</b> i=2-től elemszám-ig
+                    cs := elemek[i]
+                    j := i-1
+                    <b>Ciklus amíg</b> j>0 és elemek[j] > cs
+                        elemek[j+1] := elemek[j]
+                        j := j-1
+                    <b>Ciklus vége</b>
+                    elemek[j+1] := cs
+                <b>Ciklus vége</b>
+            <b>Eljárás vége.</b>
+        </code></pre>
+    </div>
+
+
+
+    
+
+    <h3 id="other">További linkek</h3>
+    <a href="https://progalap.elte.hu/specifikacio/" target="_blank">ELTE specifikáció szerkesztője</a>
+
+
+
+    <h3 id="sources">Források</h3>
+    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 9. előadás (ppt) (előadó: Törley Gábor)</p>
+</section>
