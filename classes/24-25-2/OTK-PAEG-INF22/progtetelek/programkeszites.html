@@ -1,0 +1,235 @@
+---
+layout: lesson-latex
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási alapismeretek tárgyon tanult programkészítési folyamat.
+class: Programozási alapismeretek
+class-link: ../OTK-PAEG-INF22
+title: Programkészítés menete
+---
+
+<section id="ej--toc">
+    <h3>Tartalom</h3>
+    <h4><a href="#intro">Bevezetés</a></h4>
+    <h4><a href="#specifikacio">1. Specifikálás</a></h4>
+    <h4><a href="#algorithm">2. Algoritmus</a></h4>
+    <h4><a href="#code">3. Kódolás</a></h4>
+    <h4><a href="#test">4. Tesztelés</a></h4>
+    <h4><a href="#errorsearch">5. Hibakeresés</a></h4>
+    <h4><a href="#errorfix">6. Hibajavítás</a></h4>
+    <h4><a href="#optimization">7. Minőségvizsgálat, hatékonyság</a></h4>
+    <h4><a href="#docs">8. Dokumentálás</a></h4>
+    <h4><a href="#maintenance">9. Használat, karbantartás</a></h4>
+    <h4><a href="#other">További linkek</a></h4>
+    <h4><a href="#sources">Források</a></h4>
+</section>
+
+<section id="ej--content">
+    <h3 id="intro"></h3>
+    <p>
+        Egy programozási feladat elkészítésének számos módja van. Legyen szó egy egyszerű 
+        összegző kódról, egy weboldalról vagy egy több tíz, több száz embert bevonó 
+        projektekről
+    </p>
+    <p>
+        A tárgyon tanult megközelítési módszer, egy konzisztens, a projektünk méretétől 
+        független alkalmazható keretrendszert ad annak elkészítéséhez.
+    </p>
+    <p>
+        Hogy kicsit átláthatóbb legyen, hogy hogyan is nézz ki ezen rendszer szerint 
+        egy program elkészítésének folyamata, vegyük az alábbi feladatot:
+    </p>
+    <blockquote id="feladat">
+        Egy ötgyerekes nagycsalád nyaralni indul a Balatonra. Az autópályán a 11 éves, 
+        a számok iránt mindig nagy érdeklődést mutató Matyi nem látja a kilométerórát, 
+        de szeretné megtudni, mekkora sebességgel mennek. Így elkezdi megszámolni hány 
+        kilométer táblát hagytak el, és közben az időt is méri. Milyen eredményt kap?
+    </blockquote>
+    
+
+    
+    <h3 id="specifikacio">1. Specifikálás</h3>
+    <p>
+        Első lépésként szeretnénk a feladatunkat olyan formális módon meghatározni, hogy az 
+        sallangmentesen, röviden és érthetően olvasható legyen.
+    </p>
+    <p>
+        Tudni akarjuk, a szükséges be- és kimeneti információkat (Milyen adatok kellenek a megoldáshoz?; Mi a megoldás?), a bemeneti adatok 
+        értelmezési tartományát (Milyen adatokat engedünk beolvasni?), valamint azt, hogy 
+        hogyan kapjuk meg a kívánt kimenetet (Hogy kapjuk meg a megoldást?).
+    </p>
+    <div class="code-toolbar">
+        <p>Ezeket az alábbi módon fogjuk ábrázolni:</p>
+        <pre class="language-pseudocode"><code>
+            <b>Be:</b> // bemeneti adatok
+            <b>Ki:</b> // kimeneti adatok
+            <b>Ef:</b> // bemenet értelmezési tartománya
+            <b>Uf:</b> // kimeneti érték meghatározása
+        </code></pre>
+    </div>
+    <p>
+        A helyes specifikáció írása bár időigényes tud lenni, rövid kódok esetén pedig 
+        egyenesen fölöslegesnek érződik, később segítségünkre lehet.
+
+        <ul>
+            <li>A feladatot jól elkülönülő egységekre bontja</li>
+            <li>Egy hosszú feladat specifikációjából dolgozni könnyebb, mint a szöveget bogarászni</li>
+        </ul>
+    </p>
+    <p>Hogy a példán haladjunk tovább, specifikációja így fog kinézni:</p>
+    <blockquote>
+        Az út, idő ismeretében határozd meg a sebességet!
+        <div class="code-toolbar">
+            <pre class="language-pseudocode"><code>
+                <b>Be:</b> s ∈ R, t ∈ R
+                <b>Ki:</b> v ∈ R
+                <b>Ef:</b> s >= 0 és t > 0
+                <b>Uf:</b> v = s / t
+            </code></pre>
+        </div>
+    </blockquote>
+    <p>Megjegyzés: vannak egyéb információk is (pl. segédadatok, függvények), ám ezekkel később fogunk foglalkozni.</p>
+    
+
+
+    <h3 id="algorithm">2. Algoritmus</h3>
+    <p>
+        Második lépésben a kész specifikációnk alapján megtervezzük azt az algoritmust, ami 
+        helyesen megoldja a feladatunkat.
+    </p>
+    <p>
+        Egy program 3 fő egységre osztható:
+        <ol>
+            <li>Beolvasás</li>
+            <li>Eredmény kiszámítása</li>
+            <li>Kiírás</li>
+        </ol> 
+        Az algoritmus "csupán" a második lépés megvalósulásáról szól, vagyis, hogy 
+        hogyan kapjuk meg a kívánt eredményt.
+    </p>
+    <p>
+        Nem foglalkozunk a bemeneti adatok helyes beolvasásával, az eredmény kiírásával. Ennek 
+        oka, hogy ezek megvalósítása programnyelvenként eltérő, esetleges.
+    </p>
+    <p>
+        Az algoritmus szekvenciálisan halad, a következőkből épül(het) fel:
+        <ul>
+            <li>elágazások (ha akkor, különben)</li>
+            <li>ciklusok (ismétélődés; számlálós és feltételes)</li>
+            <li><i>függvények (algoritmus fő részében többször meghívható "nevére" hivatkozva)</i></li>
+        </ul>
+    </p>
+    <p>Megjegyzés: függvényt alapvetően akkor írunk, ha az a specifikációban függvényként van hivatkozva!</p>
+    <p>
+        Az algoritmust <b>pszeudokódban</b> írjuk le. Ezt azért használjuk, hogy programozási 
+        nyelvtől függetlenül értelmezhető legyen az algoritmusunk.
+    </p>
+    <div class="code-toolbar">
+        <p>Így nézhet ki:</p>
+        <pre class="language-pseudocode"><code>
+            <b>Változó</b>
+                i: <b>Egész</b> // adat-deklarárció, azon változókra, amiket a specifikációban nem deklaráltunk egyértelműen
+            db := 0
+            db2 := 0
+            <b>Ciklus</b> 1-től elemszám-ig     // számlálós (for) ciklus
+                <b>Ha</b> valtozo < masik_valtozo <b>akkor</b>  // elágazás
+                    db := db + 1
+                <b>különben</b>
+                    db2 := db2 + 1
+                <b>Elágazás vége</b>
+            <b>Ciklus vége</b>
+        </code></pre>
+    </div>
+    <!-- <a href="">További információk pszeudokód íráshoz.</a> -->
+    <p>Megjegyzés: más algoritmusleíró nyelvek is léteznek (pl. folyamatábra, struktogram), de a tárgyon csak pszeudokódot használunk.</p>
+
+    <p>A példánkra alkalmazva:</p>
+    <blockquote>
+        Az út, idő ismeretében határozd meg a sebességet!
+        <div class="code-toolbar">
+            <pre class="language-pseudocode"><code>
+                v := s / t
+            </code></pre>
+        </div>
+    </blockquote>
+    
+
+
+    <h3 id="code">3. Kódolás</h3>
+    <p>
+        Ez a programkészítés "programozás" része, itt készítjük el a lefutó kódot. 
+        A tárgyon C# nyelvben dolgozunk (VS-ben), így egy üres projekt az alábbi módon fog kinézni:
+    </p>
+    <pre class="language-cs"><code>
+        namespace projekt_neve
+        {
+            internal class Program
+            {
+                // Függvények
+
+                static void Main(string[] args)
+                {
+                    // Deklaráció
+
+                    // Beolvasás
+
+                    // Feldolgozás
+
+                    // Kiírás
+
+                }
+            }
+        }
+    </code></pre>
+    <!-- <a href="">(Segítség a programozási környezetünk (Visual Studio) telepítéséhez.)</a> -->
+    <p>Fontos: a program (a különböző függvények és eljárások kivételével) a <code>static void Main(string[] args)</code>-en belülre kerülnek!</p>
+
+    <p>Nézzük a konkrét feladatunkat:</p>
+    <blockquote>
+        Az út, idő ismeretében határozd meg a sebességet!
+        <pre class="language-pseudocode"><code>
+            // Deklaráció
+            double s, t;    // Be
+            double v;       // Ki
+
+            // Beolvasás
+            Console.Write("s = ")
+            double.TryParse(Console.ReadLine(), out s);
+            Console.Write("t = ")
+            double.TryParse(Console.ReadLine(), out t);
+
+            // Feldolgozás
+            v = s / t;
+
+            // Kiírás
+            Console.WriteLine($"A sebesség: {v}");
+        </code></pre>
+    </blockquote>
+
+
+
+    <h3 id="test">4. Tesztelés</h3>
+    <p style="color: var(--secondary);"><i>megírás alatt</i></p>
+    <h3 id="errorsearch">5. Hibakeresés</h3>
+    <p style="color: var(--secondary);"><i>megírás alatt</i></p>
+    <h3 id="errorfix">6. Hibajavítás</h3>
+    <p style="color: var(--secondary);"><i>megírás alatt</i></p>
+    <h3 id="optimization">7. Minőségvizsgálat, hatékonyság</h3>
+    <p style="color: var(--secondary);"><i>megírás alatt</i></p>
+    <h3 id="docs">8. Dokumentálás</h3>
+    <p style="color: var(--secondary);"><i>megírás alatt</i></p>
+    <h3 id="maintenance">9. Használat, karbantartás</h3>
+    <p style="color: var(--secondary);"><i>megírás alatt</i></p>
+
+
+
+
+
+    <span id="other" class="anchor"></span>
+    <h3 id="otherh">További linkek</h3>
+    <a href="https://progalap.elte.hu/specifikacio/" target="_blank">ELTE specifikáció szerkesztője</a>
+
+
+
+    <span id="sources" class="anchor"></span>
+    <h3>Források</h3>
+    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 1. előadás (ppt) (előadó: Törley Gábor)</p>
+</section>
