@@ -1,0 +1,70 @@
+---
+layout: lesson
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási alapismeretek tárgyon tanult konkrét függvények.
+class: Programozási alapismeretek
+class-link: ../../OTK-PAEG-INF22
+title: Gyakran használat függvények (C#)
+---
+
+<section id="ej--toc">
+    <h3>Tartalom</h3>
+    <h4><a href="#readin">Beolvasás</a></h4>
+    <h4><a href="#other">További linkek</a></h4>
+    <h4><a href="#sources">Források</a></h4>
+</section>
+
+<section id="ej--content">
+    <h3 id="readin">Beolvasás</h3>
+    <h4>Egész szám beolvasás</h4>
+    <pre class="language-cs"><code>
+        static int BeEgész(string inputSzöveg, int minÉrt, int maxÉrt, string hibaüzenet)
+        {
+            // Helyi változó (visszatérési érték)
+            int egész;
+            // Ellenőrzéshez
+            string input;
+            bool hiba;
+            do
+            {
+                Console.WriteLine(inputSzöveg);
+                input = Console.ReadLine();
+                hiba = !int.TryParse(input, out egész) || egész < minÉrt || egész > maxÉrt;
+                if(hiba)
+                {
+                    Console.WriteLine(hibaüzenet);
+                }
+            }while(hiba);
+            return egész;
+        }
+
+        // Példa meghívásra
+        db = BeEgész("", 1, int.MaxValue, "");
+    </code></pre>
+    <h4>Egész tömb beolvasás</h4>
+    <p>Megjegyzés: az alábbi nem az órán vett, függvénybe kiszervezett tömb beolvasás! (nincs külön függvény, 0-tól indexel)</p>
+    <pre class="language-cs"><code>
+        static void Main(string[] args)
+        {
+            int elemszám = BeEgész("", 0, 10, "");
+
+            int[] egészTömb = new int[elemszám];
+            for(int i=0; i<elemszám; i++)
+            {
+                egészTömb[i] = BeEgész("", int.MinValue, 200, "");
+            }
+        }
+    </code></pre>
+
+
+
+
+
+    <h3 id="other">További linkek</h3>
+    <a href="../fuggvenyek/">Függvények</a>
+    <a href="https://progalap.elte.hu/specifikacio/" target="_blank">ELTE specifikáció szerkesztője</a>
+
+
+
+    <h3 id="sources">Források</h3>
+    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 5. előadás (ppt) (előadó: Törley Gábor)</p>
+</section>

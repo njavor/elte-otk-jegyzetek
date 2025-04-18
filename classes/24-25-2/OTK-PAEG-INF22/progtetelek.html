@@ -11,7 +11,7 @@ title: Programozási tételek (áttekintés)
     <h4><a href="#why">Miért?</a></h4>
     <h4><a href="#sum">Összegzés (SZUM)</a></h4>
     <h4><a href="#count">Megszámolás (DARAB)</a></h4>
-    <h4><a href="#max">Maximumkiválasztás (MAX)</a></h4>
+    <h4><a href="#max">Maximum- és minimumkiválasztás (MAX és MIN)</a></h4>
     <h4><a href="#min">Minimumkiválasztás (MIN)</a></h4>
     <h4><a href="#is">Eldöntés (VAN)</a></h4>
     <h4><a href="#all">Mind eldöntés / optimista eldöntés (MIND)</a></h4>
@@ -23,12 +23,9 @@ title: Programozási tételek (áttekintés)
     <h4><a href="#sources">Források</a></h4>
 </section>
 
-
 <section id="ej--content">
     <h3 id="why">Miért?</h3>
-
     <p>¯\_(ツ)_/¯</p>
-
     <p>Na de, hogy ennél kicsit többet mondjak: a programozási tételek célja, hogy egyedi problémákra általános megoldásokat használjunk.</p>
     <p>
         Kicsit bővebben kifejtve. Azt szeretnénk elérni, hogy programozás során a konkrét programozási feladatokat ne izoláltan, mint csupán "feladat 1" és "feladatat 2" lássuk. Ne csak mindig az adott problémára keressük az éppen pontosan megfelelő megoldást.
@@ -40,85 +37,72 @@ title: Programozási tételek (áttekintés)
 
 
     <h3 id="sum">Összegzés (SZUM)</h3>
-    
     <p>Elemek összesítése.</p>
-    
-    <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám]
-            <b>Ki:</b> össz ∈ H
-            <b>Ef:</b> -
-            <b>Uf:</b> <em class="visszavezetes egy">össz</em> = SZUM(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">elemek[i]</em>)
-        </code></pre>
-    </div>
-
-
-    <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Változó</b>
-                i: <b>Egész</b>
-            <em class="visszavezetes egy">össz</em> := 0
-            <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
-                <em class="visszavezetes egy">össz</em> := <em class="visszavezetes egy">össz</em> + <em class="visszavezetes harom">elemek[i]</em>
-            <b>Ciklus vége</b>
-        </code></pre>
-    </div>
-
     <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/szum.cs" target="_blank">Kód egész számokhoz (C#)</a>
-    
+    <h4>Specifikáció</h4>
+    <pre class="language-specifkáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám]
+        <b>Ki:</b> össz ∈ H
+        <b>Ef:</b> -
+        <b>Uf:</b> <em class="visszavezetes egy">össz</em> = SZUM(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">elemek[i]</em>)
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <em class="visszavezetes egy">össz</em> := 0
+        <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+            <em class="visszavezetes egy">össz</em> := <em class="visszavezetes egy">össz</em> + <em class="visszavezetes harom">elemek[i]</em>
+        <b>Ciklus vége</b>
+    </code></pre>
 
+    
 
     <h3 id="count">Megszámolás (DARAB)</h3>
-    
     <p>Feltétel(ek)nek eleget tevő elemek darabszáma.</p>
-    
-    <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T: H->L
-            <b>Ki:</b> db ∈ N
-            <b>Ef:</b> -
-            <b>Uf:</b> <em class="visszavezetes egy">db</em> = DARAB(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
-        </code></pre>
-    </div>
-
-
-    <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Változó</b>
-                i: <b>Egész</b>
-            <em class="visszavezetes egy">db</em> := 0
-            <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
-                <b>Ha</b> <em class="visszavezetes harom">T(elemek[i])</em> <b>akkor</b> <em class="visszavezetes egy">db</em> := <em class="visszavezetes egy">db</em> + 1
-            <b>Ciklus vége</b>
-        </code></pre>
-    </div>
-
     <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/darab.cs" target="_blank">Általános kód (C#)</a>
-    
-
-
-    <h3 id="max">Maximumkiválasztás (MAX)</h3>
-    
-    <p>A legnagyobb elem megadása. Indexet és értéket ad vissza.</p>
-    
     <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
+    <pre class="language-specifkáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T: H->L
+        <b>Ki:</b> db ∈ N
+        <b>Ef:</b> -
+        <b>Uf:</b> <em class="visszavezetes egy">db</em> = DARAB(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <em class="visszavezetes egy">db</em> := 0
+        <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+            <b>Ha</b> <em class="visszavezetes harom">T(elemek[i])</em> <b>akkor</b> <em class="visszavezetes egy">db</em> := <em class="visszavezetes egy">db</em> + 1
+        <b>Ciklus vége</b>
+    </code></pre>
+
+
+    
+    <h3 id="max">Maximum- és minimumkiválasztás (MAX/MIN)</h3>
+    <p>A legnagyobb/legkisebb elem megadása. Indexet és értéket ad vissza.</p>
+    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/max.cs" target="_blank">Kód egész számokhoz (C#)</a>
+    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/min.cs" target="_blank">Kód egész számokhoz(C#)</a>
+    <h4>Specifikáció</h4>
+    <div>
+        <pre class="language-specifkáció"><code>
             <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám]
             <b>Ki:</b> maxind ∈ Z, maxért ∈ H
             <b>Ef:</b> elemszám > 0
             <b>Uf:</b> (<em class="visszavezetes egy">maxind</em>, <em class="visszavezetes negy">maxért</em>) = MAX(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">elemek[i]</em>)
         </code></pre>
+
+        <pre class="language-specifkáció"><code>
+            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám]
+            <b>Ki:</b> minind ∈ Z, minért ∈ H
+            <b>Ef:</b> elemszám > 0
+            <b>Uf:</b> (<em class="visszavezetes egy">minind</em>, <em class="visszavezetes negy">minért</em>) = MIN(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">elemek[i]</em>)
+        </code></pre>
     </div>
-
-
     <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
+    <div>
+        <pre class="language-pszeudokód"><code>
             <b>Változó</b>
                 i: <b>Egész</b>
             <em class="visszavezetes negy">maxért</em> := <em class="visszavezetes harom">elemek[<em class="visszavezetes ketto">1</em>]</em>
@@ -130,30 +114,8 @@ title: Programozási tételek (áttekintés)
                 <b>Elágazás vége</b>
             <b>Ciklus vége</b>
         </code></pre>
-    </div>
 
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/max.cs" target="_blank">Kód egész számokhoz (C#)</a>
-    
-
-
-    <h3 id="min">Minimumkiválasztás (MIN)</h3>
-    
-    <p>A legkisebb elem megadása. Indexet és értéket ad vissza.</p>
-    
-    <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám]
-            <b>Ki:</b> minind ∈ Z, minért ∈ H
-            <b>Ef:</b> elemszám > 0
-            <b>Uf:</b> (<em class="visszavezetes egy">minind</em>, <em class="visszavezetes negy">minért</em>) = MIN(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">elemek[i]</em>)
-        </code></pre>
-    </div>
-
-
-    <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
+        <pre class="language-pszeudokód"><code>
             <b>Változó</b>
                 i: <b>Egész</b>
             <em class="visszavezetes negy">minért</em> := <em class="visszavezetes harom">elemek[<em class="visszavezetes ketto">1</em>]</em>
@@ -166,29 +128,22 @@ title: Programozási tételek (áttekintés)
             <b>Ciklus vége</b>
         </code></pre>
     </div>
-
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/min.cs" target="_blank">Kód egész számokhoz(C#)</a>
     
 
 
     <h3 id="is">Eldöntés (VAN)</h3>
-    
     <p>Feltétel(ek)nek megfelelő elem keresése. A válasz logikai érték (igen/nem).</p>
-    
+    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/van.cs" target="_blank">Általános kód (C#)</a>
     <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
-            <b>Ki:</b> van ∈ L
-            <b>Ef:</b> -
-            <b>Uf:</b> <em class="visszavezetes egy">van</em> = VAN(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
-        </code></pre>
-    </div>
-
-
+    <pre class="language-specifkáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
+        <b>Ki:</b> van ∈ L
+        <b>Ef:</b> -
+        <b>Uf:</b> <em class="visszavezetes egy">van</em> = VAN(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
+    </code></pre>
     <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
+    <div>
+        <pre class="language-pszeudokód"><code>
             <b>Változó</b>
                 i: <b>Egész</b>
             i := <em class="visszavezetes ketto">1</em>
@@ -197,10 +152,8 @@ title: Programozási tételek (áttekintés)
             <b>Ciklus vége</b>
             <em class="visszavezetes egy">van</em> := i <= <em class="visszavezetes ketto">elemszám</em>
         </code></pre>
-        
         <p>vagy</p>
-        
-        <pre class="language-pseudocode"><code>
+        <pre class="language-pszeudokód"><code>
             <b>Változó</b>
                 i: <b>Egész</b>
             <em class="visszavezetes egy">van</em> := hamis
@@ -211,61 +164,45 @@ title: Programozási tételek (áttekintés)
             <b>Ciklus vége</b>
         </code></pre>
     </div>
-
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/van.cs" target="_blank">Általános kód (C#)</a>
     
 
 
     <h3 id="all">Mind eldöntés / optimista eldöntés (MIND)</h3>
-    
     <p>Feltétel(ek) teljesülésének ellenőrzése <b>az összes elemre</b>. A válasz logikai érték (igen/nem).</p>
-    
-    <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
-            <b>Ki:</b> mind ∈ L
-            <b>Ef:</b> -
-            <b>Uf:</b> <em class="visszavezetes egy">mind</em> = MIND(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
-        </code></pre>
-    </div>
-
-
-    <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Változó</b>
-                i: <b>Egész</b>
-            i := <em class="visszavezetes ketto">1</em>
-            <b>Ciklus amíg</b> i <= <em class="visszavezetes ketto">elemszám</em> és <em class="visszavezetes harom">T(elemek[i])</em>
-                i := i + 1
-            <b>Ciklus vége</b>
-            <em class="visszavezetes egy">mind</em> := i > <em class="visszavezetes ketto">elemszám</em>
-        </code></pre>
-    </div>
-
     <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/mind.cs" target="_blank">Általános kód (C#)</a>
-    
+    <h4>Specifikáció</h4>
+    <pre class="language-specifkáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
+        <b>Ki:</b> mind ∈ L
+        <b>Ef:</b> -
+        <b>Uf:</b> <em class="visszavezetes egy">mind</em> = MIND(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        i := <em class="visszavezetes ketto">1</em>
+        <b>Ciklus amíg</b> i <= <em class="visszavezetes ketto">elemszám</em> és <em class="visszavezetes harom">T(elemek[i])</em>
+            i := i + 1
+        <b>Ciklus vége</b>
+        <em class="visszavezetes egy">mind</em> := i > <em class="visszavezetes ketto">elemszám</em>
+    </code></pre>
 
+    
     
     <h3 id="select">Kiválasztás (KIVÁLASZT)</h3>
-    
     <p>Feltétel(ek)nek megfelelő elem keresése. Biztosan tudjuk, hogy szerepel megfelelő elem. Indexet ad vissza.</p>
-    
+    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/kivalaszt.cs" target="_blank">Általános kód (C#)</a>
     <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
-            <b>Ki:</b> ind ∈ Z
-            <b>Ef:</b> ∃i ∈ [i..elemszám]: (T(elemek[i]))
-            <b>Uf:</b> <em class="visszavezetes egy">ind</em> = KIVÁLASZT(i>=<em class="visszavezetes ketto">1</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
-        </code></pre>
-    </div>
-
-    
+    <pre class="language-specifkáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
+        <b>Ki:</b> ind ∈ Z
+        <b>Ef:</b> ∃i ∈ [i..elemszám]: (T(elemek[i]))
+        <b>Uf:</b> <em class="visszavezetes egy">ind</em> = KIVÁLASZT(i>=<em class="visszavezetes ketto">1</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
+    </code></pre>
     <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
+    <div>
+        <pre class="language-pszeudokód"><code>
             <b>Változó</b>
             i: <b>Egész</b>
             i := <em class="visszavezetes ketto">1</em>
@@ -274,39 +211,30 @@ title: Programozási tételek (áttekintés)
                 <b>Ciklus vége</b>
                 <em class="visszavezetes egy">ind</em> := i
         </code></pre>
-        
         <p>vagy</p>
-        
-        <pre class="language-pseudocode"><code>
+        <pre class="language-pszeudokód"><code>
             <em class="visszavezetes egy">ind</em> := <em class="visszavezetes ketto">1</em>
             <b>Ciklus amíg</b> nem <em class="visszavezetes harom">T(elemek[<em class="visszavezetes egy">ind</em>])</em>
             <em class="visszavezetes egy">ind</em> := <em class="visszavezetes egy">ind</em> + 1
             <b>Ciklus vége</b>
         </code></pre>
     </div>
-
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/kivalaszt.cs" target="_blank">Általános kód (C#)</a>
     
     
 
     <h3 id="search">Keresés (KERES)</h3>
-    
     <p>Feltétel(ek)nek megfelelő elem keresése. Nem biztos, hogy van megfelelő elem. Logikai értéket és indexet ad vissza.</p>
-    
+    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/keres.cs" target="_blank">Általános kód (C#)</a>
     <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
-            <b>Ki:</b> van ∈ L, ind ∈ Z
-            <b>Ef:</b> -
-            <b>Uf:</b> (<em class="visszavezetes egy">van</em>, <em class="visszavezetes negy">ind</em>) = KERES(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
-        </code></pre>
-    </div>
-
-
+    <pre class="language-specifkáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
+        <b>Ki:</b> van ∈ L, ind ∈ Z
+        <b>Ef:</b> -
+        <b>Uf:</b> (<em class="visszavezetes egy">van</em>, <em class="visszavezetes negy">ind</em>) = KERES(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>)
+    </code></pre>
     <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
+    <div>
+        <pre class="language-pszeudokód"><code>
             <b>Változó</b>
                 i: <b>Egész</b>
             i := <em class="visszavezetes ketto">1</em>
@@ -316,20 +244,16 @@ title: Programozási tételek (áttekintés)
             <em class="visszavezetes egy">van</em> := i <= <em class="visszavezetes ketto">elemszám</em>
             <b>Ha</b> <em class="visszavezetes egy">van</em> <b>akkor</b> <em class="visszavezetes negy">ind</em> := i
         </code></pre>
-        
         <p>vagy</p>
-        
-        <pre class="language-pseudocode"><code>
+        <pre class="language-pszeudokód"><code>
             <em class="visszavezetes negy">ind</em> := <em class="visszavezetes ketto">1</em>
             <b>Ciklus amíg</b> <em class="visszavezetes negy">ind</em> <= <em class="visszavezetes ketto">elemszám</em> és nem <em class="visszavezetes harom">T(elemek[<em class="visszavezetes negy">ind</em>])</em>
                 <em class="visszavezetes negy">ind</em> := <em class="visszavezetes negy">ind</em> + 1
             <b>Ciklus vége</b>
             <em class="visszavezetes egy">van</em> := <em class="visszavezetes negy">ind</em> <= <em class="visszavezetes ketto">elemszám</em>
         </code></pre>
-        
         <p>vagy</p>
-
-        <pre class="language-pseudocode"><code>
+        <pre class="language-pszeudokód"><code>
             <em class="visszavezetes egy">van</em> := hamis
             <em class="visszavezetes negy">ind</em> := <em class="visszavezetes ketto">1</em>
             <b>Ciklus amíg</b> nem <em class="visszavezetes egy">van</em> és <em class="visszavezetes negy">ind</em> <= <em class="visszavezetes ketto">elemszám</em>
@@ -339,74 +263,81 @@ title: Programozási tételek (áttekintés)
         </code></pre>
     </div>
 
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/keres.cs" target="_blank">Általános kód (C#)</a>
     
-
 
     <h3 id="copy">Másolás (MÁSOL)</h3>
-    
     <p>A tömb(ök)höz egy másik, azonos hosszúságú tömböt rendelünk. A tömb(ök) elemein elvégzett műveletek azonosak. Tömböt ad vissza.</p>
-    
-    <h4>Specifikáció</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszámok], f:H1->H2
-            <b>Ki:</b> fvelemek ∈ H2[1..elemszám]
-            <b>Ef:</b> -
-            <b>Uf:</b> <em class="visszavezetes egy">fvelemek</em> = MÁSOL(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">f(elemek[i])</em>)
-        </code></pre>
-    </div>
-
-
-    <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Változó</b>
-                i: <b>Egész</b>
-            <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
-                <em class="visszavezetes egy">fvelemek[i]</em> := <em class="visszavezetes harom">f(elemek[i])</em>
-            <b>Ciklus vége</b>
-        </code></pre>
-    </div>
-
     <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/masol.cs" target="_blank">Általános kód (C#)</a>
-    
+    <h4>Specifikáció</h4>
+    <pre class="language-specifkáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszámok], f:H1->H2
+        <b>Ki:</b> fvelemek ∈ H2[1..elemszám]
+        <b>Ef:</b> -
+        <b>Uf:</b> <em class="visszavezetes egy">fvelemek</em> = MÁSOL(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">f(elemek[i])</em>)
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+            <em class="visszavezetes egy">fvelemek[i]</em> := <em class="visszavezetes harom">f(elemek[i])</em>
+        <b>Ciklus vége</b>
+    </code></pre>
 
+    
     
     <h3 id="filter">Kiválogatás (KIVÁLOGAT)</h3>
-    
     <p>Feltétel(ek)nek megfelelő <b>összes elem</b> megkeresése. Tömböt ad vissza.</p>
-
     <p>Két változata van. Az első, amikor az indexeket válogatjuk ki, míg a másikban az értékeket.</p>
     <p>A különbség a kettő között annyi, hogy a <b>KIVÁLOGAT</b> végén <em class="visszavezetes ot">i</em> vagy <em class="visszavezetes ot">elemek[i]</em> szerepel-e. Lent az indexes verzió látható.</p>
-
-    <h4>Specifikáció (indexek)</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
-            <b>Ki:</b> db ∈ N, kivelemek ∈ H[1..db]
-            <b>Ef:</b> -
-            <b>Uf:</b> (<em class="visszavezetes egy">db</em>, <em class="visszavezetes negy">kivelemek</em>)=KIVÁLOGAT(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>, <em class="visszavezetes ot">i</em>)
-        </code></pre>
-    </div>
-
-
-    <h4>Algoritmus (indexek)</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            <b>Változó</b>
-                i: <b>Egész</b>
-            <em class="visszavezetes egy">db</em> := 0
-            <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
-                <b>Ha</b> <em class="visszavezetes harom">T(elemek[i])</em> <b>akkor</b>
-                    <em class="visszavezetes egy">db</em> := <em class="visszavezetes egy">db</em> + 1
-                    <em class="visszavezetes negy">kivelemek[<em class="visszavezetes egy">db</em>]</em> := <em class="visszavezetes ot">i</em>
-                <b>Elágazás vége</b>
-            <b>Ciklus vége</b>
-        </code></pre>
-    </div>
-
     <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/kivalogat.cs" target="_blank">Általános kód (C#)</a>
+    <h4>Specifikáció (indexek)</h4>
+    <pre class="language-specifkáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T:H->L
+        <b>Ki:</b> db ∈ N, kivelemek ∈ H[1..db]
+        <b>Ef:</b> -
+        <b>Uf:</b> (<em class="visszavezetes egy">db</em>, <em class="visszavezetes negy">kivelemek</em>)=KIVÁLOGAT(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">T(elemek[i])</em>, <em class="visszavezetes ot">i</em>)
+    </code></pre>
+    <h4>Algoritmus (indexek)</h4>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <em class="visszavezetes egy">db</em> := 0
+        <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+            <b>Ha</b> <em class="visszavezetes harom">T(elemek[i])</em> <b>akkor</b>
+                <em class="visszavezetes egy">db</em> := <em class="visszavezetes egy">db</em> + 1
+                <em class="visszavezetes negy">kivelemek[<em class="visszavezetes egy">db</em>]</em> := <em class="visszavezetes ot">i</em>
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+    </code></pre>
+    <h4>Kiválogatás több szempont szerint (speci + alg.)</h4>
+    <p>Ha kettő, vagy több kiválogatást szeretnénk párhuzamosan végezni, akkor változik minimálisan a specifikáció és a kód.</p>
+    <ol>
+        <li>az utófeltételben több KIVÁLOGAT van, amik a megfelelő db, kivelemek párhoz tartoznak</li>
+        <li>az algoritmus számlálós ciklusa annyi (egymástól ált. elkülönülő) elágazást kap, ahány T tulajdonság van</li>
+    </ol>
+    <pre class="language-specifikáció"><code>
+        <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T1:H->L, T2:H->L
+        <b>Ki:</b> db1 ∈ N, kivelemek1 ∈ H[1..db1], db2 ∈ N, kivelemek2 ∈ H[1..db2]
+        <b>Ef:</b> -
+        <b>Uf:</b> (db1, kivelemek1)=KIVÁLOGAT(i=1..elemszám, T1(elemek[i]), i)
+                    (db2, kivelemek2)=KIVÁLOGAT(i=1..elemszám, T2(elemek[i]), i)
+    </code></pre>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        db1 := 0
+        db2 := 0
+        <b>Ciklus</b> i=1-től elemszám-ig
+            <b>Ha</b> T1(elemek[i]) <b>akkor</b>
+                db1 := db1 + 1
+                kivelemek1[db1] := i
+            <b>Ha</b> T2(elemek[i]) <b>akkor</b>
+                db2 := db2 + 1
+                kivelemek2[db2] := i
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+    </code></pre>
 
 
 
@@ -421,4 +352,5 @@ title: Programozási tételek (áttekintés)
     <h3 id="sources">Források</h3>
     <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 3. előadás (ppt) (előadó: Törley Gábor)</p>
     <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 4. előadás (ppt) (előadó: Törley Gábor)</p>
+    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 5. előadás (ppt) (előadó: Törley Gábor)</p>
 </section>
