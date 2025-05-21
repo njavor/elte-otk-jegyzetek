@@ -3,7 +3,7 @@ layout: lesson
 desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási alapismeretek tárgyon tanult programozási tételek/sémák.
 class: Programozási alapismeretek
 class-link: ../OTK-PAEG-INF22
-title: Programozási tételek (áttekintés)
+title: Programozási tételek
 ---
 
 <section id="ej--toc">
@@ -37,8 +37,7 @@ title: Programozási tételek (áttekintés)
 
 
     <h3 id="sum">Összegzés (SZUM)</h3>
-    <p>Elemek összesítése.</p>
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/szum.cs" target="_blank">Kód egész számokhoz (C#)</a>
+    <p>Elemek összesítése. <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/szum.cs" target="_blank">Kód egész számokhoz (C#)</a></p>
     <h4>Specifikáció</h4>
     <pre class="language-specifkáció"><code>
         <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám]
@@ -59,8 +58,7 @@ title: Programozási tételek (áttekintés)
     
 
     <h3 id="count">Megszámolás (DARAB)</h3>
-    <p>Feltétel(ek)nek eleget tevő elemek darabszáma.</p>
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/darab.cs" target="_blank">Általános kód (C#)</a>
+    <p>Feltétel(ek)nek eleget tevő elemek darabszáma. <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/darab.cs" target="_blank">Általános kód (C#)</a></p>
     <h4>Specifikáció</h4>
     <pre class="language-specifkáció"><code>
         <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T: H->L
@@ -81,9 +79,11 @@ title: Programozási tételek (áttekintés)
 
     
     <h3 id="max">Maximum- és minimumkiválasztás (MAX/MIN)</h3>
-    <p>A legnagyobb/legkisebb elem megadása. Indexet és értéket ad vissza.</p>
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/max.cs" target="_blank">Kód egész számokhoz (C#)</a>
-    <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/min.cs" target="_blank">Kód egész számokhoz(C#)</a>
+    <p>
+        A legnagyobb/legkisebb elem megadása. Indexet és értéket ad vissza. 
+        <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/max.cs" target="_blank">MAX Kód egész számokhoz (C#).</a>
+    </p>
+    
     <h4>Specifikáció</h4>
     <div>
         <pre class="language-specifkáció"><code>
@@ -204,7 +204,7 @@ title: Programozási tételek (áttekintés)
     <div>
         <pre class="language-pszeudokód"><code>
             <b>Változó</b>
-            i: <b>Egész</b>
+                i: <b>Egész</b>
             i := <em class="visszavezetes ketto">1</em>
             <b>Ciklus amíg</b> nem <em class="visszavezetes harom">T(elemek[i])</em>
                 i := i + 1
@@ -215,7 +215,7 @@ title: Programozási tételek (áttekintés)
         <pre class="language-pszeudokód"><code>
             <em class="visszavezetes egy">ind</em> := <em class="visszavezetes ketto">1</em>
             <b>Ciklus amíg</b> nem <em class="visszavezetes harom">T(elemek[<em class="visszavezetes egy">ind</em>])</em>
-            <em class="visszavezetes egy">ind</em> := <em class="visszavezetes egy">ind</em> + 1
+                <em class="visszavezetes egy">ind</em> := <em class="visszavezetes egy">ind</em> + 1
             <b>Ciklus vége</b>
         </code></pre>
     </div>
@@ -258,7 +258,8 @@ title: Programozási tételek (áttekintés)
             <em class="visszavezetes negy">ind</em> := <em class="visszavezetes ketto">1</em>
             <b>Ciklus amíg</b> nem <em class="visszavezetes egy">van</em> és <em class="visszavezetes negy">ind</em> <= <em class="visszavezetes ketto">elemszám</em>
                 <b>Ha</b> <em class="visszavezetes harom">T(elemek[<em class="visszavezetes negy">ind</em>])</em> <b>akkor</b> <em class="visszavezetes egy">van</em> := igaz
-                    <b>különben</b> <em class="visszavezetes negy">ind</em> := <em class="visszavezetes negy">ind</em> + 1
+                <b>különben</b> <em class="visszavezetes negy">ind</em> := <em class="visszavezetes negy">ind</em> + 1
+                <b>Elágazás vége</b>
             <b>Ciklus vége</b>
         </code></pre>
     </div>
@@ -320,8 +321,8 @@ title: Programozási tételek (áttekintés)
         <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám], T1:H->L, T2:H->L
         <b>Ki:</b> db1 ∈ N, kivelemek1 ∈ H[1..db1], db2 ∈ N, kivelemek2 ∈ H[1..db2]
         <b>Ef:</b> -
-        <b>Uf:</b> (db1, kivelemek1)=KIVÁLOGAT(i=1..elemszám, T1(elemek[i]), i)
-                    (db2, kivelemek2)=KIVÁLOGAT(i=1..elemszám, T2(elemek[i]), i)
+        <b>Uf:</b> (db1, kivelemek1)=KIVÁLOGAT(i=1..elemszám, T1(elemek[i]), i) és 
+                (db2, kivelemek2)=KIVÁLOGAT(i=1..elemszám, T2(elemek[i]), i)
     </code></pre>
     <pre class="language-pszeudokód"><code>
         <b>Változó</b>

@@ -10,37 +10,36 @@ title: Gyakran használat függvények (C#)
     <h3>Tartalom</h3>
     <h4><a href="#readin">Beolvasás</a></h4>
     <h4><a href="#other">További linkek</a></h4>
-    <h4><a href="#sources">Források</a></h4>
+    <!-- <h4><a href="#sources">Források</a></h4> -->
 </section>
 
 <section id="ej--content">
     <h3 id="readin">Beolvasás</h3>
     <h4>Egész szám beolvasás</h4>
     <pre class="language-cs"><code>
-        static int BeEgész(string inputSzöveg, int minÉrt, int maxÉrt, string hibaüzenet)
+        static int BeEgesz(string inputszoveg, int minert, int maxert, string hibauzenet)
         {
-            // Helyi változó (visszatérési érték)
-            int egész;
-            // Ellenőrzéshez
+            int result;
             string input;
             bool hiba;
             do
             {
-                Console.WriteLine(inputSzöveg);
+                Console.WriteLine(inputszoveg);
                 input = Console.ReadLine();
-                hiba = !int.TryParse(input, out egész) || egész < minÉrt || egész > maxÉrt;
+                hiba = !int.TryParse(input, out result) || result < minert || result > maxert;
                 if(hiba)
                 {
-                    Console.WriteLine(hibaüzenet);
+                    Console.WriteLine(hibauzenet);
                 }
-            }while(hiba);
-            return egész;
+            } while(hiba);
+            return result;
         }
-
-        // Példa meghívásra
-        db = BeEgész("", 1, int.MaxValue, "");
     </code></pre>
-    <h4>Egész tömb beolvasás</h4>
+    <pre class="language-cs"><code>
+        // Példa meghívásra (Main-en belül)
+        db = BeEgesz("", 1, int.MaxValue, "");
+    </code></pre>
+    <!-- <h4>Egész tömb beolvasás</h4>
     <p>Megjegyzés: az alábbi nem az órán vett, függvénybe kiszervezett tömb beolvasás! (nincs külön függvény, 0-tól indexel)</p>
     <pre class="language-cs"><code>
         static void Main(string[] args)
@@ -53,7 +52,54 @@ title: Gyakran használat függvények (C#)
                 egészTömb[i] = BeEgész("", int.MinValue, 200, "");
             }
         }
+    </code></pre> -->
+    <h4>Egész mátrix beolvasás</h4>
+    <pre class="language-cs"><code>
+        static void BeEgeszMatrix(string inputszoveg, int ihossz, int jhossz, int[,] matrix, int maxert, string errorszoveg)
+        {
+            string[] sor;
+            bool hiba;
+            int j;
+            for (int i = 0; i < ihossz; i++)
+            {
+                do
+                {
+                    hiba = false;
+
+                    Console.Write($"{i+1}. {inputszoveg}: ");
+                    sor = Console.ReadLine().Split();
+                    if (sor.Length != jhossz)
+                    {
+                        hiba = true;
+                    }
+                    else
+                    {
+                        j = 0;
+                        while ( j<jhossz && !hiba)
+                        {
+                            hiba = !int.TryParse(sor[j], out matrix[i, j]) || matrix[i, j] < minert || matrix[i, j] > maxert;
+                            j++;
+                        }
+                    }
+                    if (hiba)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Hibás bemenet! " + errorszoveg);
+                        Console.ResetColor();
+                    }
+                }
+                while (hiba);
+            }
+        }
     </code></pre>
+    <pre class="language-cs"><code>
+        // Példa meghívásra (Main-en belül)
+        int teldb = 34, napdb = 4;
+        int[,] hom = new int[teldb, napdb];
+
+        BeEgeszMatrix($"település hőmérsékletei", teldb, napdb, hom, -50, 50, $"Nem {napdb} db, szóközzel elválasztott, -50 és 50 közötti egész számot adtál meg!");
+    </code></pre>
+
 
 
 
@@ -65,6 +111,5 @@ title: Gyakran használat függvények (C#)
 
 
 
-    <h3 id="sources">Források</h3>
-    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 5. előadás (ppt) (előadó: Törley Gábor)</p>
+    <!-- <h3 id="sources">Források</h3> -->
 </section>

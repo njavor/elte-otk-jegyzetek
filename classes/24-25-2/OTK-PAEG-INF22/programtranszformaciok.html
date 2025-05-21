@@ -8,7 +8,13 @@ title: Programtranszformációk
 
 <section id="ej--toc">
     <h3>Tartalom</h3>
-    <h4><a href="#"></a></h4>
+    <h4><a href="#">Párhuzamos értékadás (06-31)</a></h4>
+    <h4><a href="#">Függvénykompozíció (06-41)</a></h4>
+    <!-- <h4><a href="#"> (06-51)</a></h4>
+    <h4><a href="#"> (06-)</a></h4>
+    <h4><a href="#"> (06-)</a></h4>
+    <h4><a href="#"> (06-)</a></h4>
+    <h4><a href="#"> (06-)</a></h4> -->
     <h4><a href="#other">További linkek</a></h4>
     <h4><a href="#sources">Források</a></h4>
 </section>
@@ -24,11 +30,9 @@ title: Programtranszformációk
 
     
     <h3 id="">Párhuzamos értékadás</h3>
-    $$
-    \text{a,b,c := f(x), g(x), h(x)}  \\
-    \Downarrow \\
-    \text{a:=f(x); b:=g(x); c:=h(x)}
-    $$
+    <pre><code>
+        a,b,c := f(x), g(x), h(x)  =>  a:=f(x); b:=g(x); c:=h(x)
+    </code></pre>
 
 
 

@@ -14,7 +14,7 @@ title: Halmazszerű nemtételek (metszet, unió)
 </section>
 
 <section id="ej--content">
-    <p>A metszet és az unió régen külön programozási tételnek voltak tekintve, ám igazából ezek a műveletek más prt-k tétel-összeépítése. További tétel-összeépítések <a href="">itt</a> találhatók.</p>
+    <p>A metszet és az unió régen külön programozási tételnek voltak tekintve, ám igazából ezek a műveletek más prt-k tétel-összeépítése. További nevezetes tétel-összeépítések <a href="">itt</a> találhatók.</p>
 
     <h3 id="halmaze">Halmazszerű tömb</h3>
     <p>Egy tömb akkor "halmazszerű", hogy ha nincs azonos értékű eleme.</p>
@@ -26,7 +26,7 @@ title: Halmazszerű nemtételek (metszet, unió)
     
     <h3 id="intersection">Metszet</h3>
     <p>Két (vagy több) halmaz közös elemeivel történő művelet.</p>
-    <p><span style="color: red;">FONTOS:</span> Az eldöntés melletti második tétel nem feltétlenül kiválogatás, feladattól függően behelyettesíthető megszámolással, kereséssel, stb.</p>
+    <p style="color: var(--important)">FONTOS: Az eldöntés melletti második tétel nem feltétlenül kiválogatás, feladattól függően behelyettesíthető megszámolással, kereséssel, stb.</p>
     
     <blockquote>Példa: két tömb közös elemeinek kiválogatása egy harmadik tömbbe.</blockquote>
     <h4>Specifikáció</h4>
@@ -66,7 +66,7 @@ title: Halmazszerű nemtételek (metszet, unió)
 
     <h3 id="union">Unió</h3>
     <p>Két (vagy több) halmaz összes elemével történő művelet.</p>
-    <p style="color: red;">FONTOS: Az eldöntés melletti második tétel nem feltétlenül kiválogatás, feladattól függően behelyettesíthető megszámolással, kereséssel, stb.</p>
+    <p style="color: var(--important);">FONTOS: Az eldöntés melletti második tétel nem feltétlenül kiválogatás, feladattól függően behelyettesíthető megszámolással, kereséssel, stb.</p>
     
     <blockquote>Példa: két tömb összes elemeinek kiválogatása egy harmadik tömbbe.</blockquote>
     <h4>Specifikáció</h4>
@@ -78,7 +78,7 @@ title: Halmazszerű nemtételek (metszet, unió)
             <b>Ef:</b> halmaze(elemek1, elemszám1) és halmaze(elemek2, elemszám2)
             <b>Uf:</b> (db, unió)=MÁSOL(i=1..elemszám1, bennevan(elemek1[i]), elemek1[i]) ⊕ KIVÁLOGAT(i=1..elemszam2, nem bennevan(elemek2[i]), elemek2[i]) és halmaze(unió,db)
         </code></pre>
-        <p style="color: red;">FONTOS: a '⊕' (:= sorozat összeadás) szimbólum nem értelmezett az ELTE-s specifikációs rendszerben, ettől még helyes!</p>
+        <p style="color: var(--important);">FONTOS: a '⊕' (:= sorozat összeadás) szimbólum nem értelmezett az ELTE-s specifikációs rendszerben, ettől még helyes!</p>
     </div>
 
 

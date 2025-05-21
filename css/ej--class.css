@@ -84,7 +84,7 @@ main{
 
 
     & h3:not(:nth-child(2)){
-        margin-top: .5em;
+        margin-top: 2em;
     }
     & h3#other{
         /* width: 100%; */
@@ -175,10 +175,12 @@ main{
             min-width: 100%;
 
             display: inline-block;
-
             font-size: var(--fs-400);
+            font-family: "Cascadia Code", sans-serif !important;
 
-
+            & *{
+                font-family: "Cascadia Code", sans-serif !important;
+            }
             & em{
                 margin-inline: .05em;
                 padding: .2em .3em;
