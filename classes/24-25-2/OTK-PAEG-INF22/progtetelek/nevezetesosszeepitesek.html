@@ -12,10 +12,8 @@ title: Nevezetes tételösszeépítések
     <h4><a href="#halmaz">Halmazszerű tömb (05-60)</a></h4>
     <h4><a href="#metszet">Metszet (06-02)</a></h4>
     <h4><a href="#unio">Unió (06-09)</a></h4>
-    <h4><a href="#">Másolással összeépítés (06-59)</a></h4>
     <h4><a href="#">Feltételes összegzés (07-02)</a></h4>
     <h4><a href="#">Feltételes maximumkeresés (07-23)</a></h4>
-    <h4><a href="#">Kereséssel összeépítés (09-02)</a></h4>
     <h4><a href="#">Ablakléptetés (09-26)</a></h4>
     <h4><a href="#other">További linkek</a></h4>
     <h4><a href="#sources">Források</a></h4>
@@ -27,7 +25,7 @@ title: Nevezetes tételösszeépítések
         Bár a 10 tanult alaptétellel önmagában számos feladat megoldható, ám sok esetben kevésnek bizonyul 1 tétel egy komplexebb feladat megoldására.
         Ez azonban könnyen orvosolható, hiszen semmi nem akadályozza az embert abban, hogy egy feladathoz több tételt is felhasználjon.
     </p>
-    <h4>Összeépítés típusai</h4>
+    <!-- <h4>Összeépítés típusai</h4> -->
     <h4>Példa</h4>
     <blockquote>
         Van nekem egy tömböm, ami egy osztály diákjainak átlagát tartalmazza. Szeretném kideríteni, hogy ha a minimum 4,5-ös átlagú diákokat nem
@@ -35,9 +33,11 @@ title: Nevezetes tételösszeépítések
     </blockquote>
     <p>
         Ez egy olyan feladat ami egy tétellel nem oldható meg, ugyanis egyik tanult tétellel sem tudunk úgy összegezni, hogy azt feltételhez kötjük <code>(átlag < 4,5)</code>.
-
+    </p>
+    <p>
         Itt jön képbe a tételösszeépítés.
-
+    </p>
+    <p>
         A feladathoz mindenképpen kell egy <b>összegzés</b> (átlagszámításhoz). Ám az összegzést nem az eredeti tömbön kell elvégezni, hanem egy olyan tömbön, 
         ami az összes 4,5 alatti átlagot tartalmazza. Ezt egy <b>kiválogatással</b> tudjuk elvégezni. Lásd a példa feladat megoldását
         <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/osszeepites-pelda.cs" target="_blank">itt</a>
@@ -45,7 +45,7 @@ title: Nevezetes tételösszeépítések
     <p>
         Ez a konkrét példa egy olyan tételösszeépítést használ, aminek külön neve is van, "feltételes összegzés". A következőkben ilyen, külön elnevezéssel is bíró tételösszeépítések szerepelnek.
     </p>
-    <p><b class="important">FONTOS:</b> Bármely tétel összeépíthetű bármely másikkal! Az alábbi nevezetes összeépítések csupán egy apró részhalmaza a lehetséges opcióknak.</p>
+    <p style="color: var(--important)">FONTOS: Bármely tétel összeépíthetű bármely másikkal! Az alábbi nevezetes összeépítések csupán egy apró részhalmaza a lehetséges opcióknak.</p>
 
 
 
@@ -89,9 +89,9 @@ title: Nevezetes tételösszeépítések
     <p></p>
     <h4>Specifikáció</h4>
     <pre class="language-speci"><code>
-        <b>Be:</b> elemszám1 ∈ N, elemek1 ∈ H[1..elemszám1], elemszám2 ∈ N, elemek2 ∈ H[1..elemszám2]
-        <b>Ki:</b> db ∈ N, metszet ∈ H[1..db]
-        <b>Fv:</b> bennevan: H -> L, bennevan(elem)=VAN(i=1..elemszám2,elemek2[i]=elem)
+        <b>Be:</b> elemszám1 ∈ <b>N</b>, elemek1 ∈ <b>H</b>[1..elemszám1], elemszám2 ∈ <b>N</b>, elemek2 ∈ <b>H</b>[1..elemszám2]
+        <b>Ki:</b> db ∈ <b>N</b>, metszet ∈ <b>H</b>[1..db]
+        <b>Fv:</b> bennevan: <b>H</b> -> L, bennevan(elem)=VAN(i=1..elemszám2,elemek2[i]=elem)
         <b>Ef:</b> halmaze(elemek1, elemszám1) és halmaze(elemek2, elemszám2)
         <b>Uf:</b> (db, metszet)=KIVÁLOGAT(i=1..elemszám1, bennevan(elemek1[i]), elemek1[i]) és halmaze(metszet,db)
     </code></pre>
@@ -124,9 +124,9 @@ title: Nevezetes tételösszeépítések
     <p></p>
     <h4>Specifikáció</h4>
     <pre class="language-speci"><code>
-        <b>Be:</b> elemszám1 ∈ N, elemek1 ∈ H[1..elemszám1], elemszám2 ∈ N, elemek2 ∈ H[1..elemszám2]
-        <b>Ki:</b> db ∈ N, unió ∈ H[1..db]
-        <b>Fv:</b> bennevan: H -> L, bennevan(elem)=VAN(i=1..elemszám2,elemek2[i]=elem)
+        <b>Be:</b> elemszám1 ∈ N, elemek1 ∈ <b>H</b>[1..elemszám1], elemszám2 ∈ N, elemek2 ∈ <b>H</b>[1..elemszám2]
+        <b>Ki:</b> db ∈ N, unió ∈ <b>H</b>[1..db]
+        <b>Fv:</b> bennevan: <b>H</b> -> L, bennevan(elem)=VAN(i=1..elemszám2,elemek2[i]=elem)
         <b>Ef:</b> halmaze(elemek1, elemszám1) és halmaze(elemek2, elemszám2)
         <b>Uf:</b> (db, unió)=MÁSOL(i=1..elemszám1, bennevan(elemek1[i]), elemek1[i]) ⊕ KIVÁLOGAT(i=1..elemszam2, nem bennevan(elemek2[i]), elemek2[i]) és halmaze(unió,db)
     </code></pre>
@@ -159,70 +159,51 @@ title: Nevezetes tételösszeépítések
 
 
 
-    <h3 id="">Másolással összeépítés (06-59)</h3>
-    <p>A <code>másolás</code> bármely más tétellel egyszerűen összeépíthető</p>
-    <h4>Specifikáció</h4>
-    <pre class="language-speci"><code>
-        <b>Be:</b>
-        <b>Ki:</b>
-        <b>Fv:</b>
-        <b>Ef:</b>
-        <b>Uf:</b>
-    </code></pre>
-    <h4>Algoritmus</h4>
-    <pre class="language-speci"><code>
-        
-    </code></pre>
-
-
-
-    <h3 id="">Feltételes összegzés (07-02)</h3>
+    <h3 id="">Feltételes összegzés</h3>
     <p></p>
     <h4>Specifikáció</h4>
     <pre class="language-speci"><code>
-        <b>Be:</b>
-        <b>Ki:</b>
-        <b>Fv:</b>
-        <b>Ef:</b>
-        <b>Uf:</b>
+        <b>Be:</b> elemszam ∈ <b>N</b>, elemek ∈ <b>H</b>[1..elemszam]
+        <b>Ki:</b> ossz ∈ <b>H</b>
+        <b>Ef:</b> - 
+        <b>Uf:</b> ossz=SZUM(i=1..elemszam, elemek[i], T(elemek[i]))
     </code></pre>
     <h4>Algoritmus</h4>
     <pre class="language-speci"><code>
-        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        ossz := 0
+        <b>Ciklus</b> i=1-től elemszam-ig
+            <b>Ha</b> T(elemek[i]) <b>akkor</b>
+                ossz := ossz + elemek[i]
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
     </code></pre>
 
 
 
-    <h3 id="">Feltételes maximumkeresés (07-23)</h3>
+    <h3 id="">Feltételes maximum-/minimumkeresés</h3>
     <p></p>
     <h4>Specifikáció</h4>
     <pre class="language-speci"><code>
-        <b>Be:</b>
-        <b>Ki:</b>
-        <b>Fv:</b>
-        <b>Ef:</b>
-        <b>Uf:</b>
+        <b>Be:</b> elemszam ∈ <b>N</b>, elemek ∈ <b>H</b>[1..elemszam], T:H->L
+        <b>Ki:</b> van ∈ <b>L</b>, maxind ∈ <b>Z</b>, maxert ∈ <b>H</b>
+        <b>Ef:</b> -
+        <b>Uf:</b> (van,maxind,maxert)=<b>MAXHA</b>(i=1..elemszam, elemek[i], T(elemek[i]))
     </code></pre>
     <h4>Algoritmus</h4>
     <pre class="language-speci"><code>
-        
-    </code></pre>
-
-
-
-    <h3 id="">Kereséssel összeépítés (09-02)</h3>
-    <p></p>
-    <h4>Specifikáció</h4>
-    <pre class="language-speci"><code>
-        <b>Be:</b>
-        <b>Ki:</b>
-        <b>Fv:</b>
-        <b>Ef:</b>
-        <b>Uf:</b>
-    </code></pre>
-    <h4>Algoritmus</h4>
-    <pre class="language-speci"><code>
-        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        maxert := -∞
+        maxind := 0        
+        <b>Ciklus</b> i=1-től elemszam-ig
+            <b>Ha</b> T(elemek[i]) és maxert < elemek[i] <b>akkor</b>
+                maxind := i
+                maxert := elemek[i]
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+        van := maxind > 0
     </code></pre>
 
 
@@ -231,11 +212,11 @@ title: Nevezetes tételösszeépítések
     <p></p>
     <h4>Specifikáció</h4>
     <pre class="language-speci"><code>
-        <b>Be:</b>
-        <b>Ki:</b>
+        <b>Be:</b> elemszam ∈ <b>N</b>, elemek ∈ <b>H</b>, k ∈ <b>N</b>
+        <b>Ki:</b> kezd ∈ <b>N</b>
         <b>Fv:</b>
         <b>Ef:</b>
-        <b>Uf:</b>
+        <b>Uf:</b> ()
     </code></pre>
     <h4>Algoritmus</h4>
     <pre class="language-speci"><code>
