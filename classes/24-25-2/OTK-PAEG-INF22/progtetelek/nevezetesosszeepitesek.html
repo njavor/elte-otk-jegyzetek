@@ -1,0 +1,241 @@
+---
+layout: lesson
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási alapismeretek tárgyon tanult tételösszeépítések.
+class: Programozási alapismeretek
+class-link: ../../OTK-PAEG-INF22
+title: Nevezetes tételösszeépítések
+---
+
+<section id="ej--toc">
+    <h3>Tartalom</h3>
+    <h4><a href="#mix">Tételösszeépítésről</a></h4>
+    <h4><a href="#halmaz">Halmazszerű tömb</a></h4>
+    <h4><a href="#metszet">Metszet</a></h4>
+    <h4><a href="#unio">Unió</a></h4>
+    <h4><a href="#ifsum">Feltételes összegzés</a></h4>
+    <h4><a href="#ifmax">Feltételes maximum-/minimumkeresés</a></h4>
+    <h4><a href="#window">Ablakléptetés</a></h4>
+    <h4><a href="#other">További linkek</a></h4>
+    <h4><a href="#sources">Források</a></h4>
+</section>
+
+<section id="ej--content">
+    <h3 id="mix">Tételösszeépítésről</h3>
+    <p>
+        Bár a 10 tanult alaptétellel önmagában számos feladat megoldható, ám sok esetben kevésnek bizonyul 1 tétel egy komplexebb feladat megoldására.
+        Ez azonban könnyen orvosolható, hiszen semmi nem akadályozza az embert abban, hogy egy feladathoz több tételt is felhasználjon.
+    </p>
+    <!-- <h4>Összeépítés típusai</h4> -->
+    <h4>Példa</h4>
+    <blockquote>
+        Van nekem egy tömböm, ami egy osztály diákjainak átlagát tartalmazza. Szeretném kideríteni, hogy ha a minimum 4,5-ös átlagú diákokat nem
+        számolnánk, akkor mennyi lenne az osztály átlaga.
+    </blockquote>
+    <p>
+        Ez egy olyan feladat ami egy tétellel nem oldható meg, ugyanis egyik tanult tétellel sem tudunk úgy összegezni, hogy azt feltételhez kötjük <code>(átlag < 4,5)</code>.
+    </p>
+    <p>
+        Itt jön képbe a tételösszeépítés.
+    </p>
+    <p>
+        A feladathoz mindenképpen kell egy <b>összegzés</b> (átlagszámításhoz). Ám az összegzést nem az eredeti tömbön kell elvégezni, hanem egy olyan tömbön, 
+        ami az összes 4,5 alatti átlagot tartalmazza. Ezt egy <b>kiválogatással</b> tudjuk elvégezni. Lásd a példa feladat megoldását
+        <a href="https://github.com/njavor/elte-otk-it-jegyzetek/tree/main/classes/24-25-2/OTK-PAEG-INF22/progtetelek/kod/osszeepites-pelda.cs" target="_blank">itt</a>
+    </p>
+    <p>
+        Ez a konkrét példa egy olyan tételösszeépítést használ, aminek külön neve is van, "feltételes összegzés". A következőkben ilyen, külön elnevezéssel is bíró tételösszeépítések szerepelnek.
+    </p>
+    <p style="color: var(--important)">FONTOS: Bármely tétel összeépíthetű bármely másikkal! Az alábbi nevezetes összeépítések csupán egy apró részhalmaza a lehetséges opcióknak.</p>
+
+
+
+
+    <h3 id="halmaz">Halmazszerű tömb</h3>
+    <p>Használt tételek: kiválogatás + eldöntés</p>
+    <h4>Specifikáció</h4>
+    <pre class="language-speci"><code>
+        <b>Be:</b> elemszam ∈ <b>N</b>, elemek ∈ <b>N</b>[1..elemszam]
+        <b>Ki:</b> hdb ∈ <b>N</b>, halmaz ∈ <b>N</b>[1..hdb]
+        <b>Fv:</b> volt: <b>N</b> -> <b>L</b>, volt(i)=VAN(j=1..i-1, elemek[j] = elemek[i])
+        <b>Ef:</b> -
+        <b>Uf:</b> (hdb, halmaz) = KIVÁLOGAT(i=1..elemszam, nem volt(i))
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-pszeudokod"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        hdb := 0
+        <b>Ciklus</b> i=1-től elemszam-ig
+            <b>Ha</b> nem volt(i) <b>akkor</b>
+                hdb := hdb + 1
+                halmaz[hdb] := elemek[i]
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+
+        <b>Függvény</b> volt(i: <b>Egész</b>): <b>Logikai</b>
+            <b>Változó</b>
+                j: <b>Egész</b>
+            j := 1
+            <b>Ciklus amíg</b> j <= i-1 és nem elemek[j] = elemek[i]
+                j := j + 1
+            <b>Ciklus vége</b>
+            volt := j <= i-1
+        <b>Függvény vége</b>
+    </code></pre>
+
+
+
+    <h3 id="metszet">Metszet</h3>
+    <p></p>
+    <h4>Specifikáció</h4>
+    <pre class="language-speci"><code>
+        <b>Be:</b> elemszám1 ∈ <b>N</b>, elemek1 ∈ <b>H</b>[1..elemszám1], elemszám2 ∈ <b>N</b>, elemek2 ∈ <b>H</b>[1..elemszám2]
+        <b>Ki:</b> db ∈ <b>N</b>, metszet ∈ <b>H</b>[1..db]
+        <b>Fv:</b> bennevan: <b>H</b> -> L, bennevan(elem)=VAN(i=1..elemszám2,elemek2[i]=elem)
+        <b>Ef:</b> halmaze(elemek1, elemszám1) és halmaze(elemek2, elemszám2)
+        <b>Uf:</b> (db, metszet)=KIVÁLOGAT(i=1..elemszám1, bennevan(elemek1[i]), elemek1[i]) és halmaze(metszet,db)
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-pszeudokod"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        db := 0
+        <b>Ciklus</b> i=1-től elemszám1-ig
+            <b>Ha</b> bennevan(elemek1[i]) <b>akkor</b>
+                db := db + 1
+                metszet[db] := elemek1[i]
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+
+        <b>Függvény</b> bennevan(elem: <b>H</b>): <b>Logikai</b>
+            <b>Változó</b>
+                i: <b>Egész</b>
+            i := 1
+            <b>Ciklus amíg</b> i <= elemszám2 és nem elemek2[i] = elem
+                i := i + 1
+            <b>Ciklus vége</b>
+            bennevan := i <= elemszám2
+        <b>Függvény vége</b>
+    </code></pre>
+
+
+
+    <h3 id="unio">Unió</h3>
+    <p></p>
+    <h4>Specifikáció</h4>
+    <pre class="language-speci"><code>
+        <b>Be:</b> elemszám1 ∈ N, elemek1 ∈ <b>H</b>[1..elemszám1], elemszám2 ∈ N, elemek2 ∈ <b>H</b>[1..elemszám2]
+        <b>Ki:</b> db ∈ N, unió ∈ <b>H</b>[1..db]
+        <b>Fv:</b> bennevan: <b>H</b> -> L, bennevan(elem)=VAN(i=1..elemszám2,elemek2[i]=elem)
+        <b>Ef:</b> halmaze(elemek1, elemszám1) és halmaze(elemek2, elemszám2)
+        <b>Uf:</b> (db, unió)=MÁSOL(i=1..elemszám1, bennevan(elemek1[i]), elemek1[i]) ⊕ KIVÁLOGAT(i=1..elemszam2, nem bennevan(elemek2[i]), elemek2[i]) és halmaze(unió,db)
+    </code></pre>
+    <p style="color: var(--important);">FONTOS: a '⊕' (:= sorozat összeadás) szimbólum nem értelmezett az ELTE-s specifikációs rendszerben, ettől még helyes!</p>
+    <h4>Algoritmus</h4>
+    <pre class="language-pszeudokod"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <b>Ciklus</b> i=1-től elemszám1-ig
+            unió[i] := elemek1[i]
+        <b>Ciklus vége</b>
+        db := elemszám1
+        <b>Ciklus</b> i=1-től elemszám2-ig
+            <b>Ha</b> nem bennevan(elemek2[i]) <b>akkor</b>
+                db := db + 1
+                unió[db] := elemek2[i]
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+
+        <b>Függvény</b> bennevan(elem: <b>H</b>): <b>Logikai</b>
+            <b>Változó</b>
+                i: <b>Egész</b>
+            i := 1
+            <b>Ciklus amíg</b> i <= elemszám1 és nem elemek1[i] = elem
+                i := i + 1
+            <b>Ciklus vége</b>
+            bennevan := i <= elemszám1
+        <b>Függvény vége</b>
+    </code></pre>
+
+
+
+    <h3 id="ifsum">Feltételes összegzés</h3>
+    <p></p>
+    <h4>Specifikáció</h4>
+    <pre class="language-speci"><code>
+        <b>Be:</b> elemszam ∈ <b>N</b>, elemek ∈ <b>H</b>[1..elemszam]
+        <b>Ki:</b> ossz ∈ <b>H</b>
+        <b>Ef:</b> - 
+        <b>Uf:</b> ossz=SZUM(i=1..elemszam, elemek[i], T(elemek[i]))
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-speci"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        ossz := 0
+        <b>Ciklus</b> i=1-től elemszam-ig
+            <b>Ha</b> T(elemek[i]) <b>akkor</b>
+                ossz := ossz + elemek[i]
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+    </code></pre>
+
+
+
+    <h3 id="ifmax">Feltételes maximum-/minimumkeresés</h3>
+    <p></p>
+    <h4>Specifikáció</h4>
+    <pre class="language-speci"><code>
+        <b>Be:</b> elemszam ∈ <b>N</b>, elemek ∈ <b>H</b>[1..elemszam], T:H->L
+        <b>Ki:</b> van ∈ <b>L</b>, maxind ∈ <b>Z</b>, maxert ∈ <b>H</b>
+        <b>Ef:</b> -
+        <b>Uf:</b> (van,maxind,maxert)=<b>MAXHA</b>(i=1..elemszam, elemek[i], T(elemek[i]))
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-speci"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        maxert := -∞
+        maxind := 0        
+        <b>Ciklus</b> i=1-től elemszam-ig
+            <b>Ha</b> T(elemek[i]) és maxert < elemek[i] <b>akkor</b>
+                maxind := i
+                maxert := elemek[i]
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+        van := maxind > 0
+    </code></pre>
+
+
+
+    <h3 id="window">Ablakléptetés (09-26)</h3>
+    <p>Olyan </p>
+    <h4>Specifikáció</h4>
+    <pre class="language-speci"><code>
+        <b>Be:</b> elemszam ∈ <b>N</b>, elemek ∈ <b>H</b>, k ∈ <b>N</b>
+        <b>Ki:</b> kezd ∈ <b>N</b>
+        <b>Fv:</b>
+        <b>Ef:</b>
+        <b>Uf:</b> ()
+    </code></pre>
+    <h4>Algoritmus</h4>
+    <pre class="language-speci"><code>
+        
+    </code></pre>
+
+
+
+
+
+    <h3 id="other">További linkek</h3>
+    <!-- <a href="./progtetelek/feladatok">Gyakorló feladatok programozási tételekkel</a> -->
+    <a href="https://progalap.elte.hu/specifikacio/" target="_blank">ELTE specifikáció szerkesztője</a>
+
+
+
+    <h3 id="sources">Források</h3>
+    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 5. előadás (ppt) (előadó: Törley Gábor)</p>
+    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 6. előadás (ppt) (előadó: Törley Gábor)</p>
+    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 7. előadás (ppt) (előadó: Törley Gábor)</p>
+    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 9. előadás (ppt) (előadó: Törley Gábor)</p>
+</section>

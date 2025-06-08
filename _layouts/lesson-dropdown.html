@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+{% include head-lesson-dropdown.html %}
+
+<body>
+    {% include header.html %}
+
+    <a href="#" id="totop">
+        <button class="totop material-symbols-outlined">arrow_upward_alt</button>
+    </a>
+
+    <main>
+        <section id="ej--title">
+            <h4><a href="{{ page.class-link }}">{{ page.class }}</a></h4>
+            <h2>{{ page.title }} </h2>
+        </section>
+        
+        {{ content }}
+    </main>
+
+    <footer>
+        <span>© 2025 Jávor Nikolett</span>
+    </footer>
+</body>
+</html>

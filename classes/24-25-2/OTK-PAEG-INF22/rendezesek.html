@@ -8,7 +8,7 @@ title: Rendezési algoritmusok
 
 <section id="ej--toc">
     <h3>Tartalom</h3>
-    <h4><a href="#summary">Az elemi rendezések</a></h4>
+    <!-- <h4><a href="#summary">Az elemi rendezések</a></h4> -->
     <h4><a href="#switch">Egyszerű cserés rendezés</a></h4>
     <h4><a href="#minselect">Minimum-kiválasztásos rendezés</a></h4>
     <h4><a href="#bubble">Buborékrendezés</a></h4>
@@ -19,14 +19,14 @@ title: Rendezési algoritmusok
 
 
 <section id="ej--content">
-    <h3 id="summary">Az elemi rendezések</h3>
+    <!-- <h3 id="summary">Az elemi rendezések</h3>
 
     <p>
         Dummy text.
     </p>
     <p>
-        Az alábbi rendezések futási ideje: <b>N\(^2\)</b>
-    </p>
+        Az alábbi rendezések futási ideje: N\(^2\)
+    </p> -->
 
 
 
@@ -40,154 +40,142 @@ title: Rendezési algoritmusok
         Az azonos értékű elemek nem cserélődnek fel, sorrendiségük megmarad.
     </p>
     <p>Animáció: <a href="" target="_blank">link</a></p>
-    <canvas id="htmlCanvas1" width="700" height="430" style="border: 1px solid black; background-color: rgb(255, 253, 250); cursor: default;"></canvas>
+    <!-- <canvas id="htmlCanvas1" width="700" height="430" style="border: 1px solid black; background-color: rgb(255, 253, 250); cursor: default;"></canvas> -->
 
 
     <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            Egyszerű_cserés_rendezés:
-                <b>Változó</b>
-                    i, j: Egész
-                    cs: TH
-                <b>Ciklus</b> i=1-től elemszám-ig
-                    <b>Ciklus</b> j=i+1-től elemszámig
-                        <b>Ha</b> elemek[i] > elemek[j] <b>akkor</b>
-                            cs := elemek[i]
-                            elemek[i] := elemek[j]
-                            elemek[j] := cs
-                        <b>Elágazás vége</b>
-                    <b>Ciklus vége</b>
+    <pre class="language-pseudocode"><code>
+        Egyszerű_cserés_rendezés:
+            <b>Változó</b>
+                i, j: Egész
+                cs: TH
+            <b>Ciklus</b> i=1-től elemszám-ig
+                <b>Ciklus</b> j=i+1-től elemszámig
+                    <b>Ha</b> elemek[i] > elemek[j] <b>akkor</b>
+                        cs := elemek[i]
+                        elemek[i] := elemek[j]
+                        elemek[j] := cs
+                    <b>Elágazás vége</b>
                 <b>Ciklus vége</b>
-            <b>Eljárás vége.</b>
-        </code></pre>
-    </div>
+            <b>Ciklus vége</b>
+        <b>Eljárás vége.</b>
+    </code></pre>
 
 
 
     <h3 id="minselect">Minimum-kiválasztásos rendezés</h3>
-    <p>
+    <!-- <p>
         
-    </p>
+    </p> -->
 
 
     <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            Minimum-kiválasztásos_rendezés:
-                <b>Változó</b>
-                    minI, i, j: Egész
-                    cs: TH
-                <b>Ciklus</b> i=1-től elemszám-1-ig
-                    minI := i
-                    <b>Ciklus</b> j=i+1-től elemszámig
-                        <b>Ha</b> elemek[minI] > elemek[j] <b>akkor</b> minI := j
-                    <b>Ciklus vége</b>
-                    cs := elemek[minI]
-                    elemek[minI] := elemek[i]
-                    elemek[i] := cs
+    <pre class="language-pseudocode"><code>
+        Minimum-kiválasztásos_rendezés:
+            <b>Változó</b>
+                minI, i, j: Egész
+                cs: TH
+            <b>Ciklus</b> i=1-től elemszám-1-ig
+                minI := i
+                <b>Ciklus</b> j=i+1-től elemszámig
+                    <b>Ha</b> elemek[minI] > elemek[j] <b>akkor</b> minI := j
                 <b>Ciklus vége</b>
-            <b>Eljárás vége.</b>
-        </code></pre>
-    </div>
+                cs := elemek[minI]
+                elemek[minI] := elemek[i]
+                elemek[i] := cs
+            <b>Ciklus vége</b>
+        <b>Eljárás vége.</b>
+    </code></pre>
 
 
 
     <h3 id="bubble">Buborékrendezés</h3>
-    <p></p>
+    <!-- <p></p> -->
 
 
     <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            Buborékrendezés:
-                <b>Változó</b>
-                    i, j: Egész
-                    cs: TH
-                <b>Ciklus</b> i=elemszám-tól 2-ig -1-esével
-                    <b>Ciklus</b> j=1-től i-1-ig
-                        <b>Ha</b> elemek[j] > elemek[j+1] <b>akkor</b>
-                            cs := elemek[j]
-                            elemek[j] := elemek[j+1]
-                            elemek[j+1] := cs
-                        <b>Elágazás vége</b>
-                    <b>Ciklus vége</b>
+    <pre class="language-pseudocode"><code>
+        Buborékrendezés:
+            <b>Változó</b>
+                i, j: Egész
+                cs: TH
+            <b>Ciklus</b> i=elemszám-tól 2-ig -1-esével
+                <b>Ciklus</b> j=1-től i-1-ig
+                    <b>Ha</b> elemek[j] > elemek[j+1] <b>akkor</b>
+                        cs := elemek[j]
+                        elemek[j] := elemek[j+1]
+                        elemek[j+1] := cs
+                    <b>Elágazás vége</b>
                 <b>Ciklus vége</b>
-            <b>Eljárás vége.</b>
-        </code></pre>
-    </div>
+            <b>Ciklus vége</b>
+        <b>Eljárás vége.</b>
+    </code></pre>
 
 
-    <h4>Algoritmus (javított)</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            Javított_buborékrendezés:
-                <b>Változó</b>
-                    ucs, i, j: Egész
-                    cs: TH
-                i := elemszám
-                <b>Ciklus amíg</b> i >= 2
-                    ucs := 0
-                    <b>Ciklus</b> j=1-től i-1-ig
-                        <b>Ha</b> elemek[j] > elemek[j+1] <b>akkor</b>
-                            cs := elemek[j]
-                            elemek[j] := elemek[j+1]
-                            elemek[j+1] := cs
-                            ucs := j
-                        <b>Elágazás vége</b>
-                    <b>Ciklus vége</b>
-                    i := ucs
+    <h4>Algoritmus (javított buborékrendezés)</h4>
+    <pre class="language-pseudocode"><code>
+        Javított_buborékrendezés:
+            <b>Változó</b>
+                ucs, i, j: Egész
+                cs: TH
+            i := elemszám
+            <b>Ciklus amíg</b> i >= 2
+                ucs := 0
+                <b>Ciklus</b> j=1-től i-1-ig
+                    <b>Ha</b> elemek[j] > elemek[j+1] <b>akkor</b>
+                        cs := elemek[j]
+                        elemek[j] := elemek[j+1]
+                        elemek[j+1] := cs
+                        ucs := j
+                    <b>Elágazás vége</b>
                 <b>Ciklus vége</b>
-            <b>Eljárás vége.</b>
-        </code></pre>
-    </div>
+                i := ucs
+            <b>Ciklus vége</b>
+        <b>Eljárás vége.</b>
+    </code></pre>
 
 
 
     <h3 id="insertion">Beillesztéses rendezés</h3>
-    <p></p>
+    <!-- <p></p> -->
 
 
     <h4>Algoritmus</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            Beillesztéses_rendezés:
-                <b>Változó</b>
-                    i, j: Egész
-                    cs: TH
-                <b>Ciklus</b> i=2-től elemszám-ig
-                    j := i-1
-                    <b>Ciklus amíg</b> j>0 és elemek[j] > elemek[j+1]
-                        cs := elemek[j]
-                        elemek[j] := elemek[j+1]
-                        elemek[j+1] := cs
-                        j := j-1
-                    <b>Ciklus vége</b>
-                <b>Ciklus vége</b>
-            <b>Eljárás vége.</b>
-        </code></pre>
-    </div>
-
-
-    <h4>Algoritmus (javított)</h4>
-    <div class="code-toolbar">
-        <pre class="language-pseudocode"><code>
-            Javított_beillesztéses_rendezés:
-                <b>Változó</b>
-                    i, j: Egész
-                    cs: TH
-                <b>Ciklus</b> i=2-től elemszám-ig
-                    cs := elemek[i]
-                    j := i-1
-                    <b>Ciklus amíg</b> j>0 és elemek[j] > cs
-                        elemek[j+1] := elemek[j]
-                        j := j-1
-                    <b>Ciklus vége</b>
+    <pre class="language-pseudocode"><code>
+        Beillesztéses_rendezés:
+            <b>Változó</b>
+                i, j: Egész
+                cs: TH
+            <b>Ciklus</b> i=2-től elemszám-ig
+                j := i-1
+                <b>Ciklus amíg</b> j>0 és elemek[j] > elemek[j+1]
+                    cs := elemek[j]
+                    elemek[j] := elemek[j+1]
                     elemek[j+1] := cs
+                    j := j-1
                 <b>Ciklus vége</b>
-            <b>Eljárás vége.</b>
-        </code></pre>
-    </div>
+            <b>Ciklus vége</b>
+        <b>Eljárás vége.</b>
+    </code></pre>
+
+
+    <h4>Algoritmus (javított beillesztéses rendezés)</h4>
+    <pre class="language-pseudocode"><code>
+        Javított_beillesztéses_rendezés:
+            <b>Változó</b>
+                i, j: Egész
+                cs: TH
+            <b>Ciklus</b> i=2-től elemszám-ig
+                cs := elemek[i]
+                j := i-1
+                <b>Ciklus amíg</b> j>0 és elemek[j] > cs
+                    elemek[j+1] := elemek[j]
+                    j := j-1
+                <b>Ciklus vége</b>
+                elemek[j+1] := cs
+            <b>Ciklus vége</b>
+        <b>Eljárás vége.</b>
+    </code></pre>
 
 
 
