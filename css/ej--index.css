@@ -1,5 +1,5 @@
-header .ej--left a:nth-last-child(1),
-header .ej--left span:nth-last-child(1){
+header .ej--left span:nth-last-child(2),
+header .ej--left a:nth-last-child(1){
     display: none;
 }
 
