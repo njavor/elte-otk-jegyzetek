@@ -7,11 +7,11 @@
     <meta name="author" content="Jávor Nikolett">
 
 
-    <!-- favicon -->
+    <!-- FAVICON -->
     <link rel="shortcut icon" href="/img/fav.ico" type="image/x-icon" >
 
 
-    <!-- css -->
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/--google-icons.css" >
 
     <link rel="stylesheet" type="text/css" href="/css/-variables.css" >
@@ -24,6 +24,15 @@
 
     <link rel="stylesheet" type="text/css" href="/elte-otk-jegyzetek/css/ej--general.css" >
 
+    <!--------- layout dependent -->
+    {% if page.layout == "subject" %}
+        <link rel="stylesheet" href="/elte-otk-jegyzetek/css/ej--class.css">
+    {% elsif page.layout == "lesson" %}
+        <link rel="stylesheet" href="/selfhost/prismjs/prism.css">
+        <link rel="stylesheet" href="/selfhost/prismjs/prism-vsc-dark-plus.css">
+    {% endif %}
+
+    <!--------- file dependent -->
     {% if page.css %}
         {% for css_file in page.css %}
             <link rel="stylesheet" href="/elte-otk-jegyzetek/css/{{ css_file }}">
@@ -36,10 +45,18 @@
     {% endif %}
     
 
-    <!-- js -->
+    <!-- JS -->
     <script src="/js/lightMode.js" defer></script>
     <script src="/js/toTopButton.js"></script>
 
+    <!--------- layout dependent -->
+    {% if page.layout == "lesson" %}
+        <script src="/elte-otk-jegyzetek/js/copyButton.js"></script>
+        <script src="/elte-otk-jegyzetek/js/dropdownDiv.js"></script>
+        <script src="/selfhost/prismjs/prism.js"></script>
+    {% endif %}
+
+    <!--------- file dependent -->
     {% if page.js %}
         {% for js_file in page.js %}
             <script src="/elte-otk-jegyzetek/js/{{ js_file }}"></script>
@@ -52,7 +69,7 @@
     {% endif %}
     
 
-    <!-- fonts & icons -->
+    <!-- FONTS & ICONS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;600;700;800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
