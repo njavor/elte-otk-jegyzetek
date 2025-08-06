@@ -1,3 +1,8 @@
+header .ej--left a:nth-last-child(),
+header .ej--list span:nth-last-child(){
+    display: none;
+}
+
 #ej--intro{
     align-items: flex-start;
     gap: .5em;
