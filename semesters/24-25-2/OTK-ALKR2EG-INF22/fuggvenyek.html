@@ -1,0 +1,189 @@
+---
+layout: lesson
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Alkalmazói rendszerek 2. tárgyon Használt függvények.
+class: Alkalmazói rendszerek 2.
+class-link: ../OTK-ALKR2EG-INF22
+title: Használt függvények
+---
+
+<section id="ej--toc">
+    <h3>Tartalom</h3>
+    <h4><a href="#ab">Adatbázisfüggvények II. (GY07)</a></h4>
+    <h4><a href="#dateandtext">Dátumfüggvények + Szövegfüggvények (EA08)</a></h4>
+    <h4><a href="#tomb">Tömbképletek (GY08)</a></h4>
+    <h4><a href="#tabla">Adattábla I-II. (EA09-EA10)</a></h4>
+    <h4><a href="#solver">Solver I-II. (GY09-GY10)</a></h4>
+    <h4><a href="#money">Pénzügyi függvények (EA11)</a></h4>
+    <!-- <h4><a href="#other">További linkek</a></h4> -->
+    <h4><a href="#sources">Források</a></h4>
+</section>
+
+<section id="ej--content">
+    <h3 id="ab">Adatbázisfüggvények II. (GY07)</h3>
+    <ul>
+        <li><b>=AB.ÁTLAG</b></li>
+        <li><b>=AB.DARAB2</b></li>
+        <li><b>=AB.MEZŐ</b></li>
+        <li><b>=AB.MIN</b></li>
+        <li><b>=AB.SZUM</b></li>
+        <li>=ÁTLAGHATÖBB</li>
+        <li>=DARABHATÖBB</li>
+        <li>=FKERES</li>
+        <li>=HA</li>
+        <li>=HAHIBA</li>
+        <li>=(HIBA.E)</li>
+        <li>=KEREKÍTÉS</li>
+        <li>=MAXHA</li>
+        <li>=MINHA</li>
+    </ul>
+
+
+
+    <h3 id="dateandtext">Dátumfüggvények + Szövegfüggvények (EA08)</h3>
+    <ul>
+        <li><b>=BAL</b></li>
+        <li><b>=DÁTUM</b></li>
+        <li><b>=DÁTUMÉRTÉK</b></li>
+        <li><b>=ÉV</b></li>
+        <li><b>=FŰZ</b></li>
+        <li><b>=HÓNAP</b></li>
+        <li><b>=IDŐ</b></li>
+        <li><b>=JOBB</b></li>
+        <li><b>=NAP</b></li>
+        <li><b>=ÓRA</b></li>
+        <li><b>=PERCEK</b></li>
+        <li><b>=SZÖVEG</b></li>
+        <li><b>=SZÖVEG.KERES</b></li>
+        <li><b>=TÖRTÉV</b></li>
+        <li>=ÁTLAGHATÖBB</li>
+        <li>=HAHIBA</li>
+        <li>=KEREK.LE</li>
+    </ul>
+    
+    
+    
+    <h3 id="tomb">Tömbképletek (GY08)</h3>
+    <ul>
+        <li>=AB.DARAB2</li>
+        <li>=ÁTLAG</li>
+        <li>=DARABHATÖBB</li>
+        <li>=ÉS</li>
+        <li>=HA</li>
+        <li>=HAHIBA</li>
+        <li>=KEREKÍTÉS</li>
+        <li>=MAX</li>
+        <li>=SZUM</li>
+        <li>=VAGY</li>
+    </ul>
+    
+    
+    
+    <h3 id="tabla">Adattábla I-II. (EA09-EA10)</h3>
+    <ul>
+        <li>=AB.DARAB2</li>
+        <li>=AB.MIN</li>
+        <li>=HA</li>
+        <li>=HAELSŐIGAZ</li>
+        <li>=KEREKÍTÉS</li>
+    </ul>
+    
+
+    
+    <h3 id="solver">Solver I-II. (GY09-GY10)</h3>
+    <ul>
+        <li>=KEREK.FEL</li>
+        <li>=PLAFON.MAT</li>
+        <li>=SZORZATÖSSZEG</li>
+        <li>=SZUM</li>
+    </ul>
+
+    
+    
+    <h3 id="money">Pénzügyi függvények (EA11)</h3>
+    <ul>
+        <li><b>=JBÉ</b></li>
+        <li><b>=RÉSZLET</b></li>
+        <li>=DARABHATÖBB</li>
+        <li>=HA</li>
+        <li>=FKERES</li>
+    </ul>
+
+    <!-- <h3 id="">Dátumfüggvények</h3>
+    <h4>=MA</h4>
+    <p>Az aktuális dátum dátumértékét adja eredményül.</p>
+    
+    <h4>=MOST</h4>
+    <p>Az aktuális dátum dátumértékét és a pontos idő időértékét adja eredményül.</p>
+
+    <h4>=DÁTUM</h4>
+    <p>Adott dátum dátumértékét adja eredményül.</p>
+
+    <h4>=NAP, =HÓNAP, =ÉV</h4>
+    <p>Dátumértéket a hónap egy napjává (0–31) / hónappá / évvé alakítja.</p>
+
+    <h4>=DÁTUMÉRTÉK</h4>
+    <p>Szövegként megadott dátumot dátumértékké alakít át.</p>
+    
+    <h4>=HÉT.NAPJA</h4>
+    <p>Dátumértéket a hét napjává alakít át.</p>
+    
+    <h4>=HÉT.SZÁMA</h4>
+    <p>Visszatérési értéke egy szám, amely azt mutatja meg, hogy a megadott dátum az év hányadik hetére esik.</p>
+
+    <h4>=PERCEK, =ÓRA</h4>
+    <h4>=IDŐ</h4>
+
+
+
+    <h3>Szövegfüggvények</h3>
+    <h4>=BAL, =JOBB</h4>
+    <h4>=KÖZÉP</h4>
+    <h4>=FŰZ</h4>
+    <h4>=SZÖVEG</h4>
+    <h4>=SZÖVEG.KERES</h4>
+
+
+    <h3 id=""></h3>
+    <h3 id=""></h3>
+    <h3 id=""></h3>
+    
+
+
+    <h3 id="ab">Adatbázisfüggvények</h3>
+    <h4>=AB.ÁTLAG</h4>
+    <p>A kijelölt adatbáziselemek átlagát számítja ki.</p>
+
+    <h4>=AB.DARAB</h4>
+    <p>Megszámolja, hogy az adatbázisban hány cella tartalmaz számokat.</p>
+    
+    <h4>=AB.DARAB2</h4>
+    <p>Megszámolja az adatbázisban lévő nem üres cellákat.</p>
+    
+    <h4>=AB.MEZŐ</h4>
+    <p>Egy adatbázisból egyetlen olyan rekordot ad vissza, amely megfelel a megadott feltételeknek.</p>
+    
+    <h4>=AB.MAX, AB.MIN</h4>
+    <p>A kiválasztott adatbáziselemek közül a legnagyobb/legkisebb értéket adja eredményül.</p>
+    
+    <h4>=AB.SZUM</h4>
+    <p>Összeadja a feltételnek megfelelő adatbázisrekordok mezőoszlopában a számokat.</p>
+
+
+
+    <h3>Pénzügyi függvények</h3>
+    <h4>=JBÉ</h4>
+    <h4>=RÉSZLET</h4>
+
+
+
+    
+
+     <h3 id="other">További linkek</h3>
+    <a href="./progtetelek/feladatok">Gyakorló feladatok programozási tételekkel</a>
+    <a href="https://progalap.elte.hu/specifikacio/" target="_blank">ELTE specifikáció szerkesztője</a>
+    
+    
+     -->
+    <h3 id="sources">Források</h3>
+    <a href="./progtetelek/feladatok" target="_blank">Az Excel függvényeinek kategória szerinti listája</a>
+</section>

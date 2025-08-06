@@ -1,4 +1,4 @@
-# ELTE-OTK-IT jegyzetek
+# ELTE-OTK jegyzetek
 
 Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); történelemtanár] alatt készült publikus jegyzeteim.
 
