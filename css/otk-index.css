@@ -1,0 +1,24 @@
+header{
+    visibility: hidden;
+}
+
+main{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* align-items: flex-start; */
+    max-width: var(--max-width);
+
+    #hero{
+        padding-top: 0;
+    }
+    #things{
+        padding-top: var(--height-header);
+        align-self: flex-start;
+        text-align: center;
+
+        a{
+            font-size: var(--font-m);
+        }
+    }
+}

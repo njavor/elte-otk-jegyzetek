@@ -5,18 +5,14 @@
 <body>
     {% include 1-header.html %}
 
-    <a href="#" id="totop">
-        <button class="totop material-symbols-outlined">arrow_upward_alt</button>
-    </a>
+    <a href="#" id="to-top" role="button">keyboard_arrow_up</a>
 
     <main>
-        <section id="ej--title">
-            <h1>{{ page.title }}</h1>
-        </section>
-        
-        <section id="ej--lessonlist">
+        <section><div>
+            <h1>{{page.title}}</h1>
+
             {{content}}
-        </section>
+        </div></section>
     </main>
 
     {% include 2-footer.html %}

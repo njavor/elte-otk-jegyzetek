@@ -1,14 +1,38 @@
 <header>
-    <div class="ej--left">
-        <a href="/" id="logolink" class="">
-            <img src="/img/nj_white.png" alt="">
+        <a href="/" id="logolink" class="hidden">
+            <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 750">
+                <path d="M197 193v-35H84v320h117c0-56-17-143 2-196 11-32 58-50 89-40 39 12 32 62 32 94 0 
+                70-22 187 23 246 60 78 246 100 304-17 20-41 16-234 14-279l-5-128H543l11 84c6 55 15 248-12 
+                284-30 32-81 19-97-13-10-22-5-53-5-77 0-98 33-271-105-286-21-2-42-2-62  2-29 6-54 20-76 
+                41m-61 313c-81 8-68 134 13 125 81-8 68-134-13-125z"/>
+            </svg>
         </a>
-        <span>|</span>
-        <a href="/elte-otk-jegyzetek">
-            ELTE-OTK jegyzetek
-        </a>
-    </div>
-    <button id="color-scheme-toggle" class="material-symbols-outlined" title="világos/sötét mód">
-        contrast
-    </button>
-</header>
+        <nav>
+            <ul>
+                <li><a href="/elte-otk-jegyzetek">ELTE OTK</a></li>
+                {% if page.layout == "subject" %}
+                    <li><a href="/elte-otk-jegyzetek/{{page.targyurl}}">{{ page.rovtargy }}</a></li>
+                {% elsif page.layout == "lesson" %}
+                    <li><a href="/elte-otk-jegyzetek/{{page.targyurl}}">{{ page.rovtargy }}</a></li>
+                    <li><a href="/elte-otk-jegyzetek/{{page.targyurl}}/{{page.posturl}}">{{ page.rovpost }}</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div id="functions">
+            <button id="theme-button" title="Téma váltás" aria-label="Téma váltás">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                    <rect id="sun" width="30%" height="30%" x="35%" y="35%"/>
+                    <rect class="ray top" width="10%" height="15%" x="46%" y="8%"/>
+                    <rect class="ray bot" width="10%" height="15%" x="46%" y="78%"/>
+                    <rect class="ray lef" width="15%" height="10%" x="8%" y="46%"/>
+                    <rect class="ray rig" width="15%" height="10%" x="78%" y="46%"/>
+                </svg>
+            </button>
+        </div>
+        <button id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+    </header>
