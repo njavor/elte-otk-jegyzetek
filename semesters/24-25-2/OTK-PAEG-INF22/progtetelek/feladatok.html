@@ -1,413 +1,356 @@
 ---
 layout: lesson
 desc: Gyakorló feladatok az Eötvös Loránd Tudományegyetem informatika tanársszakán, Programozási alapismeretek tárgyon tanult programozási tételekhez.
-class: Programozási alapismeretek
-class-link: ../../OTK-PAEG-INF22
 title: Gyakorló feladatok 1.
+rovpost: Gyak 1.
+posturl: /progtetelek/feladatok
+
+hossztargy: Programozási alapismeretek
+rovtargy: Progalap
+targyurl: /24-25-2/OTK-PAEG-INF22
+
+date: 2025.08.21
 ---
 
-<section id="ej--toc">
-    <h3>Tartalom</h3>
-    <h4><a href="#exc">Feladatok</a></h4>
-    <h4><a href="#other">További linkek</a></h4>
-    <h4><a href="#sources">Források</a></h4>
-</section>
-
-
-<section id="ej--content">
-    <h3 id="exc">Feladatok</h3>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        1. Adjuk meg egy hónapnévről a sorszámát!
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Kiválasztás //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> honev ∈ S, 
-                        honapok ∈ S[1..12] = ["január","február","március","április","május","június","július","augusztus","szeptember","október","november","december"]
-            <b>Ki:</b> sorszam ∈ N
-            <b>Ef:</b> ∃i ∈ [1..12]: (honev = honapok[i])
-            <b>Uf:</b> sorszam = KIVÁLASZT(i>=1, honev = honapok[i])
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            ind ~ sorszam
-            (1 ~ 1)
-            T(elemek[i]) ~ honev = honapok[i]
-
-
-            <b>//ALGORITMUS //</b>
-            
-            ind := 1
-            <b>Ciklus</b> <b>amíg</b> nem honev = honapok[i]
-                ind := ind + 1
-            <b>Ciklus vége</b>
-
-            Forrás: 4. előadás 17. o.
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        2. Adjuk meg az éves statisztika alapján, hogy hány napon fagyott!
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Megszámolás //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> napdb ∈ N, homersekletek ∈ Z[1..napdb]
-            <b>Ki:</b> fagyott ∈ N
-            <b>Ef:</b> -
-            <b>Uf:</b> fagyott = DARAB(i=1..napdb, homersekletek[i] <= 0)
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            db ~ fagyott
-            1..elemszám ~ 1..napdb
-            T(elemek[i]) ~ homersekletek[i] <= 0
-
-
-            <b>//ALGORITMUS //</b>
-            
-            <b>Változó</b>
-                i: <b>Egész</b>
-            fagyott := 0
-            <b>Ciklus</b> i=1-től elemszám-ig
-                <b>Ha</b> homersekletek[i] <= 0 <b>akkor</b> fagyott := fagyott + 1
-            <b>Ciklus vége</b>
-
-            Forrás: 3. előadás 70. o.
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        3. Egy maratonon felírtuk az egyes versenyzők idejét "óra perc" formátumban, adjuk meg, hogy az egyes versenyzők hány perc alatt futották le a maratont! <br>Résztvevő nélkül nem indul maraton. Az egyes idők nem kisebbek 1 percnél és nem nagyobbak 10 óránál.
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Másolás //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> vdb ∈ N, idok ∈ Ido[1..vdb], Ido=(ora:N x perc:N)
-            <b>Ki:</b> percek ∈ N[1..vdb]
-            <b>Ef:</b> vdb > 0 és ∀i ∈ [1..db]: (1 <= (idok[i].ora*60 + idok[i].perc) <= 600)
-            <b>Uf:</b> percek = MÁSOL(i=1..vdb, idok[i].ora*60 + idok[i].perc)
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            fvelemek ~ percek
-            1..elemszám ~ 1..vdb
-            f(elemek[i]) ~ idok[i].ora*60 + idok[i].perc
-
-
-            <b>//ALGORITMUS //</b>
-            
-            <b>Változó</b>
-                i: <b>Egész</b>
-            <b>Ciklus</b> i=1-től vdb-ig
-                percek[i] = idok[i].ora*60 + idok[i].perc
-            <b>Ciklus vége</b>
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        4. Lakáskeresés közben több ingatlan bérleti árát is feljegyeztük, adjuk meg, hogy volt-e olyan, ami a büdzsénkbe belefér!
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Eldöntés //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> adb ∈ N, arak ∈ N[1..adb], budzse ∈ N
-            <b>Ki:</b> van ∈ L
-            <b>Ef:</b> -
-            <b>Uf:</b> van = VAN(i=1..adb, arak[i] <= budzse)
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            (van ~ van)
-            1..elemszám ~ 1..adb
-            T(elemek[i]) ~ arak[i] <= budzse
-
-
-            <b>//ALGORITMUS //</b>
-            
-            <b>Változó</b>
-                i: <b>Egész</b>
-            i := 1
-            <b>Ciklus</b> <b>amíg</b> i <= adb és nem arak[i] <= budzse
-                i := i + 1
-            <b>Ciklus vége</b>
-            van := i <= adb
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        5. Adjuk meg valahány napi statisztika alapján a leghidegebb nap hőmérsékletét!
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Minimumkiválasztás //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> napdb ∈ N, hom ∈ Z[1..napdb]
-            <b>Ki:</b> minert ∈ Z
-            <b>Ef:</b> napdb > 0
-            <b>Uf:</b> (,minert) = MIN(i=1..napdb, hom[i])
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            (minind ~ -)
-            (minért ~ minert)
-            1..elemszám ~ 1..napdb
-            elemek[i] ~ hom[i]
-
-
-            <b>//ALGORITMUS //</b>
-            
-            <b>Változó</b>
-                i: <b>Egész</b>
-            minert := hom[1]
-            <b>Ciklus</b> i=2-től napdb-ig
-                <b>Ha</b> hom[i] < minert <b>akkor</b> minert := hom[i]
-            <b>Ciklus vége</b>
-
-            Forrás: ~ 3. előadás 77. o.
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        6. Adjuk meg kik kaptak kettest a matematika dolgozatukra!
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Kiválogatás //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> tdb ∈ N, jegyek ∈ Jegy[1..tdb], Jegy=(nev:S x jegy:N)
-            <b>Ki:</b> db ∈ N, kettesek ∈ S[1..db]
-            <b>Ef:</b> ∀i ∈ [1..tdb]: (1 <= jegyek[i].jegy <= 5)
-            <b>Uf:</b> (db, kettesek) = KIVÁLOGAT(i=1..tdb, jegyek[i].jegy = 2, jegyek[i].nev)
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            (db ~ db)
-            kivelemek ~ kettesek
-            1..elemszám ~ 1..tdb
-            T(elemek[i]) ~ jegyek[i].jegy = 2
-            elemek[i] ~ jegyek[i].nev
-
-
-            <b>//ALGORITMUS //</b>
-            
-            <b>Változó</b>
-                i: <b>Egész</b>
-            db := 0
-            <b>Ciklus</b> i=1-től tdb-ig
-                <b>Ha</b> jegyek[i].jegy = 2 <b>akkor</b>
-                    db := db + 1
-                    kettesek[db] := jegyek[i].nev
-                <b>Elágazás vége</b>
-            <b>Ciklus vége</b>
-
-            Forrás: ~ 4. előadás 38. o.
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        7. Egy tanuló év végi latin jegyei alapján adjuk meg, hogy dícséretes ötös lesz-e az osztályzata! <br>Évente legalább négy jegyet kell kapni egy-egy diáknak. Az osztályzás 5-ös skálán folyik. <br>Dícséretest abban az esetben ad a tanár, ha minden jegye ötös egy tanulónak.
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Mind eldöntés //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> jegydb ∈ N, jegyek ∈ N[1..jegydb]
-            <b>Ki:</b> kituno ∈ L
-            <b>Ef:</b> jegydb >= 4 és ∀i ∈ [1..jegydb]: (1 <= jegyek[i] <= 5)
-            <b>Uf:</b> kituno = MIND(i=1..jegydb, jegyek[i] = 5)
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            mind ~ kituno
-            1..elemszám ~ 1..jegydb
-            T(elemek[i]) ~ jegyek[i] = 5
-
-
-            <b>//ALGORITMUS //</b>
-            
-            <b>Változó</b>
-                i: <b>Egész</b>
-            i := 1
-            <b>Ciklus</b> <b>amíg</b> i <= jegydb és jegyek[i] = 5
-                i := i + 1
-            <b>Ciklus vége</b>
-            mind := i > jegydb
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        8. Kíváncsiak voltunk, hogy mennyi kalóriát fogyasztunk átlagosan, adjuk meg a vizsgált időszak átlagos kalóriabevitelt a napi adatok alapján!
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Összegzés //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> napdb ∈ N, kaloriak ∈ N[1..napdb]
-            <b>Ki:</b> atlag ∈ R
-            <b>Ef:</b> ∀i ∈ [1..napdb]: (kaloriak[i] >= 0)
-            <b>Uf:</b> atlag = SZUM(i=1..napdb, kaloriak[i]) / napdb
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            szum ~ atlag
-            1..elemszám ~ 1..napdb
-            elemek[i] ~ kaloriak[i]
-
-
-            <b>//ALGORITMUS //</b>
-            
-            <b>Változó</b>
-                i: <b>Egész</b>
-            atlag := 0
-            <b>Ciklus</b> i=1-től napdb-ig
-                atlag := atlag + kaloriak[i]
-            <b>Ciklus vége</b>
-            atlag := atlag / napdb
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        9. Mozizásaink során feljegyeztük mely filmeket néztük meg, adjuk meg hanyadiknak láttuk a "Jurassic World"-öt!
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Keresés //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> fdb ∈ N, filmek ∈ S[1..fdb]
-            <b>Ki:</b> van ∈ L, ind ∈ N
-            <b>Ef:</b> -
-            <b>Uf:</b> (van, ind) = KERES(i=1..fdb, filmek[i] = "Jurassic World")
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            (van ~ van)
-            (ind ~ ind)
-            1..elemszám ~ 1..fdb
-            T(elemek[i]) ~ filmek[i] = "Jurassic World"
-
-
-            <b>//ALGORITMUS //</b>
-            
-            ind := 1
-            <b>Ciklus</b> <b>amíg</b> ind < fdb és nem filmek[i] = "Jurassic World"
-                ind := ind + 1
-            <b>Ciklus vége</b>
-            van := ind <= fdb
-            </code></pre>
-        </div>
-    </div>
-
-    <button class="solution">
-        <span class="material-symbols-outlined">arrow_right</span>
-        10. Ebben a hónapban számos könyvet elolvastunk, az oldalszámukat felírtuk. Adjuk meg hanyadik és milyen hosszú volt a leghosszabb!
-    </button>
-    <div class="solution">
-        <div class="code-toolbar">
-            <pre class="language-pseudocode"><code>
-            <b>// TÉTEL: Maximumkiválasztás //</b>
-
-            <b>// SPECIFIKÁCIÓ //</b>
-
-            <b>Be:</b> kdb ∈ N, oldalak ∈ N[1..kdb]
-            <b>Ki:</b> maxind ∈ N, maxert ∈ N
-            <b>Ef:</b> -
-            <b>Uf:</b> (maxind, maxert) = MAX(i=1..kdb, oldalak[i])
-
-
-            <b>// VISSZAVEZETÉS //</b>
-            
-            (maxind ~ maxind)
-            (maxért ~ maxert)
-            1..elemszám ~ 1..kdb
-            elemek[i] ~ oldalak[i]
-
-
-            <b>//ALGORITMUS //</b>
-            
-            <b>Változó</b>
-                i: <b>Egész</b>
-            maxind := 1
-            maxert := oldalak[1]
-            <b>Ciklus</b> i=2-től kdb-ig
-                <b>Ha</b> oldalak[i] > maxert <b>akkor</b>
-                    maxert := oldalak[i]
-                    maxind := i
-                <b>Elágazás vége</b>
-            <b>Ciklus vége</b>
-            </code></pre>
-        </div>
-    </div>
-
-
-
-    
-
-    <h3 id="other">További linkek</h3>
-    <a href="../progtetelek">Programozási tételek</a>
-    <a href="https://progalap.elte.hu/specifikacio/" target="_blank">ELTE specifikáció szerkesztője</a>
-
-
-
-    <h3 id="sources">Források</h3>
-    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 3. előadás (ppt) (előadó: Törley Gábor)</p>
-    <p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 4. előadás (ppt) (előadó: Törley Gábor)</p>
-</section>
+
+<h3 id="exc">Feladatok</h3>
+<details>
+    <summary>1. Adjuk meg egy hónapnévről a sorszámát!</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Kiválasztás //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+        <b>Be:</b> honev ∈ S, 
+            honapok ∈ S[1..12] = ["január","február","március","április","május","június","július","augusztus","szeptember","október","november","december"]
+        <b>Ki:</b> sorszam ∈ N
+        <b>Ef:</b> ∃i ∈ [1..12]: (honev = honapok[i])
+        <b>Uf:</b> sorszam = KIVÁLASZT(i>=1, honev = honapok[i])
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        ind ~ sorszam
+        (1 ~ 1)
+        T(elemek[i]) ~ honev = honapok[i]
+
+
+        <b>//ALGORITMUS //</b>
+        ind := 1
+        <b>Ciklus</b> <b>amíg</b> nem honev = honapok[i]
+            ind := ind + 1
+        <b>Ciklus vége</b>
+
+        Forrás: 4. előadás 17. o.
+    </code></pre>
+</details>
+
+<details>
+    <summary>2. Adjuk meg az éves statisztika alapján, hogy hány napon fagyott!</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Megszámolás //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> napdb ∈ N, homersekletek ∈ Z[1..napdb]
+        <b>Ki:</b> fagyott ∈ N
+        <b>Ef:</b> -
+        <b>Uf:</b> fagyott = DARAB(i=1..napdb, homersekletek[i] <= 0)
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        db ~ fagyott
+        1..elemszám ~ 1..napdb
+        T(elemek[i]) ~ homersekletek[i] <= 0
+
+
+        <b>//ALGORITMUS //</b>
+        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        fagyott := 0
+        <b>Ciklus</b> i=1-től elemszám-ig
+            <b>Ha</b> homersekletek[i] <= 0 <b>akkor</b> fagyott := fagyott + 1
+        <b>Ciklus vége</b>
+
+        Forrás: 3. előadás 70. o.
+    </code></pre>
+</details>
+
+<details>
+    <summary>3. Egy maratonon felírtuk az egyes versenyzők idejét "óra perc" formátumban, adjuk meg, hogy az egyes versenyzők hány perc alatt futották le a maratont! <br>Résztvevő nélkül nem indul maraton. Az egyes idők nem kisebbek 1 percnél és nem nagyobbak 10 óránál.</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Másolás //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> vdb ∈ N, idok ∈ Ido[1..vdb], Ido=(ora:N x perc:N)
+        <b>Ki:</b> percek ∈ N[1..vdb]
+        <b>Ef:</b> vdb > 0 és ∀i ∈ [1..db]: (1 <= (idok[i].ora*60 + idok[i].perc) <= 600)
+        <b>Uf:</b> percek = MÁSOL(i=1..vdb, idok[i].ora*60 + idok[i].perc)
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        fvelemek ~ percek
+        1..elemszám ~ 1..vdb
+        f(elemek[i]) ~ idok[i].ora*60 + idok[i].perc
+
+
+        <b>//ALGORITMUS //</b>
+        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <b>Ciklus</b> i=1-től vdb-ig
+            percek[i] = idok[i].ora*60 + idok[i].perc
+        <b>Ciklus vége</b>
+    </code></pre>
+</details>
+
+<details>
+    <summary>4. Lakáskeresés közben több ingatlan bérleti árát is feljegyeztük, adjuk meg, hogy volt-e olyan, ami a büdzsénkbe belefér!</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Eldöntés //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> adb ∈ N, arak ∈ N[1..adb], budzse ∈ N
+        <b>Ki:</b> van ∈ L
+        <b>Ef:</b> -
+        <b>Uf:</b> van = VAN(i=1..adb, arak[i] <= budzse)
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        (van ~ van)
+        1..elemszám ~ 1..adb
+        T(elemek[i]) ~ arak[i] <= budzse
+
+
+        <b>//ALGORITMUS //</b>
+        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        i := 1
+        <b>Ciklus</b> <b>amíg</b> i <= adb és nem arak[i] <= budzse
+            i := i + 1
+        <b>Ciklus vége</b>
+        van := i <= adb
+    </code></pre>
+</details>
+
+<details>
+    <summary>5. Adjuk meg valahány napi statisztika alapján a leghidegebb nap hőmérsékletét!</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Minimumkiválasztás //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> napdb ∈ N, hom ∈ Z[1..napdb]
+        <b>Ki:</b> minert ∈ Z
+        <b>Ef:</b> napdb > 0
+        <b>Uf:</b> (,minert) = MIN(i=1..napdb, hom[i])
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        (minind ~ -)
+        (minért ~ minert)
+        1..elemszám ~ 1..napdb
+        elemek[i] ~ hom[i]
+
+
+        <b>//ALGORITMUS //</b>
+        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        minert := hom[1]
+        <b>Ciklus</b> i=2-től napdb-ig
+            <b>Ha</b> hom[i] < minert <b>akkor</b> minert := hom[i]
+        <b>Ciklus vége</b>
+
+        Forrás: ~ 3. előadás 77. o.
+    </code></pre>
+</details>
+
+<details>
+    <summary>6. Adjuk meg kik kaptak kettest a matematika dolgozatukra!</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Kiválogatás //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> tdb ∈ N, jegyek ∈ Jegy[1..tdb], Jegy=(nev:S x jegy:N)
+        <b>Ki:</b> db ∈ N, kettesek ∈ S[1..db]
+        <b>Ef:</b> ∀i ∈ [1..tdb]: (1 <= jegyek[i].jegy <= 5)
+        <b>Uf:</b> (db, kettesek) = KIVÁLOGAT(i=1..tdb, jegyek[i].jegy = 2, jegyek[i].nev)
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        (db ~ db)
+        kivelemek ~ kettesek
+        1..elemszám ~ 1..tdb
+        T(elemek[i]) ~ jegyek[i].jegy = 2
+        elemek[i] ~ jegyek[i].nev
+
+
+        <b>//ALGORITMUS //</b>
+        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        db := 0
+        <b>Ciklus</b> i=1-től tdb-ig
+            <b>Ha</b> jegyek[i].jegy = 2 <b>akkor</b>
+                db := db + 1
+                kettesek[db] := jegyek[i].nev
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+
+        Forrás: ~ 4. előadás 38. o.
+    </code></pre>
+</details>
+
+<details>
+    <summary>7. Egy tanuló év végi latin jegyei alapján adjuk meg, hogy dícséretes ötös lesz-e az osztályzata! <br>Évente legalább négy jegyet kell kapni egy-egy diáknak. Az osztályzás 5-ös skálán folyik. <br>Dícséretest abban az esetben ad a tanár, ha minden jegye ötös egy tanulónak.</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Mind eldöntés //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> jegydb ∈ N, jegyek ∈ N[1..jegydb]
+        <b>Ki:</b> kituno ∈ L
+        <b>Ef:</b> jegydb >= 4 és ∀i ∈ [1..jegydb]: (1 <= jegyek[i] <= 5)
+        <b>Uf:</b> kituno = MIND(i=1..jegydb, jegyek[i] = 5)
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        mind ~ kituno
+        1..elemszám ~ 1..jegydb
+        T(elemek[i]) ~ jegyek[i] = 5
+
+
+        <b>//ALGORITMUS //</b>
+        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        i := 1
+        <b>Ciklus</b> <b>amíg</b> i <= jegydb és jegyek[i] = 5
+            i := i + 1
+        <b>Ciklus vége</b>
+        mind := i > jegydb
+    </code></pre>
+</details>
+
+<details>
+    <summary>8. Kíváncsiak voltunk, hogy mennyi kalóriát fogyasztunk átlagosan, adjuk meg a vizsgált időszak átlagos kalóriabevitelt a napi adatok alapján!</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Összegzés //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> napdb ∈ N, kaloriak ∈ N[1..napdb]
+        <b>Ki:</b> atlag ∈ R
+        <b>Ef:</b> ∀i ∈ [1..napdb]: (kaloriak[i] >= 0)
+        <b>Uf:</b> atlag = SZUM(i=1..napdb, kaloriak[i]) / napdb
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        szum ~ atlag
+        1..elemszám ~ 1..napdb
+        elemek[i] ~ kaloriak[i]
+
+
+        <b>//ALGORITMUS //</b>
+        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        atlag := 0
+        <b>Ciklus</b> i=1-től napdb-ig
+            atlag := atlag + kaloriak[i]
+        <b>Ciklus vége</b>
+        atlag := atlag / napdb
+    </code></pre>
+</details>
+
+<details>
+    <summary>9. Mozizásaink során feljegyeztük mely filmeket néztük meg, adjuk meg hanyadiknak láttuk a "Jurassic World"-öt!</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Keresés //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> fdb ∈ N, filmek ∈ S[1..fdb]
+        <b>Ki:</b> van ∈ L, ind ∈ N
+        <b>Ef:</b> -
+        <b>Uf:</b> (van, ind) = KERES(i=1..fdb, filmek[i] = "Jurassic World")
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        (van ~ van)
+        (ind ~ ind)
+        1..elemszám ~ 1..fdb
+        T(elemek[i]) ~ filmek[i] = "Jurassic World"
+
+
+        <b>//ALGORITMUS //</b>
+        
+        ind := 1
+        <b>Ciklus</b> <b>amíg</b> ind < fdb és nem filmek[i] = "Jurassic World"
+            ind := ind + 1
+        <b>Ciklus vége</b>
+        van := ind <= fdb
+    </code></pre>
+</details>
+
+<details>
+    <summary>10. Ebben a hónapban számos könyvet elolvastunk, az oldalszámukat felírtuk. Adjuk meg hanyadik és milyen hosszú volt a leghosszabb!</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>// TÉTEL: Maximumkiválasztás //</b>
+
+        <b>// SPECIFIKÁCIÓ //</b>
+
+        <b>Be:</b> kdb ∈ N, oldalak ∈ N[1..kdb]
+        <b>Ki:</b> maxind ∈ N, maxert ∈ N
+        <b>Ef:</b> -
+        <b>Uf:</b> (maxind, maxert) = MAX(i=1..kdb, oldalak[i])
+
+
+        <b>// VISSZAVEZETÉS //</b>
+        
+        (maxind ~ maxind)
+        (maxért ~ maxert)
+        1..elemszám ~ 1..kdb
+        elemek[i] ~ oldalak[i]
+
+
+        <b>//ALGORITMUS //</b>
+        
+        <b>Változó</b>
+            i: <b>Egész</b>
+        maxind := 1
+        maxert := oldalak[1]
+        <b>Ciklus</b> i=2-től kdb-ig
+            <b>Ha</b> oldalak[i] > maxert <b>akkor</b>
+                maxert := oldalak[i]
+                maxind := i
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+    </code></pre>
+</details>
+
+
+
+
+
+<h3 id="other">További linkek</h3>
+<a href="../progtetelek">Programozási tételek</a>
+<a href="https://progalap.elte.hu/specifikacio/" target="_blank">ELTE specifikáció szerkesztője</a>
+
+
+
+<h3 id="sources">Források</h3>
+<p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 3. előadás (ppt) (előadó: Törley Gábor)</p>
+<p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 4. előadás (ppt) (előadó: Törley Gábor)</p>
