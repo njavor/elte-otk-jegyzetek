@@ -20,12 +20,12 @@ date: 2025.03.14
     <li>többsoros parancsokat nem szerencsés egyből a terminálba írni - érdemes máshol megírni, majd bemásolni</li>
 </ul>
 
-<div>
+<figure>
     <pre class="language-bash"><code>
         parancs -opciók parameterek
     </code></pre>
-    <label for="">Parancs (tipikus) felépítése</label>
-</div>
+    <figcaption>egy parancs (tipikus) felépítése</figcaption>
+</figure>
 
 
 
@@ -52,46 +52,46 @@ date: 2025.03.14
 </ul>
 <br>
 
-<div>
-    <p><code>echo</code> – valami kiírása a konzolba</p>
+<figure>
+    <figcaption><code>echo</code> – valami kiírása a konzolba</figcaption>
     <pre class="language-powershell"><code>
         echo ITTANAGYszovegem
         ITTANAGYszovegem
     </code></pre>
-</div>
+</figure>
 
 
 <h4>Fájl és könyvtárműveletek </h4>
 
-<div>
-    <p><code>ls</code> – könyvtár tartalmának listázása (list)</p>
+<figure>
+    <figcaption><code>ls</code> – könyvtár tartalmának listázása (list)</figcaption>
     <pre class="language-powershell"><code>
         ls
         mappa   mappa23    zord.txt
     </code></pre>
-    <ul>
-        <li><code>ls -l</code> – többletinformációs listázás (list -long)</li>
-        <li><code>ls -al</code> – listázás, a rejtett fájlokat és mappákat is beleértve (list -all)</li>
-    </ul>
-</div>
+</figure>
+<ul>
+    <li><code>ls -l</code> – többletinformációs listázás (list -long)</li>
+    <li><code>ls -al</code> – listázás, a rejtett fájlokat és mappákat is beleértve (list -all)</li>
+</ul>
 
-<div>
-    <p><code>cd</code> – könyvtárváltás (change directory)</p>
+<figure>
+    <figcaption><code>cd</code> – könyvtárváltás (change directory)</figcaption>
     <pre class="language-powershell"><code>
         cd /ut/a/mappahoz
     </code></pre>
-</div>
+</figure>
 
-<div>
-    <p><code>pwd</code> – munkakönyvtár kiírása (print working directory)</p>
+<figure>
+    <figcaption><code>pwd</code> – munkakönyvtár kiírása (print working directory)</figcaption>
     <pre class="language-powershell"><code>
         pwd
         C:/ut/a/helyzetemhez                    
     </code></pre>
-</div>
+</figure>
 
-<div>
-    <p><code>mkdir</code> – új könyvtár létrehozása (make directory)</p>
+<figure>
+    <figcaption><code>mkdir</code> – új könyvtár létrehozása (make directory)</figcaption>
     <pre class="language-powershell"><code>
         ls
         marittlevofajl.cs
@@ -101,10 +101,10 @@ date: 2025.03.14
         ls
         marittlevofajl.cs   egy_konyvtar
     </code></pre>
-</div>
+</figure>
 
-<div>
-    <p><code>rm</code> – fájl/(üres) könyvtár törlése (remove)</p>
+<figure>
+    <figcaption><code>rm</code> – fájl/(üres) könyvtár törlése (remove)</figcaption>
     <pre class="language-powershell"><code>
         ls
         egyfajl.txt uresmappa  mappa3
@@ -115,47 +115,47 @@ date: 2025.03.14
         ls
         mappa3
     </code></pre>
-    <ul>
-        <li><code>rm -r [konyvtarneve]</code> – könyvtár törlése tartalmával együtt</li>
-    </ul>
-</div>
+</figure>
+<ul>
+    <li><code>rm -r [konyvtarneve]</code> – könyvtár törlése tartalmával együtt</li>
+</ul>
 
-<div>
-    <p><code>cp</code> – fájl/könyvtár átmásolása (copy)</p>
+<figure>
+    <figcaption><code>cp</code> – fájl/könyvtár átmásolása (copy)</figcaption>
     <pre class="language-powershell"><code>
         cp masolando celkonyvtar
     </code></pre>
-</div>
+</figure>
 
-<div>
-    <p><code>mv</code> – fájl/könyvtár áthelyezése (vagy átnevezése) (move)</p>
+<figure>
+    <figcaption><code>mv</code> – fájl/könyvtár áthelyezése (vagy átnevezése) (move)</figcaption>
     <pre class="language-powershell"><code>
         mv egynev.txt masiknev.txt  # az "egynev.txt" mostmár "masiknev.txt" néven létezik
 
         mv afajl.html a/celkonyvtar
     </code></pre>
-</div>
+</figure>
 
-<div>
-    <p><code>touch</code> – új fájl létrehozása</p>
+<figure>
+    <figcaption><code>touch</code> – új fájl létrehozása</figcaption>
     <pre class="language-powershell"><code>
         touch alma.txt
 
         ls
         alma.txt    marittlevodolog.php   marittlevomappa
     </code></pre>
-</div>
+</figure>
 
-<div>
-    <p><code>cat</code> – fájl tartalmának megjelenítése (concatenate)</p>
+<figure>
+    <figcaption><code>cat</code> – fájl tartalmának megjelenítése (concatenate)</figcaption>
     <pre class="language-powershell"><code>
         cat afajl.txt
         Ebben a fájlban ez a szöveg van most
     </code></pre>
-</div>
+</figure>
 
-<div>
-    <p><code>head</code> – fájl elejének (első 10 sor) megjelenítése</p>
+<figure>
+    <figcaption><code>head</code> – fájl elejének (első 10 sor) megjelenítése</figcaption>
     <pre class="language-powershell"><code>
         head alma.txt
         első sor
@@ -169,13 +169,13 @@ date: 2025.03.14
         meggy
         retek
     </code></pre>
-    <ul>
-        <li><code>head -n [szam]</code> – elso <i>n</i> sor megjelenítése</li>
-    </ul>
-</div>
+</figure>
+<ul>
+    <li><code>head -n [szam]</code> – elso <i>n</i> sor megjelenítése</li>
+</ul>
 
-<div>
-    <p><code>tail</code> – fájl végének (utolsó 10 sor) megjelenítése</p>
+<figure>
+    <figcaption><code>tail</code> – fájl végének (utolsó 10 sor) megjelenítése</figcaption>
     <pre class="language-powershell"><code>
         tail alma.txt
         körte
@@ -189,13 +189,13 @@ date: 2025.03.14
         retek
         utolsó sor
     </code></pre>
-    <ul>
-        <li><code>tail -n [szam]</code> – utolsó <i>n</i> sor megjelenítése</li>
-    </ul>
-</div>
+</figure>
+<ul>
+    <li><code>tail -n [szam]</code> – utolsó <i>n</i> sor megjelenítése</li>
+</ul>
 
-<div>
-    <p><code>ln</code> – "kemény" referenciafájl létrehozása; mintha duplikáltuk volna a fájlt, de ha az egyik módosul, akkor a másik is; törlés nem érvényesül mindkettőre (link)</p>
+<figure>
+    <figcaption><code>ln</code> – "kemény" referenciafájl létrehozása; mintha duplikáltuk volna a fájlt, de ha az egyik módosul, akkor a másik is; törlés nem érvényesül mindkettőre (link)</figcaption>
     <pre class="language-powershell"><code>
         ls
         nemerdekesmappa     linkelendofajl.txt  valami.csv  egymappa
@@ -205,31 +205,31 @@ date: 2025.03.14
         ls
         nemerdekesmappa     linkelendofajl.txt  valami.csv  egymappa    masnev.txt
     </code></pre>
-    <ul>
-        <li><code>ln -s</code> – "puha" (szimbolikus) referenciafájl létrehozása; olyan, mint egy parancsikon, ha az eredeti törlődik, akkor nem fog működni (link -soft(symbolic)) </li>
-    </ul>
-</div>
+</figure>
+<ul>
+    <li><code>ln -s</code> – "puha" (szimbolikus) referenciafájl létrehozása; olyan, mint egy parancsikon, ha az eredeti törlődik, akkor nem fog működni (link -soft(symbolic)) </li>
+</ul>
 
-<div>
-    <p><code>find</code> – keresés</p>
+<figure>
+    <figcaption><code>find</code> – keresés</figcaption>
     <pre class="language-powershell"><code>
         find /ahol/keresni/akarok -name "keresendo.txt"     # névre keres
     </code></pre>
-</div>
+</figure>
 
 
 <h4>Felhasználók</h4>
 
-<div>
-    <p><code>whoami</code> – saját felhasználó lekérdezése</p>
+<figure>
+    <figcaption><code>whoami</code> – saját felhasználó lekérdezése</figcaption>
     <pre class="language-powershell"><code>
         whoami
         ennevem
     </code></pre>
-</div>
+</figure>
 
-<div>
-    <p><code>who</code> – bejelentkezett felhasználók listázása</p>
+<figure>
+    <figcaption><code>who</code> – bejelentkezett felhasználók listázása</figcaption>
     <pre class="language-powershell"><code>
         who
         jozsi   pts/0   2024-09-22 00:12 (12.123.12.12)
@@ -237,7 +237,7 @@ date: 2025.03.14
         ennevem pts/2   2024-09-22 00:28 (13.132.12.13)
         harmadikhasznalo    pts/3   2024-09-22 00:35 (13.231.11.22)
     </code></pre>
-</div>
+</figure>
 
 <p>Ennél jóval több parancs van, de elsőre ez is egy jelentős mennyiség, szóval most itt megállok.</p>
 
@@ -274,16 +274,16 @@ date: 2025.03.14
     </ul>
 </ol>
 
-<div>
-    <p class="connect-down">Így fog kinézni a parancsunk:</p>
+<p>Így fog kinézni a parancsunk:</p>
+<figure>
     <pre class="language-powershell"><code>ssh <em>felhasznalo</em>@<em>domainnev.xyz</em></code></pre>
-    <p class="connect-up">vagy</p>
+    <figcaption class="connect-up">vagy</figcaption>
     <pre class="language-powershell"><code>ssh <em>felhasznalo</em>@<em>123.12.123.12</em></code></pre>
-</div>
+</figure>
 
 <p>Ezt követően a felhasználóhoz tartozó jelszót kell megadnunk és már bent is vagyunk.</p>
 
-<div>
+<figure>
     <pre class="language-powershell"><code>
         Linux agep 4.9.0-19-amd64 #1 SMP Debian 4.9.320-2 (2022-03-10) x86_64
         Hi!
@@ -295,8 +295,8 @@ date: 2025.03.14
         
         ennevem@agep:~$
     </code></pre>
-    <label>Példa a belépés utáni állapotra</label>
-</div>
+    <figcaption>Példa a belépés utáni állapotra</figcaption>
+</figure>
 
 
 
@@ -310,6 +310,6 @@ date: 2025.03.14
 
 
 <h3 id="sources">Források</h3>
-<p>Az előadás prezentációja ("2. Operációs rendszerek feladatai")</p>
-<p>A gyakorlat</p>
+<figcaption>Az előadás prezentációja ("2. Operációs rendszerek feladatai")</figcaption>
+<figcaption>A gyakorlat</figcaption>
 <a href="https://www.geeksforgeeks.org/linux-commands-cheat-sheet" target="_blank">Linux Commands Cheat Sheet (geeksforgeeks.org)</a>
