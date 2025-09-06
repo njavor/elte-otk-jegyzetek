@@ -2,7 +2,7 @@
 
 Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); történelemtanár] alatt készült publikus jegyzeteim.
 
-| [24/25/1](/semesters/24-25-1/) | 25/26/1 | 26/27/1 | 27/28/1 | 28/29/1 |
+| [24/25/1](/semesters/24-25-1/) | [25/26/1](/semesters/25-26-1/) | 26/27/1 | 27/28/1 | 28/29/1 |
 | :--: | :--: | :--: | :--: | :--: |
 | **[24/25/2](/semesters/24-25-2/)** | **25/26/2** | **26/27/2** | **27/28/2** | **28/29/2** |
 

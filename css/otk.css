@@ -7,11 +7,14 @@
     --elte-green: #64a70b;
 }
 
-.elte-ik, .elte-btk, .elte-ppk{
+.elte-dark, .elte-ik, .elte-btk, .elte-ppk{
     --_gridColor: var(--rgb-white);
     color: var(--white);
     button, [role=button]{ color: white; }
     a:not([role=button]):hover{ color: var(--black); }
+}
+.elte-ik{
+    background: var(--elte-blue);
 }
 .elte-ik{
     background: var(--elte-lblue);
@@ -42,10 +45,14 @@
     display: block;
 }
 
+.semester{
+    scroll-margin-top: var(--space-xl);
 
-.semester .box ul{
-    flex-wrap: wrap;
+    .box ul{
+        flex-wrap: wrap;
+    }
 }
+.semester .box.elte-dark [role=button]{ background: var(--elte-blue); }
 .semester .box.elte-ik [role=button]{ background: var(--elte-lblue); }
 .semester .box.elte-btk [role=button]{ background: var(--elte-brown); }
 .semester .box.elte-ppk [role=button]{ background: var(--elte-green); }

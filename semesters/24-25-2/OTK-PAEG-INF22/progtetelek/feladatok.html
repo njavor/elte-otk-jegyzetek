@@ -15,7 +15,7 @@ date: 2025.08.21
 
 <h3 id="exc">Feladatok</h3>
 <details>
-    <summary>1. Adjuk meg egy hónapnévről a sorszámát!</summary>
+    <summary><strong>1.</strong> Adjuk meg egy hónapnévről a sorszámát!</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Kiválasztás //</b>
 
@@ -39,17 +39,17 @@ date: 2025.08.21
             ind := ind + 1
         <b>Ciklus vége</b>
 
+
         Forrás: 4. előadás 17. o.
     </code></pre>
 </details>
 
 <details>
-    <summary>2. Adjuk meg az éves statisztika alapján, hogy hány napon fagyott!</summary>
+    <summary><strong>2.</strong> Adjuk meg az éves statisztika alapján, hogy hány napon fagyott!</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Megszámolás //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> napdb ∈ N, homersekletek ∈ Z[1..napdb]
         <b>Ki:</b> fagyott ∈ N
         <b>Ef:</b> -
@@ -57,14 +57,12 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         db ~ fagyott
         1..elemszám ~ 1..napdb
         T(elemek[i]) ~ homersekletek[i] <= 0
 
 
         <b>//ALGORITMUS //</b>
-        
         <b>Változó</b>
             i: <b>Egész</b>
         fagyott := 0
@@ -72,17 +70,17 @@ date: 2025.08.21
             <b>Ha</b> homersekletek[i] <= 0 <b>akkor</b> fagyott := fagyott + 1
         <b>Ciklus vége</b>
 
+
         Forrás: 3. előadás 70. o.
     </code></pre>
 </details>
 
 <details>
-    <summary>3. Egy maratonon felírtuk az egyes versenyzők idejét "óra perc" formátumban, adjuk meg, hogy az egyes versenyzők hány perc alatt futották le a maratont! <br>Résztvevő nélkül nem indul maraton. Az egyes idők nem kisebbek 1 percnél és nem nagyobbak 10 óránál.</summary>
+    <summary><strong>3.</strong> Egy maratonon felírtuk az egyes versenyzők idejét "óra perc" formátumban, adjuk meg, hogy az egyes versenyzők hány perc alatt futották le a maratont! <br>Résztvevő nélkül nem indul maraton. Az egyes idők nem kisebbek 1 percnél és nem nagyobbak 10 óránál.</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Másolás //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> vdb ∈ N, idok ∈ Ido[1..vdb], Ido=(ora:N x perc:N)
         <b>Ki:</b> percek ∈ N[1..vdb]
         <b>Ef:</b> vdb > 0 és ∀i ∈ [1..db]: (1 <= (idok[i].ora*60 + idok[i].perc) <= 600)
@@ -90,14 +88,12 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         fvelemek ~ percek
         1..elemszám ~ 1..vdb
         f(elemek[i]) ~ idok[i].ora*60 + idok[i].perc
 
 
         <b>//ALGORITMUS //</b>
-        
         <b>Változó</b>
             i: <b>Egész</b>
         <b>Ciklus</b> i=1-től vdb-ig
@@ -107,12 +103,11 @@ date: 2025.08.21
 </details>
 
 <details>
-    <summary>4. Lakáskeresés közben több ingatlan bérleti árát is feljegyeztük, adjuk meg, hogy volt-e olyan, ami a büdzsénkbe belefér!</summary>
+    <summary><strong>4.</strong> Lakáskeresés közben több ingatlan bérleti árát is feljegyeztük, adjuk meg, hogy volt-e olyan, ami a büdzsénkbe belefér!</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Eldöntés //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> adb ∈ N, arak ∈ N[1..adb], budzse ∈ N
         <b>Ki:</b> van ∈ L
         <b>Ef:</b> -
@@ -120,14 +115,12 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         (van ~ van)
         1..elemszám ~ 1..adb
         T(elemek[i]) ~ arak[i] <= budzse
 
 
         <b>//ALGORITMUS //</b>
-        
         <b>Változó</b>
             i: <b>Egész</b>
         i := 1
@@ -139,12 +132,11 @@ date: 2025.08.21
 </details>
 
 <details>
-    <summary>5. Adjuk meg valahány napi statisztika alapján a leghidegebb nap hőmérsékletét!</summary>
+    <summary><strong>5.</strong> Adjuk meg valahány napi statisztika alapján a leghidegebb nap hőmérsékletét!</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Minimumkiválasztás //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> napdb ∈ N, hom ∈ Z[1..napdb]
         <b>Ki:</b> minert ∈ Z
         <b>Ef:</b> napdb > 0
@@ -152,7 +144,6 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         (minind ~ -)
         (minért ~ minert)
         1..elemszám ~ 1..napdb
@@ -160,7 +151,6 @@ date: 2025.08.21
 
 
         <b>//ALGORITMUS //</b>
-        
         <b>Változó</b>
             i: <b>Egész</b>
         minert := hom[1]
@@ -168,17 +158,17 @@ date: 2025.08.21
             <b>Ha</b> hom[i] < minert <b>akkor</b> minert := hom[i]
         <b>Ciklus vége</b>
 
+
         Forrás: ~ 3. előadás 77. o.
     </code></pre>
 </details>
 
 <details>
-    <summary>6. Adjuk meg kik kaptak kettest a matematika dolgozatukra!</summary>
+    <summary><strong>6.</strong> Adjuk meg kik kaptak kettest a matematika dolgozatukra!</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Kiválogatás //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> tdb ∈ N, jegyek ∈ Jegy[1..tdb], Jegy=(nev:S x jegy:N)
         <b>Ki:</b> db ∈ N, kettesek ∈ S[1..db]
         <b>Ef:</b> ∀i ∈ [1..tdb]: (1 <= jegyek[i].jegy <= 5)
@@ -186,7 +176,6 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         (db ~ db)
         kivelemek ~ kettesek
         1..elemszám ~ 1..tdb
@@ -195,7 +184,6 @@ date: 2025.08.21
 
 
         <b>//ALGORITMUS //</b>
-        
         <b>Változó</b>
             i: <b>Egész</b>
         db := 0
@@ -206,17 +194,17 @@ date: 2025.08.21
             <b>Elágazás vége</b>
         <b>Ciklus vége</b>
 
+
         Forrás: ~ 4. előadás 38. o.
     </code></pre>
 </details>
 
 <details>
-    <summary>7. Egy tanuló év végi latin jegyei alapján adjuk meg, hogy dícséretes ötös lesz-e az osztályzata! <br>Évente legalább négy jegyet kell kapni egy-egy diáknak. Az osztályzás 5-ös skálán folyik. <br>Dícséretest abban az esetben ad a tanár, ha minden jegye ötös egy tanulónak.</summary>
+    <summary><strong>7.</strong> Egy tanuló év végi latin jegyei alapján adjuk meg, hogy dícséretes ötös lesz-e az osztályzata! <br>Évente legalább négy jegyet kell kapni egy-egy diáknak. Az osztályzás 5-ös skálán folyik. <br>Dícséretest abban az esetben ad a tanár, ha minden jegye ötös egy tanulónak.</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Mind eldöntés //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> jegydb ∈ N, jegyek ∈ N[1..jegydb]
         <b>Ki:</b> kituno ∈ L
         <b>Ef:</b> jegydb >= 4 és ∀i ∈ [1..jegydb]: (1 <= jegyek[i] <= 5)
@@ -224,14 +212,12 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         mind ~ kituno
         1..elemszám ~ 1..jegydb
         T(elemek[i]) ~ jegyek[i] = 5
 
 
         <b>//ALGORITMUS //</b>
-        
         <b>Változó</b>
             i: <b>Egész</b>
         i := 1
@@ -243,12 +229,11 @@ date: 2025.08.21
 </details>
 
 <details>
-    <summary>8. Kíváncsiak voltunk, hogy mennyi kalóriát fogyasztunk átlagosan, adjuk meg a vizsgált időszak átlagos kalóriabevitelt a napi adatok alapján!</summary>
+    <summary><strong>8.</strong> Kíváncsiak voltunk, hogy mennyi kalóriát fogyasztunk átlagosan, adjuk meg a vizsgált időszak átlagos kalóriabevitelt a napi adatok alapján!</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Összegzés //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> napdb ∈ N, kaloriak ∈ N[1..napdb]
         <b>Ki:</b> atlag ∈ R
         <b>Ef:</b> ∀i ∈ [1..napdb]: (kaloriak[i] >= 0)
@@ -256,14 +241,12 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         szum ~ atlag
         1..elemszám ~ 1..napdb
         elemek[i] ~ kaloriak[i]
 
 
         <b>//ALGORITMUS //</b>
-        
         <b>Változó</b>
             i: <b>Egész</b>
         atlag := 0
@@ -275,12 +258,11 @@ date: 2025.08.21
 </details>
 
 <details>
-    <summary>9. Mozizásaink során feljegyeztük mely filmeket néztük meg, adjuk meg hanyadiknak láttuk a "Jurassic World"-öt!</summary>
+    <summary><strong>9.</strong> Mozizásaink során feljegyeztük mely filmeket néztük meg, adjuk meg hanyadiknak láttuk a "Jurassic World"-öt!</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Keresés //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> fdb ∈ N, filmek ∈ S[1..fdb]
         <b>Ki:</b> van ∈ L, ind ∈ N
         <b>Ef:</b> -
@@ -288,7 +270,6 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         (van ~ van)
         (ind ~ ind)
         1..elemszám ~ 1..fdb
@@ -296,7 +277,6 @@ date: 2025.08.21
 
 
         <b>//ALGORITMUS //</b>
-        
         ind := 1
         <b>Ciklus</b> <b>amíg</b> ind < fdb és nem filmek[i] = "Jurassic World"
             ind := ind + 1
@@ -306,12 +286,11 @@ date: 2025.08.21
 </details>
 
 <details>
-    <summary>10. Ebben a hónapban számos könyvet elolvastunk, az oldalszámukat felírtuk. Adjuk meg hanyadik és milyen hosszú volt a leghosszabb!</summary>
+    <summary><strong>10.</strong> Ebben a hónapban számos könyvet elolvastunk, az oldalszámukat felírtuk. Adjuk meg hanyadik és milyen hosszú volt a leghosszabb!</summary>
     <pre class="language-pszeudokód"><code>
         <b>// TÉTEL: Maximumkiválasztás //</b>
 
         <b>// SPECIFIKÁCIÓ //</b>
-
         <b>Be:</b> kdb ∈ N, oldalak ∈ N[1..kdb]
         <b>Ki:</b> maxind ∈ N, maxert ∈ N
         <b>Ef:</b> -
@@ -319,7 +298,6 @@ date: 2025.08.21
 
 
         <b>// VISSZAVEZETÉS //</b>
-        
         (maxind ~ maxind)
         (maxért ~ maxert)
         1..elemszám ~ 1..kdb
@@ -327,7 +305,6 @@ date: 2025.08.21
 
 
         <b>//ALGORITMUS //</b>
-        
         <b>Változó</b>
             i: <b>Egész</b>
         maxind := 1
