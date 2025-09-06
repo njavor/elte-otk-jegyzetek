@@ -7,6 +7,17 @@
     --elte-green: #64a70b;
 }
 
+@media only screen and (max-width: 1200px){
+    header nav{
+        display: flex;
+
+        ul li:not(:nth-child(1)){
+            display: none;
+        }
+    }
+}
+
+
 .elte-dark, .elte-ik, .elte-btk, .elte-ppk{
     --_gridColor: var(--rgb-white);
     color: var(--white);
