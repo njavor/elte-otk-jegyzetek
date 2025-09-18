@@ -1,15 +1,15 @@
 ---
 layout: lesson
-desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási alapismeretek tárgyon tanult programozási tételek/sémák.
-title: Programozási tételek
-rovpost: Progtételek
-posturl: /progtetelek
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási nyelvek 2. tárgyhoz kapcsolódva: Miként hozunk létre egy projektet.
+title: Egy projekt születése
+rovpost: Születés
+posturl: /szuletes
 
-hossztargy: Programozási alapismeretek
-rovtargy: Progalap
-targyurl: /24-25-2/OTK-PAEG-INF22
+hossztargy: Programozási nyelvek 2.
+rovtargy: Prognyelv 2.
+targyurl: /25-26-1/OTK-PNY2EG-INF22
 
-date: 2025.08.21
+date: 2025.09.19
 ---
 
 
@@ -34,11 +34,11 @@ date: 2025.08.21
     A remek felvezető után nem igazán merek hosszú magyarázatba menni arról, hogy mi miért C#-ban tanulunk — nem mellesleg tudásom sem akkora, hogy erre nyugodt szívvel vállakozzak — annyit azért állítok, hogy 
     C#-ban tanulni jó. Nem annyira egyszerű, mintha Pythont használnánk, ez tény, de ez véleményem szerint precízebb kódolásra sarkall.
 </p>
-<p>Tehát, Prognyelv 2-n C#-ban írunk. Na de melyik programban írjuk? Röviden: Visual Studio-ban. Hosszabban: <a href="https://en.wikipedia.org/wiki/Visual_Studio" target="_blank">ott a Wikipédia</a>.</p>
-<p>Amikor megnyitjuk a Visual Studiot (továbbiakban: VS), az alábbi ablak fog fogadni minket: </p>
+<p>Tehát, Prognyelv 2-n C#-ban írunk. Na de melyik programban írjuk a C#-ot? Röviden: Visual Studio-ban. Hosszabban: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">itt</a>.</p>
+<p>Amikor megnyitjuk a Visual Studiot (továbbiakban: VS), az következő ablak fogad minket: </p>
 <figure><img src="img/allapot0.png" alt="Az elindított VS"></figure>
 <p>
-    Az ablak bal oldala nem igényel túl sok magyarázatot, itt láthatjuk a korábban megnyitott solution-öket (.sln) — ezekről egy másik jegyzetben lesz szó, egyenlőre képzeljük el magának a programnak. 
+    Az ablak bal oldala nem igényel túl sok magyarázatot, itt láthatjuk a korábban megnyitott solution-öket (.sln). 
     A jobb oldal már annál érdekesebb. Nézzük őket sorba.
 </p>
 <h4>Clone a repository</h4>
@@ -48,10 +48,10 @@ date: 2025.08.21
 <h4>Open a local folder</h4>
 <p>
     Hasonlóan az előző opcióhoz, itt is egy már létrehozott munkát nyitunk meg, ám itt nem feltétel az .sln fájl megléte. 
-    Ez azt jelenti, hogy akár a 2016-os Riói olimpiáról készült képeink mappáját is megnyithatjuk! Bár annak esetünkben sok hasznát nem fogjuk venni...
+    Ez azt jelenti, hogy akár a 2016-os Riói olimpiáról készült képeink mappáját is megnyithatjuk. Bár annak esetünkben sok hasznát nem fogjuk venni...
 </p>
 <div class="box tip">
-    Saját ajánlásom, hogy ha már létező projektet nyitnánk meg, akkor vagy egyből keressük meg a fájlkezelőben, vagy az <b>Open a project or solution</b>t használjuk.
+    <p>Saját ajánlásom, hogy ha már létező projektet nyitnánk meg, akkor vagy egyből keressük meg a fájlkezelőben, vagy az <b>Open a project or solution</b>t használjuk.</p>
 </div>
 <h4><i>Create a new project</i></h4>
 <p>
@@ -59,9 +59,11 @@ date: 2025.08.21
 </p>
 <div class="box note">
     <h4>Continue without code</h4>
-    Az opciók alatt található a <i>"Continue without code"</i> felirat, ami egy teljesen üres VS-t fog nekünk elindítani. Számunkra sok haszna nem lesz, így 
-    a felfedezésünk sebességével felejtsük is el.
-</p>
+    <p>
+        Az opciók alatt található a <i>"Continue without code"</i> felirat, ami egy teljesen üres VS-t fog nekünk elindítani. Számunkra sok haszna nem lesz, így 
+        a felfedezésünk sebességével felejtsük is el.
+    </p>
+</div>
 
 
 
@@ -74,13 +76,11 @@ date: 2025.08.21
     <figcaption>Sablont muszáj választani.</figcaption>
 </figure>
 <p>
-    Bal oldalt ismét a legutóbb használt opciók lesznek felsorolva. Jobbra tekintve véges sok sablonnak bombázz minket a VS.
+    Bal oldalt ismét a legutóbb használt opciók lesznek felsorolva. Jobbra tekintve véges sok sablonnal bombázz minket a VS.
 </p>
 <p>
     Mi a tárgyon egy sablont fogunk használni. Ahhoz viszont, hogy gyorsan megtaláljuk, érdemes szűrni egy kicsit. Ezt jobb felül tehetjük meg. (Alternatív mód: beírjuk a keresőbe, amit keresünk)<br>
-    Nyelv: <code>C#</code> <br>
-    Platform: <code>Windows</code> <br>
-    Projekt típusa: <code>Console</code>
+    Nyelv: <code>C#</code> Platform: <code>Windows</code> Projekt típusa: <code>Console</code>
 </p>
 <p>
     Ez a fenti szűrés kettőre fogja szűkíteni lehetőségeinket.
@@ -93,14 +93,14 @@ date: 2025.08.21
 </code></pre>
 <p>Ezt azért nem fogjuk használni, mert sok fontos információt elrejt előlünk.</p>
 <p>
-    A másik, általunk majd használt opció a <code>Console App (.Net Framework)</code> sablon. Ez a sablon már kevéséb szégyenlős, a <i>namespace</i> és társai itt már láthatóak (és szerkeszthetőek) lesznek.
+    A másik, általunk majd használt sablon a <code>Console App (.Net Framework)</code>. Ez már kevéséb szégyenlős, a <i>namespace</i> és társai itt már láthatóak (és szerkeszthetőek) lesznek.
 </p>
 
 
 
 <h3 id="configure">Konfigurálás</h3>
-<p>Elérkeztünk a célegyeneshez.</p>
 <figure><img src="img/allapot2.png" alt="Projekt adatok megadása"></figure>
+<p>Elérkeztünk a célegyeneshez.</p>
 <p>Utolsó lépésként 2/3 +1 adat megadása vár ránk</p>
 <ol>
     <li>projekt neve</li>
@@ -115,10 +115,12 @@ date: 2025.08.21
 <p>+1 A framework, amihez alapértelmezetten nem fogunk hozzányúlni.</p>
 
 <br><br>
-<p>Ha mindezt megcsináltuk, már csak egy lépés van hátra:</p>
-<p><code>Create</code></p>
+<p>Ha mindezt megcsináltuk, már csak egy lépés van hátra: <code>Create</code></p>
 
-<figure><img src="img/allapot3.png" alt="Megnyitott projekt VS-ben"></figure>
+<figure>
+    <figcaption>és így jött létre az új projektünk</figcaption>
+    <img src="img/allapot3.png" alt="Megnyitott projekt VS-ben">
+</figure>
 
 
 
@@ -127,7 +129,7 @@ date: 2025.08.21
     <li>Nyisd meg a VS-t</li>
     <li><code>Create a new project</code></li>
     <li>Sablon: <code>Console App (.NET Framework)</code></li>
-    <li>Nevezd el <i>Create a new project</i> és helyezd el <i>(Location)</i> a projektet
+    <li>Nevezd el <i>(Create a new project)</i> és helyezd el <i>(Location)</i> a projektet
         <ul>
             <li>Ha több projekt lesz egy solution-ben, akkor érdemes külön solution nevet adni</li>
             <li>Ha egy projekt lesz, ki lehet pipálni a <i>Place solution and project in the same folder</i> checkboxot (nem létszükséglet)</li>
