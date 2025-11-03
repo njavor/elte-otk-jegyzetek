@@ -15,8 +15,8 @@ date: 2025.11.03
 
 <h3 id="pre">Előszó</h3>
 <p>
-    Programozási tételekkel <a href="../../24-25-2/OTK-PAEG-INF22">Programozási alapismeretek</a> órán már lehetett találkozni. Bár Algadaton kevésbé sematikus feladatokkal lehet találkozni, érdemes lehet 
-    egy legalább futólagosan megvizsgálni, hogy az egyes tételek hogyan is néznének ki Flowgorithmben.
+    Programozási tételekkel <a href="../../24-25-2/OTK-PAEG-INF22">Programozási alapismeretek</a> órán már találkozghattunk. Bár Algadaton kevésbé sematikus feladatokat oldunk meg, érdemes lehet 
+    legalább futólagosan megvizsgálni, hogy az egyes tételek hogyan is néznének ki Flowgorithmben.
 </p>
 <p>
     Előljáróban három megjegyzést kell megejtenem:
@@ -27,7 +27,7 @@ date: 2025.11.03
                 <li>egy tömb <code>i</code>. elemére való rákérdezésének ökölszabálya, hogy az <code>i-1</code>-edik elemre hivatkozunk</li>
             </ul>
         </li>
-        <li>A Flowgorithm <b>nem lusta kiértékeléssel dolgozik</b> (egy feltétel minden eleméről eldönti, hogy igaz-e), emiatt
+        <li>A Flowgorithm <b>nem lusta kiértékeléssel dolgozik</b> (helyette egy feltétel minden eleméről eldönti, hogy igaz-e), emiatt
             <ul>
                 <li>egy sima eldöntésnél például, ha az utolsó elem ami megfelelő, akkor hibával tér vissza a program, mivel az utolsó elemnél <code>i = i + 1</code>, 
                 majd a ciklus vizsgálná, hogy erre az <code>i + 1</code>. elemre igaz-e a feltétel, azonban nincs ilyen indexű elem, kimentünk a tömbből</li>
@@ -35,7 +35,7 @@ date: 2025.11.03
                 <ul>
                     <li>emiatt viszont az utolsó elemet nem vizsgáljuk meg, ennek orvoslására</li>
                 </ul></li>
-                <li>az <code>i</code> és <code>n</code> kapcsolat vizsgálata helyett a feltételt kérdezzük meg (vagy az utolsó, vagy az i. elemre)</li>
+                <li>az <code>i</code> és <code>n</code> kapcsolat vizsgálata helyett a feltételt kérdezzük meg</li>
             </ul>
         </li>
     </ol>
@@ -89,11 +89,9 @@ date: 2025.11.03
     <pre class="language-pszeudokód"><code>
         <b>Változó</b>
             i: <b>Egész</b>
-        <em class="visszavezetes negy">maxért</em> := <em class="visszavezetes harom">elemek[<em class="visszavezetes ketto">1</em>]</em>
         <em class="visszavezetes egy">maxind</em> := <em class="visszavezetes ketto">1</em>
         <b>Ciklus</b> i=2-től <em class="visszavezetes ketto">elemszám-ig</em>
-            <b>Ha</b> <em class="visszavezetes harom">elemek[i]</em> > <em class="visszavezetes negy">maxért</em> <b>akkor</b>
-                <em class="visszavezetes negy">maxért</em> := <em class="visszavezetes harom">elemek[i]</em>
+            <b>Ha</b> <em class="visszavezetes harom">elemek[i]</em> > elemek[<em class="visszavezetes egy">maxind</em>] <b>akkor</b>
                 <em class="visszavezetes egy">maxind</em> := i
             <b>Elágazás vége</b>
         <b>Ciklus vége</b>
