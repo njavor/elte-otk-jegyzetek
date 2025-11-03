@@ -1,0 +1,222 @@
+---
+layout: lesson
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Algoritmusok és adatok az iskolában 1. tárgyon elékerülő programozási tételek Flowgorithmben.
+title: Programozási tételek
+rovpost: Progtételek
+posturl: /progtetelek
+
+hossztargy: Algoritmusok és adatok az iskolában 1.
+rovtargy: Algadat 1.
+targyurl: /24-25-2/OTK-AAI1EG-INF22
+
+date: 2025.11.03
+---
+
+
+<h3 id="pre">Előszó</h3>
+<p>
+    Programozási tételekkel <a href="">Programozási alapismeretek</a> órán már lehetett találkozni. Bár Algadaton kevésbé sematikus feladatokkal lehet találkozni, érdemes lehet 
+    egy legalább futólagosan megvizsgálni, hogy az egyes tételek hogyan is néznének ki Flowgorithmben.
+</p>
+<p>
+    Előljáróban három megjegyzést kell megejtenem:
+    <ol>
+        <li>A <code>FELTÉTEL</code> és <code>MŰVELET</code> helyettesítő szövegként működnek. Ezek tartalma feladatonként változik.</li>
+        <li>1-től indexelünk, de
+            <ul>
+                <li>a tömbök továbbra is 0-tól indexelődnek, ezért</li>
+                <li>egy tömb <code>i</code>. elemére való rákérdezésének ökölszabálya, hogy az <code>i-1</code>-edik elemre hivatkozunk</li>
+            </ul>
+        </li>
+        <li>A Flowgorithm <b>nem lusta kiértékeléssel dolgozik</b> (egy feltétel minden eleméről eldönti, hogy igaz-e), emiatt
+            <ul>
+                <li>egy sima eldöntésnél például, ha az utolsó elem ami megfelelő, akkor hibával tér vissza a program, mivel az utolsó elemnél <code>i = i + 1</code>, 
+                majd a ciklus vizsgálná, hogy erre az <code>i + 1</code>. elemre igaz-e a feltétel, azonban nincs ilyen indexű elem, kimentünk a tömbből</li>
+                <li>ennek orvoslására a ciklusainkat <code>i <= n</code> helyett <code>i < n</code>-ig futtatjuk,
+                <ul>
+                    <li>emiatt viszont az utolsó elemet nem vizsgáljuk meg, ennek orvoslására</li>
+                </ul></li>
+                <li>az <code>i</code> és <code>n</code> kapcsolat vizsgálata helyett a feltételt kérdezzük meg (vagy az utolsó, vagy az i. elemre)</li>
+            </ul>
+        </li>
+    </ol>
+</p>
+
+
+
+
+<h3 id="sum">Összegzés</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <em class="visszavezetes egy">össz</em> := 0
+        <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+            <em class="visszavezetes egy">össz</em> := <em class="visszavezetes egy">össz</em> + <em class="visszavezetes harom">elemek[i]</em>
+        <b>Ciklus vége</b>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-szum.png" alt="Összegzés függvény Flowgorithmben">
+</figure>
+
+
+
+<h3 id="count">Megszámolás</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <em class="visszavezetes egy">db</em> := 0
+        <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+            <b>Ha</b> <em class="visszavezetes harom">T(elemek[i])</em> <b>akkor</b> <em class="visszavezetes egy">db</em> := <em class="visszavezetes egy">db</em> + 1
+        <b>Ciklus vége</b>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-darab.png" alt="Megszámolás függvény Flowgorithmben">
+</figure>
+
+
+
+<h3 id="max">Maximumkiválasztás</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <em class="visszavezetes negy">maxért</em> := <em class="visszavezetes harom">elemek[<em class="visszavezetes ketto">1</em>]</em>
+        <em class="visszavezetes egy">maxind</em> := <em class="visszavezetes ketto">1</em>
+        <b>Ciklus</b> i=2-től <em class="visszavezetes ketto">elemszám-ig</em>
+            <b>Ha</b> <em class="visszavezetes harom">elemek[i]</em> > <em class="visszavezetes negy">maxért</em> <b>akkor</b>
+                <em class="visszavezetes negy">maxért</em> := <em class="visszavezetes harom">elemek[i]</em>
+                <em class="visszavezetes egy">maxind</em> := i
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-max.png" alt="Maximumkiválasztás függvény Flowgorithmben">
+</figure>
+
+
+
+<h3 id="is">Eldöntés</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        i := <em class="visszavezetes ketto">1</em>
+        <b>Ciklus amíg</b> i <= <em class="visszavezetes ketto">elemszám</em> és nem <em class="visszavezetes harom">T(elemek[i])</em>
+            i := i + 1
+        <b>Ciklus vége</b>
+        <em class="visszavezetes egy">van</em> := i <= <em class="visszavezetes ketto">elemszám</em>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-van.png" alt="Eldöntés függvény Flowgorithmben">
+</figure>
+
+
+
+<h3 id="all">Mind eldöntés</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        i := <em class="visszavezetes ketto">1</em>
+        <b>Ciklus amíg</b> i <= <em class="visszavezetes ketto">elemszám</em> és <em class="visszavezetes harom">T(elemek[i])</em>
+            i := i + 1
+        <b>Ciklus vége</b>
+        <em class="visszavezetes egy">mind</em> := i > <em class="visszavezetes ketto">elemszám</em>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-mind.png" alt="Mind eldöntés függvény Flowgorithmben">
+</figure>
+
+
+
+<h3 id="select">Kiválasztás</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <em class="visszavezetes egy">ind</em> := <em class="visszavezetes ketto">1</em>
+        <b>Ciklus amíg</b> nem <em class="visszavezetes harom">T(elemek[<em class="visszavezetes egy">ind</em>])</em>
+            <em class="visszavezetes egy">ind</em> := <em class="visszavezetes egy">ind</em> + 1
+        <b>Ciklus vége</b>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-kivalaszt.png" alt="Kiválasztás függvény Flowgorithmben">
+</figure>
+
+
+
+<h3 id="search">Keresés</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <em class="visszavezetes negy">ind</em> := <em class="visszavezetes ketto">1</em>
+        <b>Ciklus amíg</b> <em class="visszavezetes negy">ind</em> <= <em class="visszavezetes ketto">elemszám</em> és nem <em class="visszavezetes harom">T(elemek[<em class="visszavezetes negy">ind</em>])</em>
+            <em class="visszavezetes negy">ind</em> := <em class="visszavezetes negy">ind</em> + 1
+        <b>Ciklus vége</b>
+        <em class="visszavezetes egy">van</em> := <em class="visszavezetes negy">ind</em> <= <em class="visszavezetes ketto">elemszám</em>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-keres.png" alt="Keresés függvény Flowgorithmben">
+</figure>
+
+
+
+<h3 id="copy">Másolás</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+            <em class="visszavezetes egy">fvelemek[i]</em> := <em class="visszavezetes harom">f(elemek[i])</em>
+        <b>Ciklus vége</b>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-masol.png" alt="Másolás függvény Flowgorithmben">
+</figure>
+
+
+
+<h3 id="filter">Kiválogatás</h3>
+<details>
+    <summary>Algoritmus</summary>
+    <pre class="language-pszeudokód"><code>
+        <b>Változó</b>
+            i: <b>Egész</b>
+        <em class="visszavezetes egy">db</em> := 0
+        <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+            <b>Ha</b> <em class="visszavezetes harom">T(elemek[i])</em> <b>akkor</b>
+                <em class="visszavezetes egy">db</em> := <em class="visszavezetes egy">db</em> + 1
+                <em class="visszavezetes negy">kivindexek[<em class="visszavezetes egy">db</em>]</em> := <em class="visszavezetes ot">i</em>
+            <b>Elágazás vége</b>
+        <b>Ciklus vége</b>
+    </code></pre>
+</details>
+<figure>
+    <img src="img/fprg-progt-kivalogat.png" alt="Kiválogatás függvény Flowgorithmben">
+</figure>
+
+
+
+
+
+<h3 id="other">További linkek</h3>
+<a href="../../24-25-2/OTK-PAEG-INF22/progtetelek">Programozási tételek áttekintése (Progalap)</a>
+
+
+
+<!-- <h3 id="sources">Források</h3> -->

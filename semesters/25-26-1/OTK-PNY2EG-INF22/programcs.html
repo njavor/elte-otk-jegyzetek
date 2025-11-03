@@ -1,0 +1,86 @@
+---
+layout: lesson
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási nyelvek 2. tárgyon vett információk a Program.cs-ről.
+title: Program.cs részei
+rovpost: Program.cs
+posturl: /programcs
+
+hossztargy: Programozási nyelvek 2.
+rovtargy: Prognyelv 2.
+targyurl: /25-26-1/OTK-PNY2EG-INF22
+
+date: 2025.09.23
+---
+
+
+<h3 id="start">A Program.cs</h3>
+<p>
+    Amikor létrehozunk Visual Studio-ban egy C# projektet, a következő fogad minket:
+</p>
+<figure>
+    <img src="./img/allapot3.png" alt="Megnyitott projekt VS-ben">
+</figure>
+<p>
+    Mielőtt nekiesnénk remek kódok írásának, nézzük meg, hogy mi mit jelent.
+</p>
+
+
+
+<h3 id="main">static void Main</h3>
+<p>
+    Haladjunk fordított sorrendben.
+</p>
+<p>
+    A kódok egyik alap egysége a függvény. C#-ban van visszatérési értékkel rendelkező (pl. int Fuggvenyem()) és visszatérési érték nélküli. Az újonnan 
+    megnyitott projekt legbelső része az utóbbi kategóriába tartozik.
+</p>
+<p>
+    A <code>static</code> szó
+</p>
+
+
+
+
+
+
+<h3 id="namespace">namespace</h3>
+<p>Kezdjük a névtérrel (namespace). Ez a különböző </p>
+
+
+
+<h3 id="using">using</h3>
+<p>
+    A fájl első pár sorában a <code>using</code> kulcsszó szerepel több <a href="#namespace">namespace</a>-el együtt.
+</p>
+<p>
+    Ezek a sorok rövidítések. Pl. amikor azt írjuk, hogy <code>Console.WriteLine("Hello World!")</code>, akkor 
+    a <i>Console</i> osztály (class) <i>WriteLine</i> függvényét használjuk a <i>"Hello World!"</i> paraméterrel. 
+    Ez a class azonban nem a mi névterünkben (namespace) lett megírva, hanem a System névteren belül.
+</p>
+<p>
+    Tehát, ha nem szerepelne a <code>using System;</code> sor a fájl elején, akkor minden egyes kiírásnál azt kéne 
+    írnom, hogy <code>System.Console.WriteLine()</code>. Ez 
+</p>
+<ul>
+    <li><code>using System;</code> — </li>
+    <li><code>using System.Collections.Generic;</code> — </li>
+    <li><code>using System.Linq;</code> — </li>
+    <li><code>using System.Text;</code> — </li>
+    <li><code>using System.Threading.Tasks;</code> — </li>
+</ul>
+
+
+
+
+
+
+<h3 id="class">internal class Program</h3>
+
+
+
+
+
+
+
+
+<h3 id="other">További linkek</h3>
