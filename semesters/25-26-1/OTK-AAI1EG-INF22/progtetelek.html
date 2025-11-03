@@ -1,13 +1,13 @@
 ---
 layout: lesson
 desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Algoritmusok és adatok az iskolában 1. tárgyon elékerülő programozási tételek Flowgorithmben.
-title: Programozási tételek
+title: Programozási tételek (Flowgorithm)
 rovpost: Progtételek
 posturl: /progtetelek
 
 hossztargy: Algoritmusok és adatok az iskolában 1.
 rovtargy: Algadat 1.
-targyurl: /24-25-2/OTK-AAI1EG-INF22
+targyurl: /25-26-1/OTK-AAI1EG-INF22
 
 date: 2025.11.03
 ---
@@ -15,16 +15,15 @@ date: 2025.11.03
 
 <h3 id="pre">Előszó</h3>
 <p>
-    Programozási tételekkel <a href="">Programozási alapismeretek</a> órán már lehetett találkozni. Bár Algadaton kevésbé sematikus feladatokkal lehet találkozni, érdemes lehet 
+    Programozási tételekkel <a href="../../24-25-2/OTK-PAEG-INF22">Programozási alapismeretek</a> órán már lehetett találkozni. Bár Algadaton kevésbé sematikus feladatokkal lehet találkozni, érdemes lehet 
     egy legalább futólagosan megvizsgálni, hogy az egyes tételek hogyan is néznének ki Flowgorithmben.
 </p>
 <p>
     Előljáróban három megjegyzést kell megejtenem:
     <ol>
-        <li>A <code>FELTÉTEL</code> és <code>MŰVELET</code> helyettesítő szövegként működnek. Ezek tartalma feladatonként változik.</li>
-        <li>1-től indexelünk, de
+        <li>A <i>FELTÉTEL</i> és <i>MŰVELET</i> helyettesítő szövegként működnek. Ezek tartalma feladatonként változik.</li>
+        <li>1-től indexelünk, de a tömbök továbbra is 0-tól indexelődnek, ezért
             <ul>
-                <li>a tömbök továbbra is 0-tól indexelődnek, ezért</li>
                 <li>egy tömb <code>i</code>. elemére való rákérdezésének ökölszabálya, hogy az <code>i-1</code>-edik elemre hivatkozunk</li>
             </ul>
         </li>
@@ -46,6 +45,9 @@ date: 2025.11.03
 
 
 <h3 id="sum">Összegzés</h3>
+<figure>
+    <img src="img/fprg-progt-szum.png" alt="Összegzés függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -57,13 +59,13 @@ date: 2025.11.03
         <b>Ciklus vége</b>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-szum.png" alt="Összegzés függvény Flowgorithmben">
-</figure>
 
 
 
 <h3 id="count">Megszámolás</h3>
+<figure>
+    <img src="img/fprg-progt-darab.png" alt="Megszámolás függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -75,13 +77,13 @@ date: 2025.11.03
         <b>Ciklus vége</b>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-darab.png" alt="Megszámolás függvény Flowgorithmben">
-</figure>
 
 
 
 <h3 id="max">Maximumkiválasztás</h3>
+<figure>
+    <img src="img/fprg-progt-max.png" alt="Maximumkiválasztás függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -97,13 +99,13 @@ date: 2025.11.03
         <b>Ciklus vége</b>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-max.png" alt="Maximumkiválasztás függvény Flowgorithmben">
-</figure>
 
 
 
 <h3 id="is">Eldöntés</h3>
+<figure>
+    <img src="img/fprg-progt-van.png" alt="Eldöntés függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -116,13 +118,13 @@ date: 2025.11.03
         <em class="visszavezetes egy">van</em> := i <= <em class="visszavezetes ketto">elemszám</em>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-van.png" alt="Eldöntés függvény Flowgorithmben">
-</figure>
 
 
 
 <h3 id="all">Mind eldöntés</h3>
+<figure>
+    <img src="img/fprg-progt-mind.png" alt="Mind eldöntés függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -135,13 +137,13 @@ date: 2025.11.03
         <em class="visszavezetes egy">mind</em> := i > <em class="visszavezetes ketto">elemszám</em>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-mind.png" alt="Mind eldöntés függvény Flowgorithmben">
-</figure>
 
 
 
 <h3 id="select">Kiválasztás</h3>
+<figure>
+    <img src="img/fprg-progt-kivalaszt.png" alt="Kiválasztás függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -151,13 +153,13 @@ date: 2025.11.03
         <b>Ciklus vége</b>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-kivalaszt.png" alt="Kiválasztás függvény Flowgorithmben">
-</figure>
 
 
 
 <h3 id="search">Keresés</h3>
+<figure>
+    <img src="img/fprg-progt-keres.png" alt="Keresés függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -168,13 +170,13 @@ date: 2025.11.03
         <em class="visszavezetes egy">van</em> := <em class="visszavezetes negy">ind</em> <= <em class="visszavezetes ketto">elemszám</em>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-keres.png" alt="Keresés függvény Flowgorithmben">
-</figure>
 
 
 
 <h3 id="copy">Másolás</h3>
+<figure>
+    <img src="img/fprg-progt-masol.png" alt="Másolás függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -185,13 +187,13 @@ date: 2025.11.03
         <b>Ciklus vége</b>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-masol.png" alt="Másolás függvény Flowgorithmben">
-</figure>
 
 
 
 <h3 id="filter">Kiválogatás</h3>
+<figure>
+    <img src="img/fprg-progt-kivalogat.png" alt="Kiválogatás függvény Flowgorithmben">
+</figure>
 <details>
     <summary>Algoritmus</summary>
     <pre class="language-pszeudokód"><code>
@@ -206,9 +208,6 @@ date: 2025.11.03
         <b>Ciklus vége</b>
     </code></pre>
 </details>
-<figure>
-    <img src="img/fprg-progt-kivalogat.png" alt="Kiválogatás függvény Flowgorithmben">
-</figure>
 
 
 
