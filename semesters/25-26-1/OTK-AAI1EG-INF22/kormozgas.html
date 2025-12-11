@@ -1,0 +1,36 @@
+---
+layout: lesson
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Algoritmusok és adatok az iskolában 1. tárgyon tanult körmozgás Netlogoban.
+title: Körmozgás
+rovpost: Körmozgás
+posturl: /kormozgas
+
+hossztargy: Algoritmusok és adatok az iskolában 1.
+rovtargy: Algadat 1.
+targyurl: /24-25-2/OTK-AAI1EG-INF22
+
+date: 2025.12.09
+---
+
+
+<h3 id="why">A Körmozgás</h3>
+<pre class="language-netlogo"><code>
+    ask bolygók
+    [
+        set szög (szög + sebesség) mod 360
+
+        let k középpontneve
+        let kpx [xcor] of one-of bolygók with [label = k]
+        let kpy [ycor] of one-of bolygók with [label = k]
+        
+        set xcor kpx + sugár * cos szög
+        set ycor kpy + sugár * sin szög
+    ]
+</code></pre>
+
+
+
+
+
+<h3 id="other">További linkek</h3>
+<a href="https://docs.netlogo.org/dictionary.html" target="_blank">NetLogo szótár (7.0.2) <span class="icon">arrow_outward</span></a>
