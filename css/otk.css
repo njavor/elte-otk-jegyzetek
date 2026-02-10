@@ -76,3 +76,9 @@
 .semester .box.elte-btk [role=button]{ background: var(--elte-brown); }
 .semester .box.elte-ppk [role=button]{ background: var(--elte-green); }
 .semester .box.elte-tkk [role=button]{ background: var(--elte-orange); }
+
+
+
+article ol li{
+    list-style-type: decimal-leading-zero;
+}
