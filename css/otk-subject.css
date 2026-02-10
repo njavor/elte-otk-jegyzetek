@@ -57,4 +57,12 @@ main{
         &:last-child:after { height: var(--_left-line-height); }
         &:has(> h3):last-child:after { height: var(--_llh-big); }
     }
+
+
+    details{
+        summary.left{
+            display: grid;
+            grid-template-columns: fit-content(100%) 1fr fit-content(100%);
+        }
+    }
 }

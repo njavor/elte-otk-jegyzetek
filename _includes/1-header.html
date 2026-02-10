@@ -10,7 +10,8 @@
                 <li><a href="/elte-otk-jegyzetek">ELTE OTK</a></li>
                 {% if page.layout == "subject" or page.layout == "lesson" %}
                     <li><a href="/elte-otk-jegyzetek/semesters{{page.targyurl}}">{{ page.rovtargy }}</a></li>
-                {% elsif page.layout == "lesson" %}
+                {% endif %}
+                {% if page.layout == "lesson" %}
                     <!-- <li><a href="/elte-otk-jegyzetek/semesters{{page.targyurl}}">{{ page.rovtargy }}</a></li> -->
                     <li><a href="/elte-otk-jegyzetek/semesters{{page.targyurl}}{{page.posturl}}">{{ page.rovpost }}</a></li>
                 {% endif %}
