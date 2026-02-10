@@ -5,6 +5,7 @@
     --elte-lblue: #009fa3;
     --elte-brown: #9a3324;
     --elte-green: #64a70b;
+    --elte-orange: #ff9a44;
 }
 
 @media only screen and (max-width: 1200px){
@@ -18,7 +19,7 @@
 }
 
 
-.elte-dark, .elte-ik, .elte-btk, .elte-ppk{
+.elte-dark, .elte-ik, .elte-btk, .elte-ppk, .elte-tkk{
     --_gridColor: var(--rgb-white);
     color: var(--white);
     button, [role=button]{ color: white; }
@@ -35,6 +36,9 @@
 }
 .elte-ppk{
     background: var(--elte-green);
+}
+.elte-tkk{
+    background: var(--elte-orange);
 }
 
 
@@ -59,11 +63,16 @@
 .semester{
     scroll-margin-top: var(--space-xl);
 
-    .box ul{
-        flex-wrap: wrap;
+    .box{
+        box-shadow: none;
+
+        & ul{
+            flex-wrap: wrap;
+        }
     }
 }
 .semester .box.elte-dark [role=button]{ background: var(--elte-blue); }
 .semester .box.elte-ik [role=button]{ background: var(--elte-lblue); }
 .semester .box.elte-btk [role=button]{ background: var(--elte-brown); }
 .semester .box.elte-ppk [role=button]{ background: var(--elte-green); }
+.semester .box.elte-tkk [role=button]{ background: var(--elte-orange); }
