@@ -1,0 +1,138 @@
+---
+layout: lesson
+desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási alapismeretek tárgyhoz ismerni érdemes részei a C# nyelvnek.
+title: C# alapozó
+rovpost: CS:A
+posturl: /alapok/cs
+
+hossztargy: Programozási alapismeretek
+rovtargy: Progalap
+targyurl: /24-25-2/OTK-PAEG-INF22
+
+date: 2026.03.08 [folyamatban]
+---
+
+
+<h3 id="history">Egy kis töri</h3>
+<p>
+    Informatika-tanári tanulmányaink során az első "rendes" programozási nyelv a <b>C#</b>.
+</p>
+<p>
+    Későbbi tárgyakon részletesebben foglalkozunk a nyelvvel, most azokat az alapvető funkciókat kívánom bemutatni, amik elkerülhetetlenek 
+    egy-egy feladat megírásához.
+</p>
+
+
+
+<h3 id="programcs">Program.cs</h3>
+<p>
+</p>
+<pre class="language-cs"><code>
+Console.WriteLine("")
+</code></pre>
+
+
+
+<h3 id="readwrite">Beolvasás és kiírás</h3>
+<p>
+</p>
+<h4>Kiírás</h4>
+<pre class="language-cs"><code>
+    Console.Write("szöveg");
+    Console.Write(" még szöveg");
+    Console.WriteLine(" szöveg sortöréssel a végén");
+    Console.WriteLine("utolsó szöveg");
+</code></pre>
+<pre class="language-console"><code>
+    szöveg még szöveg szöveg sortöréssel a végén
+    utolsó szöveg
+    [szövegkurzor itt]
+</code></pre>
+
+
+
+<h3 id="unstructured">Elemi típusok</h3>
+<p>
+</p>
+<pre class="language-cs"><code>
+    //egész típusok
+    int i = 28;
+    long j = 1000000000000000000;
+    
+    //valós típusok
+    double k = 0.1;
+    float l = 0.1;
+
+    // logikai típus
+    bool l = True;
+
+    //karakter típus
+    char c = k;
+</code></pre>
+
+<div class="box warning">
+    A típusok között nincs átjárás (pl. <code>(int i = 5,j = 2) i/j => 2</code> <code>(char c = 5) 15/c => [hiba]</code>). 
+    Így ha más típusként akarunk használni egy értéket, akkor át kell alakítanunk - konvertálni kell.
+    <br>
+
+    <pre class="language-cs"><code>
+        char c = 2;
+        int i = Convert.ToInt32(c);
+    </code></pre>
+</div>
+
+
+
+<h3 id="structured">Összetett típusok</h3>
+<p>
+    string 
+</p>
+
+
+
+<h3 id="records">Rekordok (<code>struct</code>)</h3>
+<p>
+</p>
+
+
+
+<h3 id="functions">Függvények</h3>
+<p>
+</p>
+
+
+
+<h3 id="sum">Összegzés (SZUM)</h3>
+<p>Elemek összesítése. <a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/24-25-2/OTK-PAEG-INF22/progtetelek/kod/szum.cs" target="_blank">Kód egész számokhoz (C#)</a></p>
+<h4>Specifikáció</h4>
+<pre class="language-specifkáció"><code>
+    <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám]
+    <b>Ki:</b> össz ∈ H
+    <b>Ef:</b> -
+    <b>Uf:</b> <em class="visszavezetes egy">össz</em> = SZUM(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">elemek[i]</em>)
+</code></pre>
+<h4>Algoritmus</h4>
+<pre class="language-pszeudokód"><code>
+    <b>Változó</b>
+        i: <b>Egész</b>
+    <em class="visszavezetes egy">össz</em> := 0
+    <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
+        <em class="visszavezetes egy">össz</em> := <em class="visszavezetes egy">össz</em> + <em class="visszavezetes harom">elemek[i]</em>
+    <b>Ciklus vége</b>
+</code></pre>
+
+
+
+
+
+<h3 id="other">További linkek</h3>
+<a href="./progtetelek/feladatok">Gyakorló feladatok programozási tételekkel</a>
+<a href="https://progalap.elte.hu/specifikacio/" target="_blank">ELTE specifikáció szerkesztője</a>
+
+
+
+<h3 id="sources">Források</h3>
+<p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 3. előadás (ppt) (előadó: Törley Gábor)</p>
+<p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 4. előadás (ppt) (előadó: Törley Gábor)</p>
+<p><i>Horváth Győző, Horváth Gyula, Szlávi Péter, Törley Gábor:</i> Programozási alapismeretek 5. előadás (ppt) (előadó: Törley Gábor)</p>
+<p><i>Erdősné Dr. Németh Ágnes, Mahler-Lakó Viktória:</i> Algoritmusok és adatok az iskolában 2. 1. előadás (ppt) (előadó: Mahler-Lakó Viktória)</p>
