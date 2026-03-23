@@ -3,13 +3,13 @@ layout: lesson
 desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Programozási alapismeretek tárgyhoz ismerni érdemes részei a C# nyelvnek.
 title: C# alapozó
 rovpost: CS:A
-posturl: /alapok/cs
+posturl: /alapok/cs-alapozo
 
 hossztargy: Programozási alapismeretek
 rovtargy: Progalap
 targyurl: /24-25-2/OTK-PAEG-INF22
 
-date: 2026.03.08 [folyamatban]
+date: 2026.03.10 [folyamatban]
 ---
 
 
@@ -56,11 +56,11 @@ Console.WriteLine("")
 </p>
 <pre class="language-cs"><code>
     //egész típusok
-    int i = 28;
-    long j = 1000000000000000000;
+    <b>int i = 28;</b>
+    long j = 2147483648;
     
     //valós típusok
-    double k = 0.1;
+    <b>double k = 0.1;</b>
     float l = 0.1;
 
     // logikai típus
@@ -71,26 +71,37 @@ Console.WriteLine("")
 </code></pre>
 
 <div class="box warning">
-    A típusok között nincs átjárás (pl. <code>(int i = 5,j = 2) i/j => 2</code> <code>(char c = 5) 15/c => [hiba]</code>). 
-    Így ha más típusként akarunk használni egy értéket, akkor át kell alakítanunk - konvertálni kell.
-    <br>
-
-    <pre class="language-cs"><code>
-        char c = 2;
-        int i = Convert.ToInt32(c);
-    </code></pre>
+    <p>
+        A típusok között nincs átjárás (pl. <code>(int i = 5,j = 2) i/j => 2</code>, <code>(char c = 5) 15/c => [hiba]</code>). 
+        Így ha más típusként akarunk használni egy értéket, akkor át kell alakítanunk - konvertálni kell. Erre több módszer is van, 
+        de egyenlőre használjuk a <code>Convert.To[X]()</code> függvényeket (<code>Convert.ToInt32()</code>, <code>Convert.ToDouble()</code>, stb.).
+    </p>
 </div>
 
 
 
 <h3 id="structured">Összetett típusok</h3>
+<h4>Tömbök</h4>
 <p>
-    string 
+    string szoveg = "Helló világ!"; // karakterek tömbje - szöveg
+    string[] szovegtomb = new string[5]; // szövegek tömbje
+
+    int[] tomb = new int[5]; // egészek tömbje
+    int[,] matrix = new int[3,3]; // egészek kétdimenziós tömbje - mátrix
+
+    // és így tovább... ahogy látszik a tömböknél előre meg kell a tömb méretét, nem lehet több eleme az előre megadottnál
+
+    List<double> lista = new List<double>(); // valós értékek dinamikus tömbje - lista
+</p>
+
+<h4>Lista</h4>
+<p>
+    List<double> lista = new List<double>(); // valós értékek dinamikus tömbje - lista
 </p>
 
 
 
-<h3 id="records">Rekordok (<code>struct</code>)</h3>
+<h3 id="records">Rekordok (struct)</h3>
 <p>
 </p>
 
@@ -99,27 +110,12 @@ Console.WriteLine("")
 <h3 id="functions">Függvények</h3>
 <p>
 </p>
-
-
-
-<h3 id="sum">Összegzés (SZUM)</h3>
-<p>Elemek összesítése. <a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/24-25-2/OTK-PAEG-INF22/progtetelek/kod/szum.cs" target="_blank">Kód egész számokhoz (C#)</a></p>
-<h4>Specifikáció</h4>
-<pre class="language-specifkáció"><code>
-    <b>Be:</b> elemszám ∈ N, elemek ∈ H[1..elemszám]
-    <b>Ki:</b> össz ∈ H
-    <b>Ef:</b> -
-    <b>Uf:</b> <em class="visszavezetes egy">össz</em> = SZUM(i=<em class="visszavezetes ketto">1..elemszám</em>, <em class="visszavezetes harom">elemek[i]</em>)
-</code></pre>
-<h4>Algoritmus</h4>
-<pre class="language-pszeudokód"><code>
-    <b>Változó</b>
-        i: <b>Egész</b>
-    <em class="visszavezetes egy">össz</em> := 0
-    <b>Ciklus</b> i=<em class="visszavezetes ketto">1-től elemszám-ig</em>
-        <em class="visszavezetes egy">össz</em> := <em class="visszavezetes egy">össz</em> + <em class="visszavezetes harom">elemek[i]</em>
-    <b>Ciklus vége</b>
-</code></pre>
+<!-- <div class="box info">
+    <p>
+        A függvényeknek van egy neve, egy visszatérési típusa, és egy paraméterlistája. 
+        A paraméterlista lehet üres, de a visszatérési típus nem lehet void (azaz nem lehet olyan függvényünk, ami nem ad vissza értéket).
+    </p>
+</div> -->
 
 
 
