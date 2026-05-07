@@ -13,8 +13,7 @@ date: 2026.05.07
 ---
 
 
-<h3 id="sum">Összegzés (SZUM)</h3>
-<h4>Kód</h4>
+<h3 id="sum">Összegzés</h3>
 <pre class="language-cs"><code>
     int ossz = 0;
     for(int i = 0; i < tomb.Length; i++)
@@ -25,8 +24,7 @@ date: 2026.05.07
 
 
 
-<h3 id="count">Megszámolás (DARAB)</h3>
-<h4>Kód</h4>
+<h3 id="count">Megszámolás</h3>
 <pre class="language-cs"><code>
     int db = 0;
     for(int i = 0; i < tomb.Length; i++)
@@ -37,38 +35,31 @@ date: 2026.05.07
 
 
 
-<h3 id="max">Maximum- és minimumkiválasztás (MAX/MIN)</h3>
-<h4>Kód (max)</h4>
-<div>
-    <pre class="language-cs"><code>
-        int maxind = 0, maxert = tomb[0];
-        for(int i = 1; i < tomb.Length; i++)
+<h3 id="max">Maximum- és minimumkiválasztás</h3>
+<pre class="language-cs"><code>
+    int maxind = 0, maxert = tomb[0];
+    for(int i = 1; i < tomb.Length; i++)
+    {
+        if(maxert < tomb[i])
         {
-            if(maxert < tomb[i])
-            {
-                maxind = i;
-                maxert = tomb[i];
-            }
+            maxind = i;
+            maxert = tomb[i];
         }
-    </code></pre>
-</div>
+    }
+</code></pre>
 
 
 
-<h3 id="is">Eldöntés (VAN)</h3>
-<h4>Kód</h4>
-<div>
-    <pre class="language-cs"><code>
-        int i = 0;
-        while(i < tomb.Length && /*nem feltétel*/) i++;
-        bool van = i < tomb.Length;
-    </code></pre>
-</div>
+<h3 id="is">Eldöntés</h3>
+<pre class="language-cs"><code>
+    int i = 0;
+    while(i < tomb.Length && /*nem feltétel*/) i++;
+    bool van = i < tomb.Length;
+</code></pre>
 
 
 
-<h3 id="all">Mind eldöntés / optimista eldöntés (MIND)</h3>
-<h4>Kód</h4>
+<h3 id="all">Mind eldöntés / optimista eldöntés</h3>
 <pre class="language-cs"><code>
     int i = 0;
     while(i < tomb.Length && /*nem feltétel*/) i++;
@@ -77,46 +68,41 @@ date: 2026.05.07
 
 
 
-<h3 id="select">Kiválasztás (KIVÁLASZT)</h3>
-<h4>Kód</h4>
-<div>
-    <pre class="language-cs"><code>
-        int ind = 0;
-        while(/*nem feltétel*/) ind++;
-    </code></pre>
-</div>
-
-
-
-<h3 id="search">Keresés (KERES)</h3>
-<h4>Kód</h4>
-<div>
-    <pre class="language-cs"><code>
-        int ind = 0;
-        while(ind < tomb.Length && /*nem feltétel*/) ind++;
-        van = ind < tomb.Length;
-    </code></pre>
-</div>
-
-
-
-<h3 id="copy">Másolás (MÁSOL)</h3>
-<h4>Kód</h4>
+<h3 id="select">Kiválasztás</h3>
 <pre class="language-cs"><code>
-    int[] fvelemek = new int[tomb.Length];
-    for(int i = 0; i < tomb.Length; i++) fvelemek[i] = /*módosított tomb[i]*/;
+    int ind = 0;
+    while(/*nem feltétel*/) ind++;
 </code></pre>
 
 
 
-<h3 id="filter">Kiválogatás (KIVÁLOGAT)</h3>
-<h4>Kód (indexek)</h4>
+<h3 id="search">Keresés</h3>
 <pre class="language-cs"><code>
-    List<int> kivindexek = new List<int>();
+    int ind = 0;
+    while(ind < tomb.Length && /*nem feltétel*/) ind++;
+    van = ind < tomb.Length;
+</code></pre>
+
+
+
+<h3 id="copy">Másolás</h3>
+<pre class="language-cs"><code>
+    int[] fvelemek = new int[tomb.Length];
     for(int i = 0; i < tomb.Length; i++)
     {
-        if(/*feltétel*/) kivindexek.Add(i);
+        fvelemek[i] = /*módosított tomb[i]*/;
     }
+</code></pre>
+
+
+
+<h3 id="filter">Kiválogatás (indexekre)</h3>
+<pre class="language-cs"><code>
+    List<int> kivindexek = new List&lt;int&gt;();
+for(int i = 0; i < tomb.Length; i++)
+{
+    if(/*feltétel*/) kivindexek.Add(i);
+}
 </code></pre>
 
 
@@ -125,7 +111,7 @@ date: 2026.05.07
 
 <h3 id="other">További linkek</h3>
 <a href="/elte-otk-jegyzetek/semesters/24-25-2/OTK-PAEG-INF22/progtetelek">Programozási tételek (Programozási alapismeretek)</a>
-<!-- <a href="./prt-rekurzivan">Programozási tételek rekurzívan</a> -->
+<a href="./prt-rekurzivan">Programozási tételek rekurzívan</a>
 
 
 
