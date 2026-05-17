@@ -17,24 +17,36 @@ date: 2026.04.22 [folyamatban]
 
 
 
-<h3 id="class">Az osztály</h3>
-<p>
-    Osztály létrehozásakor 
-</p>
-- attribútumok
-- metódus
-    - init() := attribútomoknak értéket adunk
-    - Destroy() := szemétgyűjtés; példányosított (memóriában tárolt) objektum törlésének módja - csak a mutatót vagy a tartalmat is töröljük
-    - X(), Y(), stb.
-
-
-
-<h3 id="igen">Példányosítás</h3>
-- csak az attribútumok tárolja az adott példány
-
-
-
-öröklés (nope származtatás)
+<h3 id="sum">Komplementer</h3>
+<pre class="language-cs"><code>
+    public IntervallumHalmaz Komplementer(int k, int v)
+    {
+        IntervallumHalmaz komplementer = new IntervallumHalmaz();
+        if (db == 0)
+        {
+            komplementer.Halmazba(1, 10);
+        }
+        else
+        {
+            if (kezd[0] > k) // rendezvény eleje - első foglalás
+            {
+                komplementer.Halmazba(k, kezd[0] - 1);
+            }
+            for (int i = 0; i < db - 1; i++) // foglalás[i] - foglalás[i+1]
+            {
+                if (kezd[i + 1] - veg[i] > 1)
+                {
+                    komplementer.Halmazba(veg[i] + 1, kezd[i + 1] - 1);
+                }
+            }
+            if (veg[db - 1] < v) // utolsó foglalás - rendezvény vége
+            {
+                komplementer.Halmazba(veg[db - 1] + 1, v);
+            }
+        }
+        return komplementer;
+    }
+</code></pre>
 
 
 
