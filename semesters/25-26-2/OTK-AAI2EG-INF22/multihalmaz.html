@@ -2,7 +2,7 @@
 layout: lesson
 desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Algoritmusok és adatok az iskoklában 2. tárgyon tanultak a multihalmazokról (C#-ban).
 title: Multihalmaz
-rovpost: multihalmaz
+rovpost: Multihalmaz
 posturl: /multihalmaz
 
 hossztargy: Algoritmusok és adatok az iskoklában 2.
@@ -11,6 +11,20 @@ targyurl: /25-26-2/OTK-AAI2EG-INF22
 
 date: 2026.05.17 [folyamatban]
 ---
+
+
+<h3 id="def">A multihalmaz</h3>
+<p>
+    A multihalmaz egy olyan halmaz, ami értékeken túl multiplicitást (darabszámot) is tárol. Például,
+</p>
+<p>
+    van egy <code>allatok = {"kenguru", "koala", "krokodil", "kecske"}</code> halmazom, és egy 
+    <code>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 24)}</code> multihalmazom. 
+    Az <i>allatokMulti</i>ban azon túl, hogy látom, hogy milyen állataim vannak, azt is látom, hogy ezekből az állatokból hány db van.
+    Ha hoznak még kettő koalát hozzám, akkor az <i>allatok</i> halmaz nem módosulna, viszont az <i>allatokMulti</i> <b>("koala", 2)</b> értékéből
+    <b>("koala", 4)</b> lenne.
+</p>
+
 
 
 <h3 id="start">Alapok</h3>
