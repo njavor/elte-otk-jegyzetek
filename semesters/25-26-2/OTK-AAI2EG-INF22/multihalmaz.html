@@ -18,23 +18,44 @@ date: 2026.05.17 [folyamatban]
     A multihalmaz egy olyan halmaz, ami értékeken túl multiplicitást (darabszámot) is tárol. Például,
 </p>
 <p>
-    van egy <code>allatok = {"kenguru", "koala", "krokodil", "kecske"}</code> halmazom, és egy 
-    <code>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 24)}</code> multihalmazom. 
+    van egy <b>allatok = {"kenguru", "koala", "krokodil", "kecske"}</b> halmazom, és egy 
+    <b>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 24)}</b> multihalmazom. 
     Az <i>allatokMulti</i>ban azon túl, hogy látom, hogy milyen állataim vannak, azt is látom, hogy ezekből az állatokból hány db van.
     Ha hoznak még kettő koalát hozzám, akkor az <i>allatok</i> halmaz nem módosulna, viszont az <i>allatokMulti</i> <b>("koala", 2)</b> értékéből
     <b>("koala", 4)</b> lenne.
 </p>
 
+<p><a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/25-26-2/OTK-AAI2EG-INF22/kod/multihalmaz.cs" target="_blank">A teljes osztály (C#)</a></p>
 
 
-<h3 id="start">Alapok</h3>
+
+<h3 id="elem">MultihalmazElem</h3>
+<pre class="language-cs"><code>
+    class MultihalmazElem
+    {
+        public int ertek, multi;
+        public MultihalmazElem(int ertek, int multi)
+        {
+            this.ertek = ertek;
+            this.multi = multi;
+        }
+        public override string ToString()
+        {
+            return $"{ertek} {multi}";
+        }
+    }
+</code></pre>
+
+
+
+<h3 id="start">Létrehozás</h3>
 <pre class="language-cs"><code>
     class Multihalmaz
     {
         int MaxDb = 100;
         int db;
         MultihalmazElem[] elemek;
-    
+
         public Multihalmaz()
         {
             db = 0;
@@ -52,11 +73,11 @@ date: 2026.05.17 [folyamatban]
 <pre class="language-cs"><code>
     public void Beolvasas()
     {
-        db = int.Parse(Console.ReadLine());
+        string[] sor = Console.ReadLine().Split();
+        db = int.Parse(sor[0]);
         for (int i = 0; i < db; i++)
         {
-            string[] sor = Console.ReadLine().Split();
-            elemek[i] = new MultihalmazElem(int.Parse(sor[0]), int.Parse(sor[1]));
+            elemek[i] = new MultihalmazElem(int.Parse(sor[i*2+1]), int.Parse(sor[i*2+2]));
         }
     }
 </code></pre>
@@ -68,7 +89,7 @@ date: 2026.05.17 [folyamatban]
         Console.WriteLine(db);
         for (int i = 0; i < db; i++)
         {
-            Console.Write(elemek[i] + " "); // akkor működik, ha a MultihalmazElem ToString()-je felül van írva
+            Console.Write(elemek[i] + " ");
         }
         Console.WriteLine();
     }
@@ -84,7 +105,8 @@ date: 2026.05.17 [folyamatban]
     {
         int i = 0;
         while (i < db && elemek[i].ertek != elem.ertek) i++;
-        if (i < db) elemek[i].multi++;
+
+        if (i < db) elemek[i].multi += elem.multi;
         else
         {
             elemek[db] = elem;
@@ -99,6 +121,7 @@ date: 2026.05.17 [folyamatban]
     {
         int i = 0;
         while (i < db && elemek[i].ertek != elem.ertek) i++;
+
         if (i < db)
         {
             elemek[i].multi -= elem.multi;
@@ -144,25 +167,25 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
+<h4>Része-e</h4>
+<p>A multihalmaz benne van-e a másik multihalmazban.</p>
+<pre class="language-cs"><code>
+    public bool ReszeE(Multihalmaz masik)
+    {
+        if (db > masik.db) return false;
+
+        int i = 0;
+        while (i < db && masik.BenneE(elemek[i])) i++;
+        return i >= db;
+    }
+</code></pre>
+
 <h4>Üres-e</h4>
 <p>0 elemet tartalmaz-e a multihalmaz.</p>
 <pre class="language-cs"><code>
     public bool UresE()
     {
         return db == 0;
-    }
-</code></pre>
-
-<h4>Része-e</h4>
-<p>A multihalmaz benne van-e a másik multihalmazban.</p>
-<pre class="language-cs"><code>
-    public bool ReszeE(Multihalmaz masik)
-    {
-        if (masik.db < this.db) return false;
-
-        int i = 0;
-        while (i < db && masik.BenneE(elemek[i])) i++;
-        return i >= db;
     }
 </code></pre>
 
@@ -174,7 +197,7 @@ date: 2026.05.17 [folyamatban]
     public Multihalmaz Unio(Multihalmaz masik)
     {
         Multihalmaz unio = new Multihalmaz();
-        for (int i = 0; i < this.db; i++) unio.Multihalmazba(this.elemek[i]);
+        for (int i = 0; i < db; i++) unio.Multihalmazba(elemek[i]);
         for (int i = 0; i < masik.db; i++) unio.Multihalmazba(masik.elemek[i]);
         return unio;
     }
@@ -187,7 +210,13 @@ date: 2026.05.17 [folyamatban]
         Multihalmaz metszet = new Multihalmaz();
         for (int i = 0; i < this.db; i++)
         {
-            if (masik.BenneE(elemek[i])) metszet.Multihalmazba(elemek[i]);
+            int j = 0;
+            while (j < masik.db && elemek[i].ertek != masik.elemek[j].ertek) j++;
+            
+            if(j < masik.db)
+            {
+                metszet.Multihalmazba(new MultihalmazElem(elemek[i].ertek, Math.Min(elemek[i].multi, masik.elemek[j].multi)));
+            }
         }
         return metszet;
     }
@@ -200,7 +229,14 @@ date: 2026.05.17 [folyamatban]
         Multihalmaz kulonbseg = new Multihalmaz();
         for (int i = 0; i < this.db; i++)
         {
-            if (!masik.BenneE(elemek[i])) kulonbseg.Multihalmazba(elemek[i]);
+            int j = 0;
+            while (j < masik.db && elemek[i].ertek != masik.elemek[j].ertek) j++;
+
+            if (j >= masik.db) kulonbseg.Multihalmazba(elemek[i]);
+            else if (elemek[i].multi > masik.elemek[j].multi)
+            {
+                kulonbseg.Multihalmazba(new MultihalmazElem(elemek[i].ertek, elemek[i].multi - masik.elemek[j].multi));
+            }
         }
         return kulonbseg;
     }

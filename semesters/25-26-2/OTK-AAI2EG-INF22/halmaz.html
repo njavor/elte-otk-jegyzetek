@@ -13,28 +13,198 @@ date: 2026.05.17 [folyamatban]
 ---
 
 
-<!-- <h3 id="start">UML</h3> -->
-
-
-
-<h3 id="class">Az osztály</h3>
+<h3 id="def">A multihalmaz</h3>
 <p>
-    Osztály létrehozásakor 
+    A multihalmaz egy olyan halmaz, ami értékeken túl multiplicitást (darabszámot) is tárol. Például,
 </p>
-- attribútumok
-- metódus
-    - init() := attribútomoknak értéket adunk
-    - Destroy() := szemétgyűjtés; példányosított (memóriában tárolt) objektum törlésének módja - csak a mutatót vagy a tartalmat is töröljük
-    - X(), Y(), stb.
+<p>
+    van egy <b>allatok = {"kenguru", "koala", "krokodil", "kecske"}</b> halmazom, és egy 
+    <b>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 24)}</b> multihalmazom. 
+    Az <i>allatokMulti</i>ban azon túl, hogy látom, hogy milyen állataim vannak, azt is látom, hogy ezekből az állatokból hány db van.
+    Ha hoznak még kettő koalát hozzám, akkor az <i>allatok</i> halmaz nem módosulna, viszont az <i>allatokMulti</i> <b>("koala", 2)</b> értékéből
+    <b>("koala", 4)</b> lenne.
+</p>
 
 
 
-<h3 id="igen">Példányosítás</h3>
-- csak az attribútumok tárolja az adott példány
+<h3 id="start">Alapok</h3>
+<pre class="language-cs"><code>
+    class Multihalmaz
+    {
+        int MaxDb = 100;
+        int db;
+        MultihalmazElem[] elemek;
+    
+        public Multihalmaz()
+        {
+            db = 0;
+            elemek = new MultihalmazElem[MaxDb];
+        }
+
+        // ...
+    }
+</code></pre>
 
 
 
-öröklés (nope származtatás)
+<h3 id="readwrite">Beolvasás és kiírás</h3>
+<h4>Beolvasás</h4>
+<pre class="language-cs"><code>
+    public void Beolvasas()
+    {
+        db = int.Parse(Console.ReadLine());
+        for (int i = 0; i < db; i++)
+        {
+            string[] sor = Console.ReadLine().Split();
+            elemek[i] = new MultihalmazElem(int.Parse(sor[0]), int.Parse(sor[1]));
+        }
+    }
+</code></pre>
+
+<h4>Kiírás</h4>
+<pre class="language-cs"><code>
+    public void Kiiras()
+    {
+        Console.WriteLine(db);
+        for (int i = 0; i < db; i++)
+        {
+            Console.Write(elemek[i] + " "); // akkor működik, ha a MultihalmazElem ToString()-je felül van írva
+        }
+        Console.WriteLine();
+    }
+</code></pre>
+
+
+
+<h3 id="edit">Multihalmaz módosítása</h3>
+
+<h4>Multihalmazba</h4>
+<pre class="language-cs"><code>
+    public void Multihalmazba(MultihalmazElem elem)
+    {
+        int i = 0;
+        while (i < db && elemek[i].ertek != elem.ertek) i++;
+        if (i < db) elemek[i].multi++;
+        else
+        {
+            elemek[db] = elem;
+            db++;
+        }
+    }
+</code></pre>
+
+<h4>Multihalmazból</h4>
+<pre class="language-cs"><code>
+    public void Multihalmazbol(MultihalmazElem elem)
+    {
+        int i = 0;
+        while (i < db && elemek[i].ertek != elem.ertek) i++;
+        if (i < db)
+        {
+            elemek[i].multi -= elem.multi;
+            if (elemek[i].multi <= 0)
+            {
+                elemek[i] = elemek[db - 1];
+                db--;
+            }
+        }
+    }
+</code></pre>
+
+<h4>Ürítés</h4>
+<pre class="language-cs"><code>
+    public void Urites()
+    {
+        db = 0;
+    }
+</code></pre>
+
+
+
+<h3 id="bool">Logikai vizsgálatok</h3>
+<h4>Eleme-e</h4>
+<p>Az elemérték benne van-e a multihalmazban</p>
+<pre class="language-cs"><code>
+    public bool ElemeE(int ertek)
+    {
+        int i = 0;
+        while (i < db && elemek[i].ertek != ertek) i++;
+        return i < db;
+    }
+</code></pre>
+
+<h4>Benne-e</h4>
+<p>Az elem benne van-e a multihalmazban.</p>
+<pre class="language-cs"><code>
+    public bool BenneE(MultihalmazElem elem)
+    {
+        int i = 0;
+        while (i < db && elemek[i].ertek != elem.ertek) i++;
+        return i < db && elemek[i].multi >= elem.multi;
+    }
+</code></pre>
+
+<h4>Üres-e</h4>
+<p>0 elemet tartalmaz-e a multihalmaz.</p>
+<pre class="language-cs"><code>
+    public bool UresE()
+    {
+        return db == 0;
+    }
+</code></pre>
+
+<h4>Része-e</h4>
+<p>A multihalmaz benne van-e a másik multihalmazban.</p>
+<pre class="language-cs"><code>
+    public bool ReszeE(Multihalmaz masik)
+    {
+        if (masik.db < this.db) return false;
+
+        int i = 0;
+        while (i < db && masik.BenneE(elemek[i])) i++;
+        return i >= db;
+    }
+</code></pre>
+
+
+
+<h3 id="setops">Halmazműveletek</h3>
+<h4>Unió</h4>
+<pre class="language-cs"><code>
+    public Multihalmaz Unio(Multihalmaz masik)
+    {
+        Multihalmaz unio = new Multihalmaz();
+        for (int i = 0; i < this.db; i++) unio.Multihalmazba(this.elemek[i]);
+        for (int i = 0; i < masik.db; i++) unio.Multihalmazba(masik.elemek[i]);
+        return unio;
+    }
+</code></pre>
+
+<h4>Metszet</h4>
+<pre class="language-cs"><code>
+    public Multihalmaz Metszet(Multihalmaz masik)
+    {
+        Multihalmaz metszet = new Multihalmaz();
+        for (int i = 0; i < this.db; i++)
+        {
+            if (masik.BenneE(elemek[i])) metszet.Multihalmazba(elemek[i]);
+        }
+        return metszet;
+    }
+</code></pre>
+
+<h4>Különbség</h4>
+<pre class="language-cs"><code>
+    public Multihalmaz Kulonbseg(Multihalmaz masik)
+    {
+        Multihalmaz kulonbseg = new Multihalmaz();
+        for (int i = 0; i < this.db; i++)
+        {
+            if (!masik.BenneE(elemek[i])) kulonbseg.Multihalmazba(elemek[i]);
+        }
+        return kulonbseg;
+    }
+</code></pre>
 
 
 
