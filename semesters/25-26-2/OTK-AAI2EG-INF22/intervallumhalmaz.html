@@ -13,42 +13,297 @@ date: 2026.05.18 [folyamatban]
 ---
 
 
-<h3 id="def">Az intervallumhalmaz</h3>
-<!-- <p>
-    A multihalmaz egy olyan halmaz, ami értékeken túl multiplicitást (darabszámot) is tárol. Például,
-</p>
-<p>
-    van egy <b>allatok = {"kenguru", "koala", "krokodil", "kecske"}</b> halmazom, és egy 
-    <b>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 42)}</b> multihalmazom. 
-    Az <i>allatokMulti</i>ban azon túl, hogy látom, hogy milyen állataim vannak, azt is látom, hogy ezekből az állatokból hány db van.
-    Ha hoznak még kettő koalát hozzám, akkor az <i>allatok</i> halmaz nem módosulna, viszont az <i>allatokMulti</i> <b>("koala", 2)</b> értékéből
-    <b>("koala", 4)</b> lenne.
-</p> -->
-
-<p><a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/25-26-2/OTK-AAI2EG-INF22/kod/intervallumhalmaz.cs" target="_blank">A teljes osztály (C#)</a></p>
+<h3 id="def">Az intervallum-halmaz</h3>
 
 
 
-<!-- <h3 id="elem">MultihalmazElem</h3>
+<h3 id="start">Létrehozás</h3>
 <pre class="language-cs"><code>
-    class MultihalmazElem
+    class IntervallumHalmaz
     {
-        public int ertek, multi;
-        public MultihalmazElem(int ertek, int multi)
+        int MaxDb = 100;
+        int db;
+        int[] kezd;
+        int[] veg;
+
+        public IntervallumHalmaz()
         {
-            this.ertek = ertek;
-            this.multi = multi;
+            db = 0;
+            kezd = new int[MaxDb];
+            veg = new int[MaxDb];
         }
-        public override string ToString()
+        public IntervallumHalmaz(int db, int[] kezd, int[] veg)
         {
-            return $"{ertek} {multi}";
+            this.db = db;
+            this.kezd = kezd;
+            this.veg = veg;
+        }
+
+    }
+</code></pre>
+
+
+
+<h3 id="read">Beolvasás</h3>
+<pre class="language-cs"><code>
+    public void Beolvasas()
+    {
+        db = int.Parse(Console.ReadLine());
+        for (int i = 0; i < db; i++)
+        {
+            string[] sor = Console.ReadLine().Split();
+            kezd[i] = int.Parse(sor[0]);
+            veg[i] = int.Parse(sor[1]);
         }
     }
-</code></pre> -->
+</code></pre>
+
+
+
+<h3 id="write">Kiírás</h3>
+<pre class="language-cs"><code>
+    public void Kiiras()
+    {
+        Console.WriteLine(db);
+        for (int i = 0; i < db; i++)
+        {
+            Console.WriteLine(kezd[i] + " " + veg[i]);
+        }
+    }
+</code></pre>
+
+
+
+<h3 id="in">Intervallum-halmazba</h3>
+<pre class="language-cs"><code>
+    public void Intervallumhalmazba(int kezd, int veg)
+    {
+        this.kezd[db] = kezd;
+        this.veg[db] = veg;
+        db++;
+    }
+</code></pre>
+
+
+
+<h3 id="out">Intervallum-halmazbol</h3>
+<pre class="language-cs"><code>
+    public void Intervallumhalmazbol(int kezd, int veg)
+    {
+        int i = 0;
+        while (i < db && (this.kezd[i] != kezd || this.veg[i] != veg)) i++;
+        if(i < db)
+        {
+            this.kezd[i] = this.kezd[db];
+            this.veg[i] = this.veg[db];
+            db--;
+        }
+    }
+</code></pre>
+
+
+
+<h3 id="empty">Ürítés</h3>
+<pre class="language-cs"><code>
+    public void Urites()
+    {
+        db = 0;
+    }
+</code></pre>
+
+
+
+<h3 id="contains">Elem-e</h3>
+<pre class="language-cs"><code>
+    public bool ElemeE(int ertek)
+    {
+        int i = 0;
+        while (i < db && (ertek < kezd[i] || ertek > veg[i])) i++;
+        return i < db;
+    }
+</code></pre>
+
+
+
+<h3 id="isempty">Üres-e</h3>
+<pre class="language-cs"><code>
+    public bool UresE()
+    {
+        return db == 0;
+    }
+</code></pre>
+
+
+
+<h3 id="union">Unió</h3>
+<pre class="language-cs"><code>
+    public IntervallumHalmaz Unio(IntervallumHalmaz masik)
+    {
+        if (db == 0) return masik;
+        if (masik.db == 0) return this;
+        IntervallumHalmaz unio = new IntervallumHalmaz();
+        int udb = 0;
+        int i = 0;
+        int j = 0;
+
+        int akt_kezd;
+        int akt_veg;
+
+        if (kezd[i] < masik.kezd[j])
+        {
+            akt_kezd = kezd[i];
+            akt_veg = veg[i];
+            i++;
+        }
+        else
+        {
+            akt_kezd = masik.kezd[j];
+            akt_veg = masik.veg[j];
+            j++;
+        }
+
+        while (i < db && j < masik.db)
+        {
+            if (kezd[i] < masik.kezd[j])
+            {
+                if (akt_veg < kezd[i])
+                {
+                    unio.kezd[udb] = akt_kezd;
+                    unio.veg[udb] = akt_veg;
+                    udb++;
+
+                    akt_kezd = kezd[i];
+                    akt_veg = veg[i];
+                    i++;
+                }
+                else
+                {
+                    akt_veg = Math.Max(akt_veg, veg[i]);
+                    i++;
+                }
+            }
+            else
+            {
+                if (akt_veg < masik.kezd[j])
+                {
+                    unio.kezd[udb] = akt_kezd;
+                    unio.veg[udb] = akt_veg;
+                    udb++;
+
+                    akt_kezd = masik.kezd[j];
+                    akt_veg = masik.veg[j];
+                    j++;
+                }
+                else
+                {
+                    akt_veg = Math.Max(akt_veg, masik.veg[j]);
+                    j++;
+                }
+            }
+        }
+        while (i < db)
+        {
+            if (akt_veg < kezd[i])
+            {
+                unio.kezd[udb] = akt_kezd;
+                unio.veg[udb] = akt_veg;
+                udb++;
+
+                akt_kezd = kezd[i];
+                akt_veg = veg[i];
+                i++;
+            }
+            else
+            {
+                akt_veg = Math.Max(akt_veg, veg[i]);
+                i++;
+            }
+        }
+        while (j < masik.db)
+        {
+            if (akt_veg < masik.kezd[j])
+            {
+                unio.kezd[udb] = akt_kezd;
+                unio.veg[udb] = akt_veg;
+                udb++;
+
+                akt_kezd = masik.kezd[j];
+                akt_veg = masik.veg[j];
+                j++;
+            }
+            else
+            {
+                akt_veg = Math.Max(akt_veg, masik.veg[j]);
+                j++;
+            }
+        }
+
+        unio.kezd[udb] = akt_kezd;
+        unio.veg[udb] = akt_veg;
+        udb++;
+
+        unio.db = udb;
+        return unio;
+    }
+</code></pre>
+
+
+
+<h3 id="intersection">Metszet</h3>
+<pre class="language-cs"><code>
+    public IntervallumHalmaz Metszet(IntervallumHalmaz masik)
+    {
+        IntervallumHalmaz metszet = new IntervallumHalmaz();
+        int mdb = 0;
+        int i = 0;
+        int j = 0;
+        while (i < db && j < masik.db)
+        {
+            if (veg[i] < masik.kezd[j]) { i++; }
+            else if (kezd[i] > masik.veg[j]) { j++; }
+            else
+            {
+                metszet.kezd[mdb] = Math.Max(kezd[i], masik.kezd[j]);
+                metszet.veg[mdb] = Math.Min(veg[i], masik.veg[j]);
+                mdb++;
+                if (veg[i] < masik.veg[j]) { i++; }
+                else if (masik.veg[j] < veg[i]) { j++; }
+                else
+                {
+                    i++;
+                    j++;
+                }
+            }
+        }
+        metszet.db = mdb;
+        return metszet;
+    }
+</code></pre>
+
+
+
+<h3 id="complement">Komplementer</h3>
+<pre class="language-cs"><code>
+    public IntervallumHalmaz Komplementer(int k, int v)
+    {
+        IntervallumHalmaz komplementer = new IntervallumHalmaz();
+        if (db == 0) komplementer = komplementer.Unio(new IntervallumHalmaz(1, new int[] { 1 }, new int[] { 10 }));
+        else
+        {
+            if (kezd[0] > k) komplementer.Intervallumhalmazba(k, kezd[0] - 1);
+            for (int i = 0; i < db - 1; i++)
+            {
+                if (kezd[i + 1] - veg[i] > 1) komplementer.Intervallumhalmazba(veg[i] + 1, kezd[i + 1] - 1);
+            }
+            if (veg[db - 1] < v) komplementer.Intervallumhalmazba(veg[db - 1] + 1, v);
+        }
+        return komplementer;
+    }
+</code></pre>
 
 
 
 
-<!-- <h3 id="other">További linkek</h3> -->
-<!-- <a href="./programcs">Program.cs részei</a>
-<a href="https://visualstudio.microsoft.com/" target="_blank">Visual Studio letöltése</a> -->
+
+<h3 id="other">További linkek</h3>
+<a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/25-26-2/OTK-AAI2EG-INF22/kod/intervallumhalmaz.cs" target="_blank">A class teljes kódja (C#)</a>

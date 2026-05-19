@@ -13,25 +13,196 @@ date: 2026.05.18 [folyamatban]
 ---
 
 
-<h3 id="def">halmaz</h3>
-<!--
+<h3 id="def">A halmaz</h3>
 <p>
-    A multihalmaz egy olyan halmaz, ami értékeken túl multiplicitást (darabszámot) is tárol. Például,
+    A halmaz az a cucc, amit vettél matek órán. Bővebb magyarázat felár ellenében.
 </p>
-<p>
-    van egy <b>allatok = {"kenguru", "koala", "krokodil", "kecske"}</b> halmazom, és egy 
-    <b>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 24)}</b> multihalmazom. 
-    Az <i>allatokMulti</i>ban azon túl, hogy látom, hogy milyen állataim vannak, azt is látom, hogy ezekből az állatokból hány db van.
-    Ha hoznak még kettő koalát hozzám, akkor az <i>allatok</i> halmaz nem módosulna, viszont az <i>allatokMulti</i> <b>("koala", 2)</b> értékéből
-    <b>("koala", 4)</b> lenne.
-</p> -->
-
-<p><a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/25-26-2/OTK-AAI2EG-INF22/kod/halmaz.cs" target="_blank">A teljes osztály (C#)</a></p>
 
 
 
+<h3 id="start">Létrehozás</h3>
+<pre class="language-cs"><code>
+    class Multihalmaz
+    {
+        int MaxDb = 100;
+        int db;
+        MultihalmazElem[] elemek;
+
+        public Multihalmaz()
+        {
+            db = 0;
+            elemek = new MultihalmazElem[MaxDb];
+        }
+        
+    }
+</code></pre>
 
 
-<!-- <h3 id="other">További linkek</h3> -->
-<!-- <a href="./programcs">Program.cs részei</a>
-<a href="https://visualstudio.microsoft.com/" target="_blank">Visual Studio letöltése</a> -->
+
+<h3 id="read">Beolvasás</h3>
+<pre class="language-cs"><code>
+    public void Beolvasas()
+    {
+        db = int.Parse(Console.ReadLine());
+        for (int i = 0; i < db; i++)
+        {
+            elemek[i] = int.Parse(Console.ReadLine());
+        }
+    }
+</code></pre>
+
+
+
+<h3 id="write">Kiírás</h3>
+<pre class="language-cs"><code>
+    public void Kiiras()
+    {
+        Console.WriteLine(db);
+        for (int i = 0; i < db; i++)
+        {
+            Console.Write(elemek[i] + " ");
+        }
+        Console.WriteLine();
+    }
+</code></pre>
+
+
+
+<h3 id="in">Halmazba</h3>
+<pre class="language-cs"><code>
+    public void Halmazba(int elem)
+    {
+        if (!ElemeE(elem))
+        {
+            elemek[db] = elem;
+            db++;
+        }
+    }
+</code></pre>
+
+
+
+<h3 id="out">Halmazbol</h3>
+<pre class="language-cs"><code>
+    public void Halmazbol(int elem)
+    {
+        int i = 0;
+        while (i < db && elemek[i] != elem) i++;
+        if (i < db)
+        {
+            elemek[i] = elemek[db - 1];
+            db--;
+        }
+    }
+</code></pre>
+
+
+
+<h3 id="delete">Ürítés</h3>
+<pre class="language-cs"><code>
+    public void Urites()
+    {
+        db = 0;
+    }
+</code></pre>
+
+
+
+<h3 id="contains">Eleme-e</h3>
+<pre class="language-cs"><code>
+    public bool ElemeE(int elem)
+    {
+        int i = 0;
+        while (i < db && elemek[i] != elem) i++;
+        return i < db;
+    }
+</code></pre>
+
+
+
+<h3 id="isempty">Üres-e</h3>
+<pre class="language-cs"><code>
+    public bool UresE()
+    {
+        return db == 0;
+    }
+</code></pre>
+
+
+
+<h3 id="ispartof">Része-e</h3>
+<pre class="language-cs"><code>
+    public bool ReszeE(Halmaz masik)
+    {
+        if (masik.db < this.db) return false;
+
+        int i = 0;
+        while (i < db && masik.ElemeE(elemek[i])) i++;
+        return i >= db;
+    }
+</code></pre>
+
+
+
+<h3 id="isequal">Egyenlő-e</h3>
+<pre class="language-cs"><code>
+    public bool EgyenloE(Halmaz masik)
+    {
+        if (db != masik.db) return false;
+        for (int i = 0; i < db; i++)
+        {
+            if (!masik.ElemeE(elemek[i])) return false;
+        }
+        return true;
+    }
+</code></pre>
+
+
+
+<h3 id="union">Unió</h3>
+<pre class="language-cs"><code>
+    public Halmaz Unio(Halmaz masik)
+    {
+        Halmaz unio = new Halmaz();
+        for (int i = 0; i < this.db; i++) unio.Halmazba(this.elemek[i]);
+        for (int i = 0; i < masik.db; i++) unio.Halmazba(masik.elemek[i]);
+        return unio;
+    }
+</code></pre>
+
+
+
+<h3 id="intersection">Metszet</h3>
+<pre class="language-cs"><code>
+    public Halmaz Metszet(Halmaz masik)
+    {
+        Halmaz metszet = new Halmaz();
+        for (int i = 0; i < this.db; i++)
+        {
+            if (masik.ElemeE(elemek[i])) metszet.Halmazba(elemek[i]);
+        }
+        return metszet;
+    }
+</code></pre>
+
+
+
+<h3 id="difference">Különbség</h3>
+<pre class="language-cs"><code>
+    public Halmaz Kulonbseg(Halmaz masik)
+    {
+        Halmaz kulonbseg = new Halmaz();
+        for (int i = 0; i < this.db; i++)
+        {
+            if (!masik.ElemeE(elemek[i])) kulonbseg.Halmazba(elemek[i]);
+        }
+        return kulonbseg;
+    }
+</code></pre>
+
+
+
+
+
+<h3 id="other">További linkek</h3>
+<a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/25-26-2/OTK-AAI2EG-INF22/kod/halmaz.cs" target="_blank">A class teljes kódja (C#)</a>

@@ -37,7 +37,7 @@ class IntervallumHalmaz
             Console.WriteLine(kezd[i] + " " + veg[i]);
         }
     }
-    
+
 
     public void Intervallumhalmazba(int kezd, int veg)
     {
@@ -45,15 +45,22 @@ class IntervallumHalmaz
         this.veg[db] = veg;
         db++;
     }
-    public void Multihalmazbol(int kezd, int veg)
+    public void Intervallumhalmazbol(int kezd, int veg)
     {
-        // tudú
+        int i = 0;
+        while (i < db && (this.kezd[i] != kezd || this.veg[i] != veg)) i++;
+        if(i < db)
+        {
+            this.kezd[i] = this.kezd[db];
+            this.veg[i] = this.veg[db];
+            db--;
+        }
     }
     public void Urites()
     {
         db = 0;
     }
-    
+
 
     public bool ElemeE(int ertek)
     {
@@ -65,7 +72,7 @@ class IntervallumHalmaz
     {
         return db == 0;
     }
-    
+
 
     public IntervallumHalmaz Unio(IntervallumHalmaz masik)
     {
@@ -202,7 +209,7 @@ class IntervallumHalmaz
         metszet.db = mdb;
         return metszet;
     }
-    public IntervallumHalmaz Komplementer(IntervallumHalmaz masik)
+    public IntervallumHalmaz Komplementer(int k, int v)
     {
         IntervallumHalmaz komplementer = new IntervallumHalmaz();
         if (db == 0) komplementer = komplementer.Unio(new IntervallumHalmaz(1, new int[] { 1 }, new int[] { 10 }));

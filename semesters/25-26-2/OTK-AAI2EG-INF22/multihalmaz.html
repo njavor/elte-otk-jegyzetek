@@ -25,11 +25,9 @@ date: 2026.05.18 [folyamatban]
     <b>("koala", 4)</b> lenne.
 </p>
 
-<p><a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/25-26-2/OTK-AAI2EG-INF22/kod/multihalmaz.cs" target="_blank">A teljes osztály (C#)</a></p>
 
 
-
-<!-- <h3 id="elem">MultihalmazElem</h3>
+<h3 id="elem">MultihalmazElem</h3>
 <pre class="language-cs"><code>
     class MultihalmazElem
     {
@@ -62,7 +60,6 @@ date: 2026.05.18 [folyamatban]
             elemek = new MultihalmazElem[MaxDb];
         }
 
-        // ...
     }
 </code></pre>
 
@@ -76,7 +73,28 @@ date: 2026.05.18 [folyamatban]
         db = int.Parse(sor[0]);
         for (int i = 0; i < db; i++)
         {
-            elemek[i] = new MultihalmazElem(int.Parse(sor[i*2+1]), int.Parse(sor[i*2+2]));
+            elemek[i] = new MultihalmazElem(int.Parse(sor[i * 2 + 1]), int.Parse(sor[i * 2 + 2]));
+        }
+    }
+</code></pre>
+
+
+
+<h3 id="sort">Rendezés</h3>
+<pre class="language-cs"><code>
+    public void Rendezes()
+    {
+        for (int i = 0; i < db - 1; i++)
+        {
+            for (int j = i + 1; j < db; j++)
+            {
+                if (elemek[i].ertek > elemek[j].ertek)
+                {
+                    MultihalmazElem tmp = elemek[i];
+                    elemek[i] = elemek[j];
+                    elemek[j] = tmp;
+                }
+            }
         }
     }
 </code></pre>
@@ -98,7 +116,7 @@ date: 2026.05.18 [folyamatban]
 
 
 
-<h3 id="add">Multihalmazba</h3>
+<h3 id="in">Multihalmazba</h3>
 <pre class="language-cs"><code>
     public void Multihalmazba(MultihalmazElem elem)
     {
@@ -116,7 +134,7 @@ date: 2026.05.18 [folyamatban]
 
 
 
-<h3 id="remove">Multihalmazból</h3>
+<h3 id="out">Multihalmazból</h3>
 <pre class="language-cs"><code>
     public void Multihalmazbol(MultihalmazElem elem)
     {
@@ -137,7 +155,7 @@ date: 2026.05.18 [folyamatban]
 
 
 
-<h3 id="clear">Ürítés</h3>
+<h3 id="empty">Ürítés</h3>
 <pre class="language-cs"><code>
     public void Urites()
     {
@@ -148,7 +166,6 @@ date: 2026.05.18 [folyamatban]
 
 
 <h3 id="contains">Eleme-e</h3>
-<p>Az elemérték benne van-e a multihalmazban</p>
 <pre class="language-cs"><code>
     public bool ElemeE(int ertek)
     {
@@ -160,8 +177,7 @@ date: 2026.05.18 [folyamatban]
 
 
 
-<h3 id="containsin">Benne-e</h3>
-<p>Az elem benne van-e a multihalmazban.</p>
+<h3 id="isin">Benne-e</h3>
 <pre class="language-cs"><code>
     public bool BenneE(MultihalmazElem elem)
     {
@@ -173,8 +189,7 @@ date: 2026.05.18 [folyamatban]
 
 
 
-<h3 id="subset">Része-e</h3>
-<p>A multihalmaz benne van-e a másik multihalmazban.</p>
+<h3 id="ispartof">Része-e</h3>
 <pre class="language-cs"><code>
     public bool ReszeE(Multihalmaz masik)
     {
@@ -188,8 +203,7 @@ date: 2026.05.18 [folyamatban]
 
 
 
-<h3 id="empty">Üres-e</h3>
-<p>0 elemet tartalmaz-e a multihalmaz.</p>
+<h3 id="isempty">Üres-e</h3>
 <pre class="language-cs"><code>
     public bool UresE()
     {
@@ -221,8 +235,8 @@ date: 2026.05.18 [folyamatban]
         {
             int j = 0;
             while (j < masik.db && elemek[i].ertek != masik.elemek[j].ertek) j++;
-            
-            if(j < masik.db)
+
+            if (j < masik.db)
             {
                 metszet.Multihalmazba(new MultihalmazElem(elemek[i].ertek, Math.Min(elemek[i].multi, masik.elemek[j].multi)));
             }
@@ -251,11 +265,11 @@ date: 2026.05.18 [folyamatban]
         }
         return kulonbseg;
     }
-</code></pre> -->
+</code></pre>
 
 
 
 
-<!-- <h3 id="other">További linkek</h3> -->
-<!-- <a href="./programcs">Program.cs részei</a>
-<a href="https://visualstudio.microsoft.com/" target="_blank">Visual Studio letöltése</a> -->
+
+<h3 id="other">További linkek</h3>
+<a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/25-26-2/OTK-AAI2EG-INF22/kod/multihalmaz.cs" target="_blank">A class teljes kódja (C#)</a>
