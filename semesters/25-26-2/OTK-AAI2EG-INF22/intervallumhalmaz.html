@@ -1,20 +1,29 @@
 ---
 layout: lesson
 desc: Az Eötvös Loránd Tudományegyetem informatikatanár szakán, Algoritmusok és adatok az iskoklában 2. tárgyon tanultak az intervallumhalmazokról (C#-ban).
-title: Intervallumhalmaz
-rovpost: Intervallumhalmaz
+title: Intervallum-halmaz
+rovpost: Intervallum-halmaz
 posturl: /intervallumhalmaz
 
 hossztargy: Algoritmusok és adatok az iskoklában 2.
 rovtargy: Algadatisk 2.
 targyurl: /25-26-2/OTK-AAI2EG-INF22
 
-date: 2026.05.18 [folyamatban]
+date: 2026.05.20
 ---
 
 
 <h3 id="def">Az intervallum-halmaz</h3>
-<p>Az intervallum-halmazról, a halmazhoz hasonlóan nem adok most magyarázatot. Utóbbibal ellentétben viszont ezen hiányosságomat valamikor pótlom.</p>
+<p>
+    Az intervallum-halmaz egy olyan halmaz, ami intervallumokból (kezdő- és végpontok párosaiból) áll össze. Értelmezzük ezt a következő példával:
+</p>
+<p>
+    felírtam, hogy egy adott napon mikor vagyok elfoglalt (8-10, 14-15:30, 16-17:30). Ez három db intervallum, így az intervallum-halmazom egy háromelemű halmaz lesz
+    (<b>elfoglaltsag = {(800, 1000), (1400, 1530), (1600, 1730)}</b>). Aztán ha kiderül, hogy 15:30 és 16:00 között kötelező jógagyakorlatokat kell végeznem, akkor ezt
+    az intervallumot is el akarom tárolni. Mivel viszont ez összeköti az utolsó két foglaltságomat, így ez a három intervallum igazából egy nagy elfoglaltság lesz (
+    <b>elfoglaltsag = {(800, 1000), (1400, 1730)}</b>).
+</p>
+<p>Ezt a lent látható módon valósítottuk meg C#-ban.</p>
 
 
 
@@ -39,7 +48,8 @@ date: 2026.05.18 [folyamatban]
             this.kezd = kezd;
             this.veg = veg;
         }
-
+        
+        //...
     }
 </code></pre>
 
@@ -73,6 +83,10 @@ date: 2026.05.18 [folyamatban]
     }
 </code></pre>
 
+<div class="box warning">
+    <p>Az elvárt beolvasási és kiírási mód kb. feladatonként más, így a fenti két függvény könnyen revízióra szorulhat.</p>
+</div>
+
 
 
 <h3 id="in">Intervallum-halmazba</h3>
@@ -87,7 +101,7 @@ date: 2026.05.18 [folyamatban]
 
 
 
-<h3 id="out">Intervallum-halmazbol</h3>
+<h3 id="out">Intervallum-halmazból</h3>
 <pre class="language-cs"><code>
     public void Intervallumhalmazbol(int kezd, int veg)
     {

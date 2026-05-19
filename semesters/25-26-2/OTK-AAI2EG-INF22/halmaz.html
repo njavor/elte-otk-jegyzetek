@@ -17,23 +17,25 @@ date: 2026.05.18 [folyamatban]
 <p>
     A halmaz az a cucc, amit vettél matek órán. Bővebb magyarázat felár ellenében sem adok. Köszi, szia, helló.
 </p>
+<p>A lent látható módon valósítottuk meg C#-ban.</p>
 
 
 
 <h3 id="start">Létrehozás</h3>
 <pre class="language-cs"><code>
-    class Multihalmaz
+    class Halmaz
     {
         int MaxDb = 100;
         int db;
-        MultihalmazElem[] elemek;
+        int[] elemek;
 
-        public Multihalmaz()
+        public Halmaz()
         {
             db = 0;
-            elemek = new MultihalmazElem[MaxDb];
+            elemek = new int[MaxDb];
         }
-        
+
+        //...
     }
 </code></pre>
 
@@ -66,6 +68,10 @@ date: 2026.05.18 [folyamatban]
     }
 </code></pre>
 
+<div class="box warning">
+    <p>Az elvárt beolvasási és kiírási mód kb. feladatonként más, így a fenti két függvény könnyen revízióra szorulhat.</p>
+</div>
+
 
 
 <h3 id="in">Halmazba</h3>
@@ -82,7 +88,7 @@ date: 2026.05.18 [folyamatban]
 
 
 
-<h3 id="out">Halmazbol</h3>
+<h3 id="out">Halmazból</h3>
 <pre class="language-cs"><code>
     public void Halmazbol(int elem)
     {
