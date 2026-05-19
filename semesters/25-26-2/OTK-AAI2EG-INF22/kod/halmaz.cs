@@ -51,7 +51,7 @@ class Halmaz
     {
         db = 0;
     }
-    
+
 
     public bool ElemeE(int elem)
     {
@@ -80,7 +80,7 @@ class Halmaz
         }
         return true;
     }
-    
+
 
     public Halmaz Unio(Halmaz masik)
     {

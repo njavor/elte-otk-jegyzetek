@@ -17,8 +17,8 @@ class IntervallumHalmaz
         this.kezd = kezd;
         this.veg = veg;
     }
-    
-    
+
+
     public void Beolvasas()
     {
         db = int.Parse(Console.ReadLine());
@@ -41,7 +41,9 @@ class IntervallumHalmaz
 
     public void Intervallumhalmazba(int kezd, int veg)
     {
-        //tudú
+        this.kezd[db] = kezd;
+        this.veg[db] = veg;
+        db++;
     }
     public void Multihalmazbol(int kezd, int veg)
     {
@@ -51,9 +53,8 @@ class IntervallumHalmaz
     {
         db = 0;
     }
-    #endregion
+    
 
-    #region Logikai vizsgalatok
     public bool ElemeE(int ertek)
     {
         int i = 0;
@@ -200,5 +201,20 @@ class IntervallumHalmaz
         }
         metszet.db = mdb;
         return metszet;
+    }
+    public IntervallumHalmaz Komplementer(IntervallumHalmaz masik)
+    {
+        IntervallumHalmaz komplementer = new IntervallumHalmaz();
+        if (db == 0) komplementer = komplementer.Unio(new IntervallumHalmaz(1, new int[] { 1 }, new int[] { 10 }));
+        else
+        {
+            if (kezd[0] > k) komplementer.Intervallumhalmazba(k, kezd[0] - 1);
+            for (int i = 0; i < db - 1; i++)
+            {
+                if (kezd[i + 1] - veg[i] > 1) komplementer.Intervallumhalmazba(veg[i] + 1, kezd[i + 1] - 1);
+            }
+            if (veg[db - 1] < v) komplementer.Intervallumhalmazba(veg[db - 1] + 1, v);
+        }
+        return komplementer;
     }
 }
