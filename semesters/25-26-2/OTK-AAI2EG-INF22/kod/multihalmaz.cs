@@ -30,7 +30,22 @@ class Multihalmaz
         db = int.Parse(sor[0]);
         for (int i = 0; i < db; i++)
         {
-            elemek[i] = new MultihalmazElem(int.Parse(sor[i*2+1]), int.Parse(sor[i*2+2]));
+            elemek[i] = new MultihalmazElem(int.Parse(sor[i * 2 + 1]), int.Parse(sor[i * 2 + 2]));
+        }
+    }
+    public void Rendezes()
+    {
+        for (int i = 0; i < db - 1; i++)
+        {
+            for (int j = i + 1; j < db; j++)
+            {
+                if (elemek[i].ertek > elemek[j].ertek)
+                {
+                    MultihalmazElem tmp = elemek[i];
+                    elemek[i] = elemek[j];
+                    elemek[j] = tmp;
+                }
+            }
         }
     }
     public void Kiiras()
@@ -117,8 +132,8 @@ class Multihalmaz
         {
             int j = 0;
             while (j < masik.db && elemek[i].ertek != masik.elemek[j].ertek) j++;
-            
-            if(j < masik.db)
+
+            if (j < masik.db)
             {
                 metszet.Multihalmazba(new MultihalmazElem(elemek[i].ertek, Math.Min(elemek[i].multi, masik.elemek[j].multi)));
             }

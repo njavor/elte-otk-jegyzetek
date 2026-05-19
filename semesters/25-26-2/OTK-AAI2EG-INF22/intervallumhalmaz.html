@@ -13,41 +13,38 @@ date: 2026.05.17 [folyamatban]
 ---
 
 
-<!-- <h3 id="start">UML</h3> -->
+<h3 id="def">Az intervallumhalmaz</h3>
+<!-- <p>
+    A multihalmaz egy olyan halmaz, ami értékeken túl multiplicitást (darabszámot) is tárol. Például,
+</p>
+<p>
+    van egy <b>allatok = {"kenguru", "koala", "krokodil", "kecske"}</b> halmazom, és egy 
+    <b>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 42)}</b> multihalmazom. 
+    Az <i>allatokMulti</i>ban azon túl, hogy látom, hogy milyen állataim vannak, azt is látom, hogy ezekből az állatokból hány db van.
+    Ha hoznak még kettő koalát hozzám, akkor az <i>allatok</i> halmaz nem módosulna, viszont az <i>allatokMulti</i> <b>("koala", 2)</b> értékéből
+    <b>("koala", 4)</b> lenne.
+</p> -->
+
+<!-- <p><a href="https://github.com/njavor/elte-otk-jegyzetek/tree/main/semesters/25-26-2/OTK-AAI2EG-INF22/kod/intervallumhalmaz.cs" target="_blank">A teljes osztály (C#)</a></p> -->
 
 
 
-<h3 id="sum">Halmazműveletek</h3>
-<h4>Komplementer</h4>
+<!-- <h3 id="elem">MultihalmazElem</h3>
 <pre class="language-cs"><code>
-    public IntervallumHalmaz Komplementer(int k, int v)
+    class MultihalmazElem
     {
-        IntervallumHalmaz komplementer = new IntervallumHalmaz();
-        if (db == 0)
+        public int ertek, multi;
+        public MultihalmazElem(int ertek, int multi)
         {
-            komplementer.Halmazba(1, 10);
+            this.ertek = ertek;
+            this.multi = multi;
         }
-        else
+        public override string ToString()
         {
-            if (kezd[0] > k) // rendezvény eleje - első foglalás
-            {
-                komplementer.Halmazba(k, kezd[0] - 1);
-            }
-            for (int i = 0; i < db - 1; i++) // foglalás[i] - foglalás[i+1]
-            {
-                if (kezd[i + 1] - veg[i] > 1)
-                {
-                    komplementer.Halmazba(veg[i] + 1, kezd[i + 1] - 1);
-                }
-            }
-            if (veg[db - 1] < v) // utolsó foglalás - rendezvény vége
-            {
-                komplementer.Halmazba(veg[db - 1] + 1, v);
-            }
+            return $"{ertek} {multi}";
         }
-        return komplementer;
     }
-</code></pre>
+</code></pre> -->
 
 
 

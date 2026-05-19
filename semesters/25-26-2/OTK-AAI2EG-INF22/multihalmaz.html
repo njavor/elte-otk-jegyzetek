@@ -9,7 +9,7 @@ hossztargy: Algoritmusok és adatok az iskoklában 2.
 rovtargy: Algadatisk 2.
 targyurl: /25-26-2/OTK-AAI2EG-INF22
 
-date: 2026.05.17 [folyamatban]
+date: 2026.05.18 [folyamatban]
 ---
 
 
@@ -19,7 +19,7 @@ date: 2026.05.17 [folyamatban]
 </p>
 <p>
     van egy <b>allatok = {"kenguru", "koala", "krokodil", "kecske"}</b> halmazom, és egy 
-    <b>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 24)}</b> multihalmazom. 
+    <b>allatokMulti = {("kenguru", 4), ("koala", 2), ("krokodil", 3), ("kecske", 42)}</b> multihalmazom. 
     Az <i>allatokMulti</i>ban azon túl, hogy látom, hogy milyen állataim vannak, azt is látom, hogy ezekből az állatokból hány db van.
     Ha hoznak még kettő koalát hozzám, akkor az <i>allatok</i> halmaz nem módosulna, viszont az <i>allatokMulti</i> <b>("koala", 2)</b> értékéből
     <b>("koala", 4)</b> lenne.
@@ -29,7 +29,7 @@ date: 2026.05.17 [folyamatban]
 
 
 
-<h3 id="elem">MultihalmazElem</h3>
+<!-- <h3 id="elem">MultihalmazElem</h3>
 <pre class="language-cs"><code>
     class MultihalmazElem
     {
@@ -68,8 +68,7 @@ date: 2026.05.17 [folyamatban]
 
 
 
-<h3 id="readwrite">Beolvasás és kiírás</h3>
-<h4>Beolvasás</h4>
+<h3 id="read">Beolvasás</h3>
 <pre class="language-cs"><code>
     public void Beolvasas()
     {
@@ -82,7 +81,9 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
-<h4>Kiírás</h4>
+
+
+<h3 id="write">Kiírás</h3>
 <pre class="language-cs"><code>
     public void Kiiras()
     {
@@ -97,9 +98,7 @@ date: 2026.05.17 [folyamatban]
 
 
 
-<h3 id="edit">Multihalmaz módosítása</h3>
-
-<h4>Multihalmazba</h4>
+<h3 id="add">Multihalmazba</h3>
 <pre class="language-cs"><code>
     public void Multihalmazba(MultihalmazElem elem)
     {
@@ -115,7 +114,9 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
-<h4>Multihalmazból</h4>
+
+
+<h3 id="remove">Multihalmazból</h3>
 <pre class="language-cs"><code>
     public void Multihalmazbol(MultihalmazElem elem)
     {
@@ -134,7 +135,9 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
-<h4>Ürítés</h4>
+
+
+<h3 id="clear">Ürítés</h3>
 <pre class="language-cs"><code>
     public void Urites()
     {
@@ -144,8 +147,7 @@ date: 2026.05.17 [folyamatban]
 
 
 
-<h3 id="bool">Logikai vizsgálatok</h3>
-<h4>Eleme-e</h4>
+<h3 id="contains">Eleme-e</h3>
 <p>Az elemérték benne van-e a multihalmazban</p>
 <pre class="language-cs"><code>
     public bool ElemeE(int ertek)
@@ -156,7 +158,9 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
-<h4>Benne-e</h4>
+
+
+<h3 id="containsin">Benne-e</h3>
 <p>Az elem benne van-e a multihalmazban.</p>
 <pre class="language-cs"><code>
     public bool BenneE(MultihalmazElem elem)
@@ -167,7 +171,9 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
-<h4>Része-e</h4>
+
+
+<h3 id="subset">Része-e</h3>
 <p>A multihalmaz benne van-e a másik multihalmazban.</p>
 <pre class="language-cs"><code>
     public bool ReszeE(Multihalmaz masik)
@@ -180,7 +186,9 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
-<h4>Üres-e</h4>
+
+
+<h3 id="empty">Üres-e</h3>
 <p>0 elemet tartalmaz-e a multihalmaz.</p>
 <pre class="language-cs"><code>
     public bool UresE()
@@ -191,8 +199,7 @@ date: 2026.05.17 [folyamatban]
 
 
 
-<h3 id="setops">Halmazműveletek</h3>
-<h4>Unió</h4>
+<h3 id="union">Unió</h3>
 <pre class="language-cs"><code>
     public Multihalmaz Unio(Multihalmaz masik)
     {
@@ -203,7 +210,9 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
-<h4>Metszet</h4>
+
+
+<h3 id="intersection">Metszet</h3>
 <pre class="language-cs"><code>
     public Multihalmaz Metszet(Multihalmaz masik)
     {
@@ -222,7 +231,9 @@ date: 2026.05.17 [folyamatban]
     }
 </code></pre>
 
-<h4>Különbség</h4>
+
+
+<h3 id="difference">Különbség</h3>
 <pre class="language-cs"><code>
     public Multihalmaz Kulonbseg(Multihalmaz masik)
     {
@@ -240,7 +251,7 @@ date: 2026.05.17 [folyamatban]
         }
         return kulonbseg;
     }
-</code></pre>
+</code></pre> -->
 
 
 
