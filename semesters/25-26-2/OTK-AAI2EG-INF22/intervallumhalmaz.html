@@ -89,7 +89,8 @@ date: 2026.05.20
 
 
 
-<h3 id="in">Intervallum-halmazba</h3>
+<!-- <h3 id="in">Intervallum-halmazba</h3>
+<p>FONTOS: Ezt önmagába ne nagyon használjuk, mert</p>
 <pre class="language-cs"><code>
     public void Intervallumhalmazba(int kezd, int veg)
     {
@@ -97,7 +98,7 @@ date: 2026.05.20
         this.veg[db] = veg;
         db++;
     }
-</code></pre>
+</code></pre> -->
 
 
 
@@ -298,19 +299,37 @@ date: 2026.05.20
 
 
 <h3 id="complement">Komplementer</h3>
+<p>
+    
+</p>
 <pre class="language-cs"><code>
     public IntervallumHalmaz Komplementer(int k, int v)
     {
         IntervallumHalmaz komplementer = new IntervallumHalmaz();
-        if (db == 0) komplementer = komplementer.Unio(new IntervallumHalmaz(1, new int[] { 1 }, new int[] { 10 }));
+        if (db == 0) komplementer = komplementer.Unio(new IntervallumHalmaz(1, new int[] { k }, new int[] { v }));
         else
         {
             if (kezd[0] > k) komplementer.Intervallumhalmazba(k, kezd[0] - 1);
+            {
+                komplementer.kezd[db] = k;
+                komplementer.veg[db] = kezd[0] - 1;
+                komplementer.db++;
+            }
             for (int i = 0; i < db - 1; i++)
             {
                 if (kezd[i + 1] - veg[i] > 1) komplementer.Intervallumhalmazba(veg[i] + 1, kezd[i + 1] - 1);
+                {
+                    komplementer.kezd[db] = veg[i] + 1;
+                    komplementer.veg[db] = kezd[i + 1] - 1;
+                    komplementer.db++;
+                }
             }
-            if (veg[db - 1] < v) komplementer.Intervallumhalmazba(veg[db - 1] + 1, v);
+            if (veg[db - 1] < v) komplementer.Intervallumhalmazba(veg[db - 1] + 1, v)
+            {
+                komplementer.kezd[db] = veg[db - 1] + 1;
+                komplementer.veg[db] = v;
+                komplementer.db++;
+            }
         }
         return komplementer;
     }

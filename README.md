@@ -2,14 +2,14 @@
 
 Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); történelemtanár] alatt készült publikus jegyzeteim.
 
-| [24/25/1](/semesters/24-25-1/) | [25/26/1](/semesters/25-26-1/) | 26/27/1 | 27/28/1 | 28/29/1 |
+| [24/25/1](/semesters/24-25-1/) | [25/26/1](/semesters/25-26-1/) | [26/27/1](/semesters/26-27-1/) | 27/28/1 | 28/29/1 |
 | :--: | :--: | :--: | :--: | :--: |
 | **[24/25/2](/semesters/24-25-2/)** | **[25/26/2](/semesters/25-26-2/)** | **26/27/2** | **27/28/2** | **28/29/2** |
 
 <br>
 
 > [!NOTE]
-> Csak a kötelező tárgyak (egy részét) tartalmazza (jelenleg). 
+> Csak a kötelező tárgyak (egy részét) tartalmazza. 
 
 > [!WARNING]
 > A `.md` jegyzetek többsége órákon készült, hibákat tartalmaz(hat).
@@ -19,27 +19,47 @@ Osztatlan tanárképzésem [informatikatanár (digitális kultúra tanára); tö
 
 
 
+## [26/27/1](/semesters/26-27-1/)
+### Tárgyak
+| # | tárgy | kred | típus | kar |
+| :-: | :- | :-: | :-: | :-: |
+| **01** | ***[A tanulás pszichológiája 1.](/semesters/26-27-1/OTK-TAN22-107/)*** | 2 | **`K`** | **PPK** |
+| **02** | ***[A tanulás pszichológiája 2.](/semesters/26-27-1/OTK-TAN22-108/)*** | 2 | **`K`** | **PPK** |
+| **03** | ***[A történelemtanítás elmélete](/semesters/26-27-1/OT-TOR22-401/)*** | 3 | **`K`** | **BTK** |
+| **04** | ***[Egyéb vallások: A Biblia ókori keleti vallási környezete](/semesters/26-27-1/BBN-VAL11-136dot25/)*** | 3 | **`SZV`** | **BTK** |
+| **05** | ***[Grafikus programozás versenyfeladatok Python turtle-ben](/semesters/26-27-1/IKP-9335/)*** | 2 | **`SZV`** | **IK** |
+| **06** | ***[Informatika története](/semesters/26-27-1/OTK-TORTE-INF22/)*** | 2 | **`K`** | **IK** |
+| **07** | ***[Középkori magyar történelem 1.](/semesters/26-27-1/OT-TOR22-211/)*** | 3 | **`K`** | **BTK** |
+| **08** | ***[Oktatásinformatika 1.](/semesters/26-27-1/OTK-OKTINF1G-INF22/)*** | 3 | **`K`** | **IK** |
+| **09** | ***[Szexuális nevelés az iskolában](/semesters/26-27-1/PPK-NEVcolon333/)*** | 2 | **`SZV`** | **PPK** |
+| **10** | ***[Újkori egyetemes történelem 2.](/semesters/26-27-1/OT-TOR22-262/)*** | 3 | **`K`** | **BTK** |
+| **11** | ***[Újkori magyar történelem 1.](/semesters/26-27-1/OT-TOR-251/)*** | 3 | **`K`** | **BTK** |
+| **12** | ***[Újkori magyar történelem 2.](/semesters/26-27-1/OT-TOR22-252/)*** | 3 | **`K`** | **BTK** |
+| **13** | ***[WEB fejlesztés](/semesters/26-27-1/OTK-WFEG-INF22/)*** | 4 | **`K`** | **IK** |
+
+
+
 ## [25/26/2](/semesters/25-26-2/)
 ### Tárgyak
 | # | tárgy | kred | típus | kar |
 | :-: | :- | :-: | :-: | :-: |
-| **1** | ***[Algoritmusok és adatok az iskolában 2.](/semesters/24-25-2/OTK-AAI2EG-INF22/)*** | 4 | `K` | **IK** |
-| **2** | ***[Alkalmazói rendszerek 4.](/semesters/24-25-2/OTK-ALKR4EG/)*** | 4 | `K` | **IK** |
+| **1** | ***[Algoritmusok és adatok az iskolában 2.](/semesters/24-25-2/OTK-AAI2EG-INF22/)*** | 4 | **`K`** | **IK** |
+| **2** | ***[Alkalmazói rendszerek 4.](/semesters/24-25-2/OTK-ALKR4EG/)*** | 4 | **`K`** | **IK** |
 | **3** | ***[Anyanyelvi kritériumvizsga](/semesters/25-26-2/OTK-AKV/)*** | 0 | **`K`** | **BTK** |
-| **4** | ***[Az arab zene története](/semesters/24-25-2/BBV-111-15/)*** | 2 | `SZ` | **BTK** |
-| **5** | ***[Fejlődéspszichológia és szocializáció](/semesters/24-25-2/OTK-TAN22-105/)*** | 2 | `K` | **PPK** |
-| **6** | ***[Feladatmegoldó szeminárium](/semesters/24-25-2/OTK-FMSZG-INF22/)*** | 3 | `K` | **IK** |
+| **4** | ***[Az arab zene története](/semesters/24-25-2/BBV-111-15/)*** | 2 | **`SZV`** | **BTK** |
+| **5** | ***[Fejlődéspszichológia és szocializáció](/semesters/24-25-2/OTK-TAN22-105/)*** | 2 | **`K`** | **PPK** |
+| **6** | ***[Feladatmegoldó szeminárium](/semesters/24-25-2/OTK-FMSZG-INF22/)*** | 3 | **`K`** | **IK** |
 | **7** | ***[Felkészítő szeminárium az anyanyelvi kritériumvizsgára](/semesters/25-26-2/OT-AKV-3/)*** | 3 | **`SZV`** | **BTK** |
-| **8** | ***[Koraújkori egyetemes történelem 1.](/semesters/24-25-2/OT-TOR22-241/)*** | 3 | `K` | **BTK** |
-| **9** | ***[Koraújkori egyetemes történelem 2.](/semesters/24-25-2/OT-TOR22-242/)*** | 3 | `K` | **BTK** |
-| **10** | ***[Koraújkori egyetemes magyar 1.](/semesters/24-25-2/OT-TOR22-231/)*** | 3 | `K` | **BTK** |
-| **11** | ***[Koraújkori egyetemes magyar 2.](/semesters/24-25-2/OT-TOR22-232/)*** | 3 | `K` | **BTK** |
-| **12** | ***[Középkori magyar történelem 1.](/semesters/24-25-2/OT-TOR22-211/)*** | 3 | `K` | **BTK** |
-| **13** | ***[Középkori magyar történelem 2.](/semesters/24-25-2/OT-TOR22-212/)*** | 3 | `K` | **BTK** |
-| **14** | ***[Pályaszocializációs gyakorlat 3. - A csoportfolyamatok pszichológiája](/semesters/24-25-2/OTK-PGY-3-TAN22-106/)*** | 4 | `K` | **PPK** |
-| **15** | ***[R&S Internet eszközök, CISCO I. és II.](/semesters/24-25-2/IKP-9253/)*** | 4 | `SZV` | **IK** |
-| **16** | ***[Történeti földrajz](/semesters/24-25-2/OT-TOR-111/)*** | 3 | `K` | **BTK** |
-| **17** | ***[Zsidó vallás és kultúra 2.](/semesters/24-25-2/BBN-HEB11-222/)*** | 3 | `SZV` | **BTK** |
+| **8** | ***[Koraújkori egyetemes történelem 1.](/semesters/24-25-2/OT-TOR22-241/)*** | 3 | **`K`** | **BTK** |
+| **9** | ***[Koraújkori egyetemes történelem 2.](/semesters/24-25-2/OT-TOR22-242/)*** | 3 | **`K`** | **BTK** |
+| **10** | ***[Koraújkori egyetemes magyar 1.](/semesters/24-25-2/OT-TOR22-231/)*** | 3 | **`K`** | **BTK** |
+| **11** | ***[Koraújkori egyetemes magyar 2.](/semesters/24-25-2/OT-TOR22-232/)*** | 3 | **`K`** | **BTK** |
+| **12** | ***[Középkori magyar történelem 1.](/semesters/24-25-2/OT-TOR22-211/)*** | 3 | **`K`** | **BTK** |
+| **13** | ***[Középkori magyar történelem 2.](/semesters/24-25-2/OT-TOR22-212/)*** | 3 | **`K`** | **BTK** |
+| **14** | ***[Pályaszocializációs gyakorlat 3. - A csoportfolyamatok pszichológiája](/semesters/24-25-2/OTK-PGY-3-TAN22-106/)*** | 4 | **`K`** | **PPK** |
+| **15** | ***[R&S Internet eszközök, CISCO I. és II.](/semesters/24-25-2/IKP-9253/)*** | 4 | **`SZV`** | **IK** |
+| **16** | ***[Történeti földrajz](/semesters/24-25-2/OT-TOR-111/)*** | 3 | **`K`** | **BTK** |
+| **17** | ***[Zsidó vallás és kultúra 2.](/semesters/24-25-2/BBN-HEB11-222/)*** | 3 | **`SZV`** | **BTK** |
 
 
 
