@@ -82,3 +82,11 @@
 article ol li{
     list-style-type: decimal-leading-zero;
 }
+
+
+
+
+a[href^='http']::after{
+    content: "arrow_outward";
+    font-family: var(--font-icon);
+}
