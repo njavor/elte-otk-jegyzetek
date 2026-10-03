@@ -66,6 +66,9 @@
     .box{
         box-shadow: none;
 
+        & h4:not(:nth-child(2)){
+            margin-top: var(--space-s);
+        }
         & ul{
             flex-wrap: wrap;
         }
