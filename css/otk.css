@@ -55,6 +55,7 @@
 #title ul{
     display: flex;
     gap: var(--space-s);
+    flex-wrap: wrap;
 }
 #title ul a{
     display: block;
